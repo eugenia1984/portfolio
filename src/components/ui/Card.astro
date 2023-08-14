@@ -1,0 +1,58 @@
+---
+import projectImage from '@assets/images/project.png';
+import { Image } from '@astrojs/image/components';
+import Tags from '@components/ui/Tags.astro';
+import Button from '@components/ui/Button.astro';
+interface Props {
+	url?: string;
+	alt?: string;
+	title?: string;
+	projectImage?: string;
+	link?: string;
+	tags: string[];
+	children?: HTMLElement | HTMLElement[];
+}
+
+const {
+	url = '#',
+	alt = 'Project image',
+	title = 'Project title',
+	tags = ['Tags'],
+	link = '#',
+} = Astro.props;
+---
+
+<section class="w-full p-4 md:w-1/2 lg:w-1/3">
+	<article
+		data-testId="card"
+		class="rounded-xl bg-white p-3 shadow-lg duration-100 hover:scale-105 hover:transform hover:shadow-xl"
+	>
+		<div class="relative flex items-end overflow-hidden rounded-xl">
+			<a href={url ? url : '#'} target="_blank" aria-label="link to project">
+				<Image
+					src={projectImage ? projectImage : 'assets/images/project.png'}
+					alt={alt}
+					aspectRatio="4:4"
+					format="png"
+					width={400}
+					height={400}
+					loading="eager"
+				/>
+			</a>
+		</div>
+		<div class="mt-1 p-2">
+			<h3 class="text-xl text-orange lg:text-3xl">
+				{title}
+				<Button size={'sm'} style={'primary'} name="Contact">
+					<a
+						href={link ? link : '#'}
+						target="_blank"
+						rel="noopener"
+						aria-label="link to the code of the project">code</a
+					>
+				</Button>
+			</h3>
+			<Tags tags={tags} />
+		</div>
+	</article>
+</section>
