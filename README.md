@@ -34,12 +34,11 @@
 
 ## Features📢
 
-✔️ Integration with **MUI**  supporting **Dark mode**.
+✔️ Integration with **MUI** supporting **Dark mode**.
 
 ✔️ Uses the following integrations:
 
 - @astrojs/material-ui
-
 
 🔜 404 error page
 
@@ -68,10 +67,9 @@ Inside of theo project, you'll see the following folders and files:
 │   │   ├── Contact.astro
 |   |   └── ...
 ├── package.json
-├── 
+├──
 └── ...
 ```
-
 
 `src/components/` is where I put any components and similarly `src/layouts/` for layouts.
 
@@ -85,27 +83,22 @@ Any static assets, eg. images, can be placed in the `public/` directory.
 
 All commands are run from the root of the project, from a terminal:
 
-| Command             | Action                                             |
-| :------------------ | :------------------------------------------------- |
-| `yarn`              | Installs dependencies                              |
-| `yarn dev`          | Starts local dev server at `localhost:3000`        |
-| `yarn build`        | Build your production site to `./dist/`            |
-| `yarn preview`      | Preview your build locally, before deploying       |
-| `yarn astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `yarn astro --help` | Get help using the Astro CLI                       |
-| `yarn test:e2e`     | Run Playwright tests                               |
-
+| Command | Action |
+| ------- | ------ |
+| `npm install`  | Installs dependencies |
+| `npm run dev`  | Starts local dev server at `localhost:3000` |
+| `npm build`    | Build your production site to `./dist/`     |                     
 
 ---
 
 ## Credits
 
-Assets designed by (Freepik)[www.freepik.com].
+Assets designed by [Freepik](www.freepik.com).
 
 ---
 
 ## Notes
 
-I appreciate your interest in this Project ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me at [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta) 
+I appreciate your interest in this Project ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me at [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)
 
 ---
