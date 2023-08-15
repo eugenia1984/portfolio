@@ -5,6 +5,7 @@ import {
   Button,
   Container,
   IconButton,
+  Link,
   Menu,
   MenuItem,
   Select,
@@ -31,10 +32,11 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => setAnchorElNav(event.currentTarget)
   const handleCloseNavMenu = () => setAnchorElNav(null)
-
   const handleLanguageChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setLanguage(event.target.value as Language);
-  };
+  }
+
+  const colorTextLink: string = theme.palette.mode === 'dark' ? 'white' : 'black'
 
   return (
     <header>
@@ -68,8 +70,14 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
                 } }
               >
                 { pages[language].map((page) => (
-                  <MenuItem key={ page } onClick={ handleCloseNavMenu }>
-                    <Typography textAlign="center">{ page }</Typography>
+                  <MenuItem key={ page.title } onClick={ handleCloseNavMenu }>
+                    <Typography textAlign="center">
+                      <Link href={ page.to } aria-label={ page.title } underline="none">
+                        <Box component="span" sx={ { color: colorTextLink } }>
+                          { page.title }
+                        </Box>
+                      </Link>
+                    </Typography>
                   </MenuItem>
                 )) }
               </Menu>
@@ -80,11 +88,15 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
             <Box sx={ { flexGrow: 1, display: { xs: 'none', md: 'flex' } } }>
               { pages[language].map((page) => (
                 <Button
-                  key={ page }
+                  key={ page.title }
                   onClick={ handleCloseNavMenu }
                   sx={ { my: 2, color: 'white', display: 'block' } }
                 >
-                  { page }
+                  <Link href={ page.to } aria-label={ page.title } underline="none">
+                    <Box component="span" sx={ { color: colorTextLink } }>
+                      { page.title }
+                    </Box>
+                  </Link>
                 </Button>
               )) }
             </Box>
