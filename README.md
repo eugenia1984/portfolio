@@ -55,36 +55,35 @@
 Inside of theo project, you'll see the following folders and files:
 
 ```
-|
+/
 ├── public/
 │   └── maria-eugenia-costa-en.pdf
 │   └── maria-eugenia-costa-es.pdf
 │   └── maria-eugenia-costa-pt.pdf
-|   └── vite.svg
+|   ├── vite.svg
 |   
 ├── src/
 |   ├── assets/
-|   |   └──react.scv
+|   |   ├── react.scv
 |   |
 │   ├── components/
 │   │   ├── atom/
-│   │   |   ├── TitleH2.tsx
-|   |   |   └── ...
-│   │   ├── template/
-│   │   ├── about/
-│   │   ├── contact/
-│   │   ├── footer/
-│   │   ├── header/
-│   │   ├── hero/
-│   │   ├── project/
-|   |   └── MyApp.tsx
+|   |   |   └── TitleH2.tsx
+│   │   └── template/
+|   |   |    ├──  about/
+|   |   |    ├── contact/
+|   |   |    ├── footer/
+|   |   |    ├── header/
+|   |   |    ├── hero/
+|   |   |    └──project/
+|   |   └─MyApp.tsx
 |   |
-|   ├── context/
-|   |   └──LanguageContext.tsx
+|   ├── context
+|   |   └── LanguageContext.tsx
 |   |
 |   ├── theme
 |   |
-|   └──utils
+|   └── utils
 |
 ├── App.css
 ├── App.txs
@@ -98,7 +97,7 @@ Inside of theo project, you'll see the following folders and files:
 ├── README.md
 ├── tsconfig.json
 ├── tsconfig.node.json
-├── vite.config.js
+└── vite.config.js
 ```
 
 `src/components/` is where I put any components and similarly `src/layouts/` for layouts.
@@ -126,7 +125,6 @@ All commands are run from the root of the project, from a terminal:
 Assets designed by [Freepik](www.freepik.com).
 
 ---
-
 ## Notes
 
 I appreciate your interest in this Project ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me at [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)
