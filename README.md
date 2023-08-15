@@ -55,29 +55,37 @@
 Inside of theo project, you'll see the following folders and files:
 
 ```
-/
+|
 ├── public/
 │   └── maria-eugenia-costa-en.pdf
 │   └── maria-eugenia-costa-es.pdf
 │   └── maria-eugenia-costa-pt.pdf
-|   ├── vite.svg
+|   └── vite.svg
 |   
 ├── src/
 |   ├── assets/
-|   |   ├── react.scv
+|   |   └──react.scv
 |   |
 │   ├── components/
-│   │   ├── ui/
-│   │   |   ├── BackToTop.astro
+│   │   ├── atom/
+│   │   |   ├── TitleH2.tsx
 |   |   |   └── ...
-│   │   ├── About.astro
-│   │   ├── Contact.astro
-|   |   └── ...
-|   ├── context
+│   │   ├── template/
+│   │   ├── about/
+│   │   ├── contact/
+│   │   ├── footer/
+│   │   ├── header/
+│   │   ├── hero/
+│   │   ├── project/
+|   |   └── MyApp.tsx
+|   |
+|   ├── context/
+|   |   └──LanguageContext.tsx
 |   |
 |   ├── theme
 |   |
-|   ├── utils
+|   └──utils
+|
 ├── App.css
 ├── App.txs
 ├── index.css
