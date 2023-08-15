@@ -6,7 +6,7 @@ export const pages = {
   ],
   en: [
     { title: 'About', to: '/about' },
-    { title:  'Proyects', to: '/proyects' },
+    { title:  'Projects', to: '/proyects' },
     { title: 'Contact', to: '/contact' }
   ],
   pt: [
