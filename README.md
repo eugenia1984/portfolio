@@ -55,28 +55,28 @@
 Inside of theo project, you'll see the following folders and files:
 
 ```
-/
+|
 ├── public/
-│   └── maria-eugenia-costa-en.pdf
-│   └── maria-eugenia-costa-es.pdf
-│   └── maria-eugenia-costa-pt.pdf
-|   ├── vite.svg
+│   ├── maria-eugenia-costa-en.pdf
+│   ├── maria-eugenia-costa-es.pdf
+│   ├── maria-eugenia-costa-pt.pdf
+|   └── vite.svg
 |   
 ├── src/
 |   ├── assets/
-|   |   ├── react.scv
+|   |   ├── react.scg
 |   |
 │   ├── components/
 │   │   ├── atom/
 |   |   |   └── TitleH2.tsx
-│   │   └── template/
+│   │   ├── template/
 |   |   |    ├──  about/
 |   |   |    ├── contact/
 |   |   |    ├── footer/
 |   |   |    ├── header/
 |   |   |    ├── hero/
 |   |   |    └──project/
-|   |   └─MyApp.tsx
+|   |   └─ MyApp.tsx
 |   |
 |   ├── context
 |   |   └── LanguageContext.tsx
