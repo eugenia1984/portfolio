@@ -34,12 +34,18 @@
 
 ## Features📢
 
+✔️ React-DOM
+
 ✔️ Integration with **MUI** supporting **Dark mode**.
 
 ✔️ Uses the following integrations:
 
-- @astrojs/material-ui
+- @emotion/react
 
+- @emotion/styled
+
+- @mui/icons-material
+  
 🔜 404 error page
 
 ---
@@ -51,14 +57,15 @@ Inside of theo project, you'll see the following folders and files:
 ```
 /
 ├── public/
-│   └── favicon.ico
-|   ├── hero.png
-|   └── ...
+│   └── maria-eugenia-costa-en.pdf
+│   └── maria-eugenia-costa-es.pdf
+│   └── maria-eugenia-costa-pt.pdf
+|   ├── vite.svg
+|   
 ├── src/
 |   ├── assets/
-|   |   ├── images/
-│   │   |   ├── hero.png
-|   |   |   └── ...
+|   |   ├── react.scv
+|   |
 │   ├── components/
 │   │   ├── ui/
 │   │   |   ├── BackToTop.astro
@@ -66,9 +73,24 @@ Inside of theo project, you'll see the following folders and files:
 │   │   ├── About.astro
 │   │   ├── Contact.astro
 |   |   └── ...
+|   ├── context
+|   |
+|   ├── theme
+|   |
+|   ├── utils
+├── App.css
+├── App.txs
+├── index.css
+├── main.tsx
+├── .eslintrc.cjs
+├── .gitignore
+├── index.html
+├── package-lock.json
 ├── package.json
-├──
-└── ...
+├── README.md
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.js
 ```
 
 `src/components/` is where I put any components and similarly `src/layouts/` for layouts.
