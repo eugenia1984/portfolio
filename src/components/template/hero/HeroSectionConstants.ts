@@ -1,7 +1,12 @@
+export const GREETING = {
+  es: 'Hola!',
+  en: 'Hi!',
+  pt: 'Olá!'
+}
 export const TITLE = {
-  es: 'Hola! Mi nombre es María Eugenia Costa',
-  en: 'Hi! My name is María Eugenia Costa',
-  pt: 'Olá! Meu nome é María Eugenia Costa'
+  es: 'Soy María Eugenia Costa',
+  en: "I'm María Eugenia Costa",
+  pt: 'Sou María Eugenia Costa'
 }
 
 export const SUBTITLE = {

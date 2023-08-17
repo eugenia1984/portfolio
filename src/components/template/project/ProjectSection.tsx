@@ -19,13 +19,21 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ }) => {
       </Grid>
       <Grid container sx={ PROJECT_STYLES.container2 }>
         { CARDS && CARDS.map((project, index) => {
-          const { title, languageText, technologies } = project
+          const {
+            title,
+            languageText,
+            technologies,
+            linkRepository,
+            linkDeploy
+          } = project
           return (
             <Grid item xs={ 12 } md={ 6 } lg={ 4 } key={ `project-${ index }` }>
               <CardProject
                 projectName={ title }
-                projectDescription={languageText[language].description}
-                projectTechnologies={technologies} 
+                projectDescription={ languageText[language].description }
+                projectTechnologies={ technologies }
+                projectLinkGitHub={ linkRepository }
+                projectLinkDeploy={linkDeploy}
               />
             </Grid>
           )

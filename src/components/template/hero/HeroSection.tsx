@@ -1,5 +1,5 @@
 import { Grid, Link, Typography } from '@mui/material'
-import { TITLE, SUBTITLE, EXPERIENCE, BTN_TEXT } from './HeroSectionConstants'
+import { TITLE, SUBTITLE, EXPERIENCE, BTN_TEXT, GREETING } from './HeroSectionConstants'
 import { useLanguageContext } from '../../../context/LanguageContext'
 import cvEN from '/maria-eugenia-costa-en.pdf'
 import cvES from '/maria-eugenia-costa-es.pdf'
@@ -27,6 +27,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ }) => {
     <section id="hero">
       <Grid container sx={ HERO_STYLES.container }>
         <Grid item xs={ 12 } sm={ 6 }>
+          <Typography align="center" gutterBottom>
+            { GREETING[language] }
+          </Typography>
           <TitleH2 titleText={ TITLE[language] } />
           <Typography variant="h3" align="center" gutterBottom>
             { SUBTITLE[language] }

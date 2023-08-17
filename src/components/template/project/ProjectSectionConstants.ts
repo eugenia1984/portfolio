@@ -7,9 +7,9 @@ export const TITLE = {
 export const CARDS = [
   {
     title: 'Binance',
-    technologies: [],
+    technologies: ['React', 'TypeSCript', 'MUI'],
     linkRepository: '',
-    linkDeply: '',
+    linkDeploy: '',
     imgSrc: '',
     languageText: {
       es: {
@@ -28,9 +28,9 @@ export const CARDS = [
   },
   {
     title: 'EasyCook',
-    technologies: [],
+    technologies: ['React', 'TypeSCript', 'MUI'],
     linkRepository: '',
-    linkDeply: '',
+    linkDeploy: '',
     imgSrc: '',
     languageText: {
       es: {
@@ -51,7 +51,7 @@ export const CARDS = [
     title: 'Appartamentos',
     technologies: ['React', 'TypeSCript', 'MUI'],
     linkRepository: 'https://github.com/eugenia1984/c12-25-t-node-react',
-    linkDeply: 'https://appartments-c12-25.vercel.app/',
+    linkDeploy: 'https://appartments-c12-25.vercel.app/',
     imgSrc: '',
     languageText: {
       es: {
