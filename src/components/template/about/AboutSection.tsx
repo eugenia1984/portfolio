@@ -2,6 +2,7 @@ import { Grid, Typography } from '@mui/material'
 import { useLanguageContext } from '../../../context/LanguageContext'
 import TitleH2 from '../../atom/TitleH2'
 import { TITLE, TEXT } from './AboutSectionConstants'
+import { ABOUT_STYLES } from './AboutSectionStyles'
 
 interface AboutSectionProps { }
 
@@ -10,7 +11,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ }) => {
 
   return (
     <section id="about">
-      <Grid container sx={ { padding: '1.75rem 0.5rem' } }>
+      <Grid container sx={ ABOUT_STYLES.container }>
         <Grid item xs={ 12 } sm={ 5 }>
         <TitleH2 titleText={TITLE[language]} />
         </Grid>
