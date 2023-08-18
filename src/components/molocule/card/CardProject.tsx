@@ -12,6 +12,7 @@ import {
   Typography
 } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import MonitorIcon from '@mui/icons-material/Monitor'
 
 interface CardProjectProps {
   projectName: string
@@ -32,7 +33,7 @@ const CardProject: React.FC<CardProjectProps> = ({
     <Card sx={ { maxWidth: 345, marginBottom: '1.75rem' } }>
       <CardMedia
         sx={ { height: 140 } }
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image="https://img.icons8.com/quill/50/bookmark--v1.png"
         title="green iguana"
       />
       <CardContent>
@@ -42,10 +43,15 @@ const CardProject: React.FC<CardProjectProps> = ({
         <Typography variant="body2" color="text.secondary">
           { projectDescription }
         </Typography>
-        <Grid spacing={ 1 } alignItems="center" justifyContent='flex-start' sx={ { margin: '12px 0px' } }>
+        <Grid container spacing={ 1 } alignItems="center" justifyContent='flex-start' sx={ { margin: '12px 0px' } }>
           <Stack direction="row" spacing={ 1 } alignItems="center" justifyContent='flex-start'>
-            { projectTechnologies.map(technology => {
-              return <Chip label={ technology } color="primary" variant="outlined" />
+            { projectTechnologies.map((technology, index) => {
+              return <Chip 
+              label={ technology } 
+              color="primary" 
+              variant="outlined" 
+              key={projectName+index}
+              />
             }) }
           </Stack>
         </Grid>
@@ -56,14 +62,9 @@ const CardProject: React.FC<CardProjectProps> = ({
             GitHub
           </Link>
         </Button>
-        <Button variant="outlined" size="small">
+        <Button variant="outlined" size="small" startIcon={ <MonitorIcon /> }>
           <Link href={ projectLinkDeploy } target="_blank" rel="noopener">
-            <img
-              src="https://img.icons8.com/fluency/40/monitor.png"
-              alt="Monitor"
-              width="40"
-              height="40"
-            />
+           Deploy
           </Link>
         </Button>
       </CardActions>

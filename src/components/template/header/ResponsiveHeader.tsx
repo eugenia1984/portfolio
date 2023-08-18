@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {
   AppBar,
   Box,
@@ -13,20 +13,19 @@ import {
   Typography
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import { useTheme } from '@mui/material/styles'
+import { useTheme } from '../../../context/ThemeContext'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
-import { ColorModeContext } from '../../../App'
 import { useLanguageContext } from '../../../context/LanguageContext'
 import { Language } from '../../../utils/types'
 import { HEADER_STYLES } from './ResponsiveHeaderStyles'
 import { pages } from './ResponsiveHeaderConstants'
 
+
 interface ResponsiveHeaderProps { }
 
 const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
-  const theme = useTheme()
-  const colorMode = useContext(ColorModeContext)
+  const { themeMode, toggleTheme } = useTheme()
   const { language, setLanguage } = useLanguageContext()
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
 
@@ -35,8 +34,6 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
   const handleLanguageChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setLanguage(event.target.value as Language);
   }
-
-  const colorTextLink: string = theme.palette.mode === 'dark' ? 'white' : 'black'
 
   return (
     <header>
@@ -73,7 +70,7 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
                   <MenuItem key={ page.title } onClick={ handleCloseNavMenu }>
                     <Typography textAlign="center">
                       <Link href={ page.to } aria-label={ page.title } underline="none">
-                        <Box component="span" sx={ { color: colorTextLink } }>
+                        <Box component="span" >
                           { page.title }
                         </Box>
                       </Link>
@@ -93,21 +90,21 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
                   sx={ { my: 2, color: 'white', display: 'block' } }
                 >
                   <Link href={ page.to } aria-label={ page.title } underline="none">
-                    <Box component="span" sx={ { color: colorTextLink } }>
+                    <Box component="span" >
                       { page.title }
                     </Box>
                   </Link>
                 </Button>
               )) }
             </Box>
-            <IconButton sx={ { ml: 1 } } onClick={ colorMode.toggleColorMode } color="inherit">
-              { theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon /> }
+            <IconButton sx={ { margin: '0rem 1rem' } } onClick={ toggleTheme } color="inherit">
+              { themeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon /> }
             </IconButton>
             <Box sx={ { flexGrow: 0 } }>
               <Select value={ language } onChange={ handleLanguageChange }>
-                <MenuItem value="es">ES</MenuItem>
-                <MenuItem value="en">EN</MenuItem>
-                <MenuItem value="pt">PT</MenuItem>
+                <MenuItem value="es">Español</MenuItem>
+                <MenuItem value="en">English</MenuItem>
+                <MenuItem value="pt">Português</MenuItem>
               </Select>
             </Box>
           </Toolbar>

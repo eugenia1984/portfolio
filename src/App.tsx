@@ -1,121 +1,40 @@
-import React, { useState, useMemo, createContext } from 'react'
+//import React, { useState, useMemo, createContext } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import './App.css'
-import MyApp from './components/template/MyApp'
+import React from 'react'
+import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
+import { CustomThemeProvider, ThemeProvider, useTheme } from './context/ThemeContext'
+import { darkTheme, lightTheme } from './theme/theme'
 
-export const ColorModeContext = createContext({ toggleColorMode: () => { } })
+import AboutSection from './components/template/about/AboutSection'
+import ContactSection from './components/template/contact/ContactSection'
+import ResponsiveFooter from './components/template/footer/ResponsiveFooter'
+import ResponsiveHeader from './components/template/header/ResponsiveHeader'
+import HeroSection from './components/template/hero/HeroSection'
+import ProjectSection from './components/template/project/ProjectSection'
 
 function App() {
-  const [mode, setMode] = useState<'light' | 'dark'>('light');
-  const colorMode = useMemo(
-    () => ({
-      toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-      },
-    }),
-    [],
-  );
-
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode,
-        },
-        typography: {
-          fontFamily: 'Nunito, Nunito Sans, sans-serif',
-          h1: {
-            fontSize: '28px',
-            lineHeight: '40px',
-            fontWeight: 700,
-          },
-          h2: {
-            fontSize: '26px',
-            lineHeight: '30px',
-            fontWeight: 600,
-          },
-          h3: {
-            fontSize: '18px',
-            lineHeight: '24px',
-            fontWeight: 700,
-          },
-          h4: {
-            fontSize: '18px',
-            lineHeight: '24px',
-            fontWeight: 600,
-          },
-          h5: {
-            fontSize: '15px',
-            lineHeight: '21px',
-            fontWeight: 500,
-          },
-        },
-        components: {
-          MuiButton: {
-            defaultProps: {
-              disableRipple: true,
-            },
-            styleOverrides: {
-              root: {
-                borderRadius: 16,
-                fontStyle: 'normal',
-                fontSize: '16px',
-                padding: '13px 20px',
-              },
-              text: {
-                '&.Mui-focusVisible': {
-                  backgroundColor: '#BFBFBF',
-                },
-                ':hover': {
-                  backgroundColor: '#BFBFBF',
-                },
-              },
-              outlined: {
-                border: '2px solid',
-                ':hover': {
-                  border: '2px solid',
-                  background: 'rgba(18, 38, 170, 0.1)',
-                },
-                ':focus': {
-                  color: 'white',
-                  background: '#1226AA',
-                },
-                '&.Mui-disabled': {
-                  border: '2px solid #8F9193',
-                  color: '#8F9193',
-                },
-              },
-              containedPrimary: {
-                background: '#1B17E7',
-                ':hover': {
-                  backgroundColor:
-                    'linear-gradient(270deg, #1226AA 0%, #121A52 103.21%)',
-                },
-                ':focus': {
-                  backgroundColor: '#121A52',
-                },
-                '&.Mui-disabled': {
-                  background: '#8F9193',
-                  color: 'white',
-                },
-              },
-            },
-          }
-        }
-      }),
-    [mode],
-  );
-
+ // const { themeMode } = useTheme()
+  // const theme = themeMode === 'light' ? lightTheme : darkTheme
 
   return (
     <>
-      <ColorModeContext.Provider value={ colorMode }>
-        <ThemeProvider theme={ theme }>
-          <MyApp />
+      {/* <MuiThemeProvider theme={ theme }> */}
+        <ThemeProvider>
+          <CustomThemeProvider>
+          <CssBaseline />
+          <ResponsiveHeader />
+          <main>
+            <HeroSection />
+            <AboutSection />
+            <ProjectSection />
+            <ContactSection />
+          </main>
+          <ResponsiveFooter />
+          </CustomThemeProvider>
         </ThemeProvider>
-      </ColorModeContext.Provider>
+      {/* </MuiThemeProvider> */}
+
       {/* <div>
           <a href="https://vitejs.dev" target="_blank">
             <img src={ viteLogo } className="logo" alt="Vite logo" />

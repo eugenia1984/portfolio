@@ -27,13 +27,14 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ }) => {
             linkDeploy
           } = project
           return (
-            <Grid item xs={ 12 } md={ 6 } lg={ 4 } key={ `project-${ index }` }>
+            <Grid item xs={ 12 } md={ 6 } lg={ 4 } key={ `project-id-${ index }` }>
               <CardProject
                 projectName={ title }
                 projectDescription={ languageText[language].description }
                 projectTechnologies={ technologies }
                 projectLinkGitHub={ linkRepository }
-                projectLinkDeploy={linkDeploy}
+                projectLinkDeploy={ linkDeploy }
+                key={ `project-${ index }` }
               />
             </Grid>
           )
