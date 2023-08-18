@@ -1,11 +1,8 @@
 //import React, { useState, useMemo, createContext } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import React from 'react'
 import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
-import { CustomThemeProvider, ThemeProvider, useTheme } from './context/ThemeContext'
-import { darkTheme, lightTheme } from './theme/theme'
-
+import { CustomThemeProvider, ThemeProvider } from './context/ThemeContext'
 import AboutSection from './components/template/about/AboutSection'
 import ContactSection from './components/template/contact/ContactSection'
 import ResponsiveFooter from './components/template/footer/ResponsiveFooter'
@@ -14,14 +11,11 @@ import HeroSection from './components/template/hero/HeroSection'
 import ProjectSection from './components/template/project/ProjectSection'
 
 function App() {
- // const { themeMode } = useTheme()
-  // const theme = themeMode === 'light' ? lightTheme : darkTheme
 
   return (
     <>
-      {/* <MuiThemeProvider theme={ theme }> */}
-        <ThemeProvider>
-          <CustomThemeProvider>
+      <ThemeProvider>
+        <CustomThemeProvider>
           <CssBaseline />
           <ResponsiveHeader />
           <main>
@@ -31,10 +25,8 @@ function App() {
             <ContactSection />
           </main>
           <ResponsiveFooter />
-          </CustomThemeProvider>
-        </ThemeProvider>
-      {/* </MuiThemeProvider> */}
-
+        </CustomThemeProvider>
+      </ThemeProvider>
       {/* <div>
           <a href="https://vitejs.dev" target="_blank">
             <img src={ viteLogo } className="logo" alt="Vite logo" />

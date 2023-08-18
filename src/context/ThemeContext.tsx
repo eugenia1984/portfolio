@@ -1,6 +1,6 @@
 import React, { ReactNode, createContext, useContext, useState } from 'react'
 import { createTheme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
-import { ThemeMode } from '../utils/constants'
+import { Colors, ThemeMode, primaryLight } from '../utils/constants'
 
 interface ThemeContextType {
   themeMode: ThemeMode
@@ -46,19 +46,19 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = ({ childr
       palette: {
         mode: themeMode,
         primary: {
-          main: themeMode === ThemeMode.Light ? '#007bff' : '#4caf50',
+          main: themeMode === ThemeMode.Light ? Colors.PrimaryLight : Colors.PrimaryDark,
         },
         secondary: {
-          main: themeMode === ThemeMode.Light ? '#f50057' : '#ff9800',
+          main: themeMode === ThemeMode.Light ? Colors.SecondaryLight : Colors.SecondaryBlack,
         },
         error: {
-          main: themeMode === ThemeMode.Light ? '#f50057' : '#ff9800',
+          main: themeMode === ThemeMode.Light ? Colors.ErrorLight : Colors.ErrorBlack,
         },
         warning: {
-          main: themeMode === ThemeMode.Light ? '#f50057' : '#ff9800',
+          main: themeMode === ThemeMode.Light ? Colors.WarningLight : Colors.WarningBlack,
         },
         success: {
-          main: themeMode === ThemeMode.Light ? '#f50057' : '#ff9800',
+          main: themeMode === ThemeMode.Light ? Colors.SuccessLight : Colors.SuccessBlack,
         },
       },
       typography: {
@@ -67,355 +67,369 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = ({ childr
           fontSize: '28px',
           lineHeight: '40px',
           fontWeight: 700,
+          color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
         h2: {
           fontSize: '26px',
           lineHeight: '30px',
           fontWeight: 600,
+          color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
         h3: {
           fontSize: '18px',
           lineHeight: '24px',
           fontWeight: 700,
+          color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
         h4: {
           fontSize: '18px',
           lineHeight: '24px',
           fontWeight: 600,
+          color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
         h5: {
           fontSize: '15px',
           lineHeight: '21px',
           fontWeight: 500,
+          color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
         body1: {
           fontFamily: 'Montserrat, sans-serif',
           fontSize: '15px',
           lineHeight: '25px',
           fontWeight: 400,
+          color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
         body2: {
           fontFamily: 'Montserrat, sans-serif',
           fontSize: '15px',
           lineHeight: '25px',
           fontWeight: 300,
+          color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
         caption: {
           fontFamily: 'Montserrat, sans-serif',
           fontSize: '11px',
           lineHeight: '15px',
           fontWeight: 600,
+          color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
         button: {
           fontSize: '15px',
           lineHeight: '21px',
           fontWeight: 700,
           textTransform: 'none',
+          color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
-        components: {
-          MuiTextField: {
-            defaultProps: {
-              variant: 'filled',
-            },
-            styleOverrides: {
-              root: {
-                input: {
-                  '&[type=number]': {
-                    MozAppearance: 'textfield',
-                  },
-                  '&::-webkit-outer-spin-button': {
-                    WebkitAppearance: 'none',
-                    margin: 0,
-                  },
-                  '&::-webkit-inner-spin-button': {
-                    WebkitAppearance: 'none',
-                    margin: 0,
-                  },
+      },
+      components: {
+        MuiTextField: {
+          defaultProps: {
+            variant: 'filled',
+          },
+          styleOverrides: {
+            root: {
+              input: {
+                '&[type=number]': {
+                  MozAppearance: 'textfield',
+                },
+                '&::-webkit-outer-spin-button': {
+                  WebkitAppearance: 'none',
+                  margin: 0,
+                },
+                '&::-webkit-inner-spin-button': {
+                  WebkitAppearance: 'none',
+                  margin: 0,
                 },
               },
             },
           },
-          MuiInputLabel: {
-            defaultProps: {
-              shrink: true,
-            },
-            styleOverrides: {
-              root: {
-                '&.Mui-error': {
-                  color: 'black',
-                },
-                '&.Mui-focused': {
-                  color: 'black',
-                },
+        },
+        MuiInputLabel: {
+          defaultProps: {
+            shrink: true,
+          },
+          styleOverrides: {
+            root: {
+              '&.Mui-error': {
+                color: 'black',
+              },
+              '&.Mui-focused': {
+                color: 'black',
               },
             },
           },
-          MuiFilledInput: {
-            defaultProps: {
-              disableUnderline: true,
-              size: 'small',
-            },
-            styleOverrides: {
-              root: ({ theme }) => ({
-                border: '2px solid #C7C8C8',
-                overflow: 'hidden',
-                backgroundColor: '#FFFFFF',
-                borderRadius: 16,
-                transition: theme.transitions.create([
-                  'border-color',
-                  'background-color',
-                  'box-shadow',
-                ]),
-                ':hover': {
-                  backgroundColor: '#FFFFFF',
-                },
-                '&.Mui-error': {
-                  borderColor: '#CD1812',
-                },
-              }),
-            },
+        },
+        MuiFilledInput: {
+          defaultProps: {
+            disableUnderline: true,
+            size: 'small',
           },
-          MuiSelect: {
-            defaultProps: {
-              variant: 'filled',
-            },
+          styleOverrides: {
+            root: ({ theme }) => ({
+              border: '2px solid #C7C8C8',
+              overflow: 'hidden',
+              backgroundColor: themeMode === ThemeMode.Light ? '#FFFFFF' : '#1C1C19',
+              borderRadius: 16,
+              transition: theme.transitions.create([
+                'border-color',
+                'background-color',
+                'box-shadow',
+              ]),
+              ':hover': {
+                backgroundColor: themeMode === ThemeMode.Light ? '#FFFFFF' : '#1C1C19',
+              },
+              '&.Mui-error': {
+                borderColor: '#CD1812',
+              },
+            }),
           },
-          MuiButton: {
-            defaultProps: {
-              disableRipple: true,
+        },
+        MuiSelect: {
+          defaultProps: {
+            variant: 'filled',
+          },
+        },
+        MuiButton: {
+          defaultProps: {
+            disableRipple: true,
+          },
+          styleOverrides: {
+            root: {
+              borderRadius: '16px',
+              fontStyle: 'normal',
+              fontSize: '16px',
+              padding: '8px 16px',
             },
-            styleOverrides: {
-              root: {
-                borderRadius: 16,
-                fontStyle: 'normal',
-                fontSize: '16px',
-                padding: '13px 20px',
+            text: {
+              '&.Mui-focusVisible': {
+                backgroundColor: themeMode === ThemeMode.Light ? '#EADDFF' : '#4F378B',
               },
-              text: {
-                '&.Mui-focusVisible': {
-                  backgroundColor: '#BFBFBF',
-                },
-                ':hover': {
-                  backgroundColor: '#BFBFBF',
-                },
+              ':hover': {
+                backgroundColor: themeMode === ThemeMode.Light ? '#21005D' : '#EADDFF',
               },
-              outlined: {
+            },
+            outlined: {
+              border: '2px solid',
+              ':hover': {
                 border: '2px solid',
-                ':hover': {
-                  border: '2px solid',
-                  background: 'rgba(18, 38, 170, 0.1)',
-                },
-                ':focus': {
-                  color: 'white',
-                  background: '#1226AA',
-                },
-                '&.Mui-disabled': {
-                  border: '2px solid #8F9193',
-                  color: '#8F9193',
-                },
+                background: 'rgba(18, 38, 170, 0.1)',
+                boxShadow: themeMode === ThemeMode.Light ?
+                  '0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15)'
+                  : '0 4px 8px rgba(250, 250, 250, 0.2), 0 6px 20px rgba(250, 250, 250, 0.15)',
               },
-              containedPrimary: {
-                background: '#1B17E7',
-                ':hover': {
-                  backgroundColor:
-                    'linear-gradient(270deg, #1226AA 0%, #121A52 103.21%)',
-                },
-                ':focus': {
-                  backgroundColor: '#121A52',
-                },
-                '&.Mui-disabled': {
-                  background: '#8F9193',
-                  color: 'white',
-                },
+              ':focus': {
+                color: 'white',
+                background: '#1226AA',
+              },
+              '&.Mui-disabled': {
+                border: themeMode === ThemeMode.Light ? '2px solid #79747E' : '2px solid #938F99',
+                color: themeMode === ThemeMode.Light ? '2px solid #79747E' : '2px solid #938F99',
               },
             },
-          },
-          MuiTableCell: {
-            styleOverrides: {
-              root: {
-                fontFamily: 'Nunito, sans-serif',
-                fontWeight: 600,
-                fontSize: '15px',
-                lineHeight: '21px',
-                color: '#202327',
-                textAlign: 'left',
-                borderBottom: 'none',
-              },
-              head: {
-                color: '#555555',
-                fontSize: '13px',
-                lineHeight: '15px',
-                fontFamily: 'Nunito Sans, sans-serif',
-              },
+            containedPrimary: {
+              color: themeMode === ThemeMode.Light ? Colors.PrimaryLightText : Colors.PrimaryDarkText,
+              backgroundColor: themeMode === ThemeMode.Light ? Colors.PrimaryLight : Colors.PrimaryDark,
+              // ':hover': {
+              //   backgroundColor: themeMode === ThemeMode.Light ? '#21005D' : '#EADDFF',
+              // },
+              // ':focus': {
+              //   backgroundColor: themeMode === ThemeMode.Light ? '#EADDFF' : '#4F378B',
+              // },
+              // '&.Mui-disabled': {
+              //   background: '#8F9193',
+              //   color: 'white',
+              // },
             },
           },
-          MuiTableRow: {
-            styleOverrides: {
-              root: {
-                ':nth-of-type(odd)': {
-                  background: 'rgba(231,233,247,0.4)',
-                },
-              },
-              head: {
-                backgroundColor: '#fff !important',
-              },
+        },
+        MuiTableCell: {
+          styleOverrides: {
+            root: {
+              fontFamily: 'Nunito, sans-serif',
+              fontWeight: 600,
+              fontSize: '15px',
+              lineHeight: '21px',
+              color: '#202327',
+              textAlign: 'left',
+              borderBottom: 'none',
+            },
+            head: {
+              color: '#555555',
+              fontSize: '13px',
+              lineHeight: '15px',
+              fontFamily: 'Nunito Sans, sans-serif',
             },
           },
-          MuiSwitch: {
-            styleOverrides: {
-              root: ({ theme }) => ({
-                width: 32,
-                height: 18,
-                padding: 0,
-                display: 'flex',
-                ':active': {
-                  '& .MuiSwitch-thumb': {
-                    width: 15,
-                  },
-                },
-                '& .MuiSwitch-switchBase.Mui-checked': {
-                  transform: 'translateX(14px) !important',
-                },
-                '& .MuiSwitch-switchBase': {
-                  padding: 2,
-                  '&.Mui-checked': {
-                    transform: 'translateX(12px)',
-                    color: '#fff',
-                    '& + .MuiSwitch-track': {
-                      opacity: 1,
-                      backgroundColor: theme.palette.primary.main,
-                    },
-                  },
-                },
-                '& .Mui-focusVisible': {
-                  backgroundColor: '#1226AA',
-                  color: '#F1F2FA',
-                },
-                '& .Mui-checked.Mui-focusVisible': {
-                  backgroundColor: 'black',
-                  color: 'white',
-                },
+        },
+        MuiTableRow: {
+          styleOverrides: {
+            root: {
+              ':nth-of-type(odd)': {
+                background: 'rgba(231,233,247,0.4)',
+              },
+            },
+            head: {
+              backgroundColor: '#fff !important',
+            },
+          },
+        },
+        MuiSwitch: {
+          styleOverrides: {
+            root: ({ theme }) => ({
+              width: 32,
+              height: 18,
+              padding: 0,
+              display: 'flex',
+              ':active': {
                 '& .MuiSwitch-thumb': {
-                  boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
-                  width: 14,
-                  height: 14,
-                  borderRadius: 6,
-                  transition: theme.transitions.create(['width'], {
-                    duration: 200,
-                  }),
-                },
-                '& .MuiSwitch-track': {
-                  borderRadius: 16 / 2,
-                  opacity: 1,
-                  backgroundColor:
-                    theme.palette.mode === 'dark'
-                      ? 'rgba(255,255,255,.35)'
-                      : 'rgba(0,0,0,.25)',
-                  boxSizing: 'border-box',
-                  '.Mui-checked.Mui-checked + &': {
-                    // Controls checked color for the track
-                    opacity: 0.1,
-                    backgroundColor: '#fff',
-                  },
-                },
-              }),
-            },
-          },
-          MuiTypography: {
-            styleOverrides: {
-              //@ts-ignore
-              anchor: {
-                ':hover': {
-                  cursor: 'pointer',
+                  width: 15,
                 },
               },
-            },
-          },
-          MuiDialog: {
-            styleOverrides: {
-              paper: {
-                borderRadius: '8px',
+              '& .MuiSwitch-switchBase.Mui-checked': {
+                transform: 'translateX(14px) !important',
               },
-            },
-          },
-          MuiSnackbar: {
-            styleOverrides: {
-              root: ({ theme }) => ({
-                '& .MuiSnackbarContent-root': {
-                  padding: '1em',
-                  fontSize: '15px',
-                  lineHeight: '17px',
-                  color: 'black',
-                  backgroundColor: theme.palette.bgLight,
-                },
-              }),
-            },
-          },
-          MuiAutocomplete: {
-            // fix popper wont open
-            defaultProps: {
-              componentsProps: {
-                popper: {
-                  sx: {
-                    height: 0,
-                  },
-                },
-                paper: {
-                  sx: {
-                    width: 'max-content',
+              '& .MuiSwitch-switchBase': {
+                padding: 2,
+                '&.Mui-checked': {
+                  transform: 'translateX(12px)',
+                  color: '#fff',
+                  '& + .MuiSwitch-track': {
+                    opacity: 1,
+                    backgroundColor: theme.palette.primary.main,
                   },
                 },
               },
+              '& .Mui-focusVisible': {
+                backgroundColor: '#1226AA',
+                color: '#F1F2FA',
+              },
+              '& .Mui-checked.Mui-focusVisible': {
+                backgroundColor: 'black',
+                color: 'white',
+              },
+              '& .MuiSwitch-thumb': {
+                boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
+                width: 14,
+                height: 14,
+                borderRadius: 6,
+                transition: theme.transitions.create(['width'], {
+                  duration: 200,
+                }),
+              },
+              '& .MuiSwitch-track': {
+                borderRadius: 16 / 2,
+                opacity: 1,
+                backgroundColor:
+                  theme.palette.mode === 'dark'
+                    ? 'rgba(255,255,255,.35)'
+                    : 'rgba(0,0,0,.25)',
+                boxSizing: 'border-box',
+                '.Mui-checked.Mui-checked + &': {
+                  // Controls checked color for the track
+                  opacity: 0.1,
+                  backgroundColor: '#fff',
+                },
+              },
+            }),
+          },
+        },
+        MuiTypography: {
+          styleOverrides: {
+            //@ts-ignore
+            anchor: {
+              ':hover': {
+                cursor: 'pointer',
+              },
             },
           },
-          MuiDatePicker: {
-            // fix popper wont open
-            defaultProps: {
-              PopperProps: {
+        },
+        MuiDialog: {
+          styleOverrides: {
+            paper: {
+              borderRadius: '8px',
+            },
+          },
+        },
+        MuiSnackbar: {
+          styleOverrides: {
+            root: {
+              '& .MuiSnackbarContent-root': {
+                padding: '1em',
+                fontSize: '15px',
+                lineHeight: '17px',
+                color: themeMode === ThemeMode.Light ? 'white' : 'black',
+                backgroundColor: themeMode === ThemeMode.Light ? '2px solid #1C1B1F' : '2px solid #E6E1E5',
+              },
+            },
+          },
+        },
+        MuiAutocomplete: {
+          // fix popper wont open
+          defaultProps: {
+            componentsProps: {
+              popper: {
                 sx: {
                   height: 0,
                 },
               },
-            },
-          },
-          MuiChip: {
-            styleOverrides: {
-              colorPrimary: ({ theme }) => ({
-                background: theme.palette.bgLight,
-                borderRadius: '8px',
-                fontSize: '9px',
-                fontWeight: 700,
-                color: theme.palette.primary.main,
-              }),
-            },
-          },
-          MuiDivider: {
-            styleOverrides: {
-              root: ({ theme }) => ({
-                borderColor: theme.palette.bgLight,
-                borderWidth: '1px',
-              }),
-            },
-          },
-          MuiAlert: {
-            defaultProps: {
-              style: {
-                borderRadius: '0.8rem',
-                fontSize: '1rem',
-              },
-            },
-            styleOverrides: {
-              standardError: {
-                border: '1px solid #CD1812',
-                background: 'rgba(244,67,54,0.1)',
-              },
-              standardSuccess: {
-                border: '1px solid #66BB6A',
-                background: 'rgba(102, 187, 106, 0.1)',
+              paper: {
+                sx: {
+                  width: 'max-content',
+                },
               },
             },
           },
-        }  
+        },
+        MuiDatePicker: {
+          // fix popper wont open
+          defaultProps: {
+            PopperProps: {
+              sx: {
+                height: 0,
+              },
+            },
+          },
+        },
+        MuiChip: {
+          styleOverrides: {
+            colorPrimary: ({ theme }) => ({
+              background: themeMode === ThemeMode.Light ? '#E6E1E5' : '#1C1B1F',
+              borderRadius: '8px',
+              fontSize: '9px',
+              fontWeight: 700,
+              color: theme.palette.primary.main,
+            }),
+          },
+        },
+        MuiDivider: {
+          styleOverrides: {
+            root: {
+              borderColor: themeMode === ThemeMode.Light ? Colors.PrimaryLight : Colors.PrimaryDark,
+              borderWidth: '1px',
+            },
+          },
+        },
+        MuiAlert: {
+          defaultProps: {
+            style: {
+              borderRadius: '0.8rem',
+              fontSize: '1rem',
+            },
+          },
+          styleOverrides: {
+            standardError: {
+              border: `1px solid ${ themeMode === ThemeMode.Light ? Colors.ErrorLight : Colors.ErrorBlack }`,
+              background: themeMode === ThemeMode.Light ? Colors.ErrorLight : Colors.ErrorBlack,
+              color: themeMode === ThemeMode.Light ? Colors.ErrorLightText : Colors.ErrorBlackText,
+            },
+            standardSuccess: {
+              border: `1px solid ${ themeMode === ThemeMode.Light ? Colors.SuccessLight : Colors.SuccessBlack }`,
+              background: themeMode === ThemeMode.Light ? Colors.SuccessLight : Colors.SuccessBlack,
+              color: themeMode === ThemeMode.Light ? Colors.SuccessLightText : Colors.SuccessBlackText,
+            },
+          },
+        },
       }
     });
   }, [themeMode])

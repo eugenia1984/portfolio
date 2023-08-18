@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   AppBar,
   Box,
@@ -21,13 +21,12 @@ import { Language } from '../../../utils/types'
 import { HEADER_STYLES } from './ResponsiveHeaderStyles'
 import { pages } from './ResponsiveHeaderConstants'
 
-
 interface ResponsiveHeaderProps { }
 
 const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
   const { themeMode, toggleTheme } = useTheme()
   const { language, setLanguage } = useLanguageContext()
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => setAnchorElNav(event.currentTarget)
   const handleCloseNavMenu = () => setAnchorElNav(null)

@@ -1,18 +1,19 @@
 import * as React from 'react'
 import {
-  Button,
   Card,
   CardActions,
   CardContent,
   CardMedia,
   Chip,
   Grid,
-  Link,
   Stack,
   Typography
 } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import MonitorIcon from '@mui/icons-material/Monitor'
+import NewWindowButton from '../../atom/NewWindowButton'
+import { useTheme } from '../../../context/ThemeContext'
+import { ThemeMode } from '../../../utils/constants'
 
 interface CardProjectProps {
   projectName: string
@@ -29,11 +30,14 @@ const CardProject: React.FC<CardProjectProps> = ({
   projectLinkGitHub,
   projectLinkDeploy
 }) => {
+  const { themeMode } = useTheme()
   return (
-    <Card sx={ { maxWidth: 345, marginBottom: '1.75rem' } }>
+    <Card sx={ { maxWidth: 345, marginBottom: '1.75rem',boxShadow: themeMode === ThemeMode.Light ?
+    '0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15)'
+    : '0 4px 8px rgba(250, 250, 250, 0.2), 0 6px 20px rgba(250, 250, 250, 0.15)' } }>
       <CardMedia
         sx={ { height: 140 } }
-        image="https://img.icons8.com/quill/50/bookmark--v1.png"
+        image="https://img.freepik.com/free-photo/side-view-kids-with-magnifying-glass_23-2149668696.jpg"
         title="green iguana"
       />
       <CardContent>
@@ -46,27 +50,29 @@ const CardProject: React.FC<CardProjectProps> = ({
         <Grid container spacing={ 1 } alignItems="center" justifyContent='flex-start' sx={ { margin: '12px 0px' } }>
           <Stack direction="row" spacing={ 1 } alignItems="center" justifyContent='flex-start'>
             { projectTechnologies.map((technology, index) => {
-              return <Chip 
-              label={ technology } 
-              color="primary" 
-              variant="outlined" 
-              key={projectName+index}
+              return <Chip
+                label={ technology }
+                color="primary"
+                variant="outlined"
+                key={ projectName + index }
               />
             }) }
           </Stack>
         </Grid>
       </CardContent>
       <CardActions>
-        <Button variant="outlined" size="small" startIcon={ < GitHubIcon /> }>
-          <Link href={ projectLinkGitHub } target="_blank" rel="noopener">
-            GitHub
-          </Link>
-        </Button>
-        <Button variant="outlined" size="small" startIcon={ <MonitorIcon /> }>
-          <Link href={ projectLinkDeploy } target="_blank" rel="noopener">
-           Deploy
-          </Link>
-        </Button>
+        <NewWindowButton
+          ariaLabelText="GitHub"
+          urlWindow={ projectLinkGitHub }
+          icon={ < GitHubIcon /> }
+          buttonText="GitHub"
+        />
+        <NewWindowButton
+          ariaLabelText="GitHub"
+          urlWindow={ projectLinkDeploy }
+          icon={ <MonitorIcon /> }
+          buttonText="Deploy"
+        />
       </CardActions>
     </Card>
   );

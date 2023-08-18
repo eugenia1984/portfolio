@@ -14,7 +14,6 @@ const TitleH2: React.FC<TitleH2Props> = ({
     <Typography
       variant="h2"
       align={ titleAlign ? titleAlign : 'center' }
-      gutterBottom
     >
       { titleText }
     </Typography>

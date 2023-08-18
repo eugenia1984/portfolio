@@ -15,7 +15,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ }) => {
         <Grid item xs={ 12 } sm={ 5 }>
         <TitleH2 titleText={TITLE[language]} />
         </Grid>
-        <Grid item xs={ 12 } sm={ 7 }>
+        <Grid item xs={ 12 } sm={ 7 } sx={{ padding: '1rem'}}>
           <Typography>{TEXT[language]}</Typography>
         </Grid>
       </Grid>
