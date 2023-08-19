@@ -112,7 +112,7 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
                     aria-label={ page.title }
                     underline="none"
                   >
-                    <Box component="span" >
+                    <Box component="span" sx={{color: '#e7dede'}}>
                       { page.title }
                     </Box>
                   </Link>

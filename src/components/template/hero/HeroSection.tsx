@@ -35,7 +35,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ }) => {
   return (
     <section id="hero">
       <Grid container sx={ HERO_STYLES.container }>
-        <Grid item xs={ 12 } sm={ 6 }>
+        <Grid item xs={ 12 } sm={ 6 } sx={{ display: 'flex'}}>
           <Grid sx={ HERO_STYLES.introContainter }>
             <Typography variant="h4" >
               { GREETING[language] }

@@ -1,5 +1,5 @@
 //import "./styles.css"
-import React, { useRef, ReactNode } from 'react'
+import React, { useRef } from 'react'
 import {
   motion,
   useScroll,
@@ -13,9 +13,8 @@ import { wrap } from '@motionone/utils'
 import './ParallaxTextStyles.css'
 
 interface ParallaxProps {
-  // children: string;
-  children: ReactNode;
-  baseVelocity: number;
+  children: string
+  baseVelocity: number
 }
 
 const ParallaxText = ({ children, baseVelocity = 100 }: ParallaxProps) => {
@@ -25,19 +24,19 @@ const ParallaxText = ({ children, baseVelocity = 100 }: ParallaxProps) => {
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
     stiffness: 400
-  });
+  })
   const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
     clamp: false
-  });
+  })
 
   /**
    * This is a magic wrapping for the length of the text - you
    * have to replace for wrapping that works for you or dynamically
    * calculate
    */
-  const x = useTransform(baseX, (v) => `${ wrap(-20, -45, v) }%`);
+  const x = useTransform(baseX, (v) => `${ wrap(-20, -45, v) }%`)
 
-  const directionFactor = useRef<number>(1);
+  const directionFactor = useRef<number>(1)
   useAnimationFrame((t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
@@ -46,12 +45,12 @@ const ParallaxText = ({ children, baseVelocity = 100 }: ParallaxProps) => {
      * switch scrolling directions.
      */
     if (velocityFactor.get() < 0) {
-      directionFactor.current = -1;
+      directionFactor.current = -1
     } else if (velocityFactor.get() > 0) {
-      directionFactor.current = 1;
+      directionFactor.current = 1
     }
 
-    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+    moveBy += directionFactor.current * moveBy * velocityFactor.get()
 
     baseX.set(baseX.get() + moveBy);
   });
@@ -67,12 +66,12 @@ const ParallaxText = ({ children, baseVelocity = 100 }: ParallaxProps) => {
     <div className="parallax">
       <motion.div className="scroller" style={ { x } }>
         <span>{ children } </span>
-        {/* <span>{ children } </span>
         <span>{ children } </span>
-        <span>{ children } </span> */}
+        <span>{ children } </span>
+        <span>{ children } </span>
       </motion.div>
     </div>
-  );
+  )
 }
 
 export default ParallaxText

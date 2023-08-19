@@ -1,5 +1,10 @@
 export const YEAR = new Date().getFullYear()
 
+/* Regular expression that validates: at least 3 letters */
+export const nameRegex = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{3,}$/
+
+export const emailRegex = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/
+
 /* To change from light to dark the theme mode */
 export enum ThemeMode {
   Light = 'light',

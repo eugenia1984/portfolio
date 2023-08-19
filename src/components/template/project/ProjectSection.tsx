@@ -24,7 +24,8 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ }) => {
             languageText,
             technologies,
             linkRepository,
-            linkDeploy
+            linkDeploy,
+            imgSrc
           } = project
           return (
             <Grid
@@ -40,6 +41,7 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ }) => {
                 projectTechnologies={ technologies }
                 projectLinkGitHub={ linkRepository }
                 projectLinkDeploy={ linkDeploy }
+                projectImgSrc={imgSrc}
                 key={ `project-${ index }` }
               />
             </Grid>

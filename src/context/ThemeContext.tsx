@@ -396,7 +396,7 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = ({ childr
             colorPrimary: ({ theme }) => ({
               background: themeMode === ThemeMode.Light ? '#E6E1E5' : '#1C1B1F',
               borderRadius: '8px',
-              fontSize: '9px',
+              fontSize: '12px',
               fontWeight: 700,
               color: theme.palette.primary.main,
             }),

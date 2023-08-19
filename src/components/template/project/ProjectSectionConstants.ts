@@ -52,7 +52,7 @@ export const CARDS = [
     technologies: ['React', 'TypeSCript', 'MUI'],
     linkRepository: 'https://github.com/eugenia1984/c12-25-t-node-react',
     linkDeploy: 'https://appartments-c12-25.vercel.app/',
-    imgSrc: '',
+    imgSrc: 'screens/appartamentos .png',
     languageText: {
       es: {
         imgAlt: '',

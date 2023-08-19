@@ -35,7 +35,13 @@ export const HEADER_STYLES = {
     display: {
       xs: 'none',
       sm: 'flex'
-    }
+    },
+    justifyContent: {
+      xs: 'none',
+      sm: 'flex-end'
+    },
+    gap: '12px',
+    marginLeft: '12px'
   },
   iconMenuMobile: {
     my: 2,
