@@ -1,6 +1,6 @@
 export const PROJECT_STYLES = {
   container: {
-    padding: '1.75rem 0.5rem',
+    padding: '80px 0.5rem 1.75rem ',
     maxWidth: '1400px',
     margin: '0 auto'
   },

@@ -20,6 +20,7 @@ import { useLanguageContext } from '../../../context/LanguageContext'
 import { Language } from '../../../utils/types'
 import { HEADER_STYLES } from './ResponsiveHeaderStyles'
 import { pages } from './ResponsiveHeaderConstants'
+import './ResponsiveHeader.css'
 
 interface ResponsiveHeaderProps { }
 
@@ -36,13 +37,19 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
 
   return (
     <header>
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Typography variant="h6" noWrap component="a" href="/" sx={ HEADER_STYLES.logoDesktop } >
+            <Typography
+              variant="h1"
+              noWrap
+              component="a"
+              href="/"
+              sx={ HEADER_STYLES.logoDesktop }
+            >
               María Eugenia Costa
             </Typography>
-            <Box sx={ { flexGrow: 1, display: { xs: 'flex', md: 'none' } } }>
+            <Box sx={ HEADER_STYLES.menuDesktop }>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -61,14 +68,19 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
                 transformOrigin={ { vertical: 'top', horizontal: 'left' } }
                 open={ Boolean(anchorElNav) }
                 onClose={ handleCloseNavMenu }
-                sx={ {
-                  display: { xs: 'block', md: 'none' },
-                } }
+                sx={ HEADER_STYLES.menuMobile }
               >
                 { pages[language].map((page) => (
-                  <MenuItem key={ page.title } onClick={ handleCloseNavMenu }>
+                  <MenuItem
+                    key={ page.title }
+                    onClick={ handleCloseNavMenu }
+                  >
                     <Typography textAlign="center">
-                      <Link href={ page.to } aria-label={ page.title } underline="none">
+                      <Link
+                        href={ page.to }
+                        aria-label={ page.title }
+                        underline="none"
+                      >
                         <Box component="span" >
                           { page.title }
                         </Box>
@@ -78,17 +90,28 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
                 )) }
               </Menu>
             </Box>
-            <Typography variant="h5" noWrap component="a" href="/" sx={ HEADER_STYLES.logoMobile } >
+            <Typography
+              variant="h1"
+              noWrap
+              component="a"
+              href="/"
+              sx={ HEADER_STYLES.logoMobile }
+            >
               MEC
             </Typography>
-            <Box sx={ { flexGrow: 1, display: { xs: 'none', md: 'flex' } } }>
+            <Box sx={ HEADER_STYLES.menuMobileContainer }>
               { pages[language].map((page) => (
                 <Button
                   key={ page.title }
                   onClick={ handleCloseNavMenu }
-                  sx={ { my: 2, color: 'white', display: 'block' } }
+                  sx={ HEADER_STYLES.iconMenuMobile }
+                  aria-label={ page.title }
                 >
-                  <Link href={ page.to } aria-label={ page.title } underline="none">
+                  <Link
+                    href={ page.to }
+                    aria-label={ page.title }
+                    underline="none"
+                  >
                     <Box component="span" >
                       { page.title }
                     </Box>
@@ -96,11 +119,20 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
                 </Button>
               )) }
             </Box>
-            <IconButton sx={ { margin: '0rem 1rem' } } onClick={ toggleTheme } color="inherit">
-              { themeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon /> }
+            <IconButton
+              sx={ { margin: '0rem 1rem' } }
+              onClick={ toggleTheme }
+              color="inherit"
+            >
+              { themeMode === 'dark' ?
+                <Brightness7Icon /> : <Brightness4Icon />
+              }
             </IconButton>
             <Box sx={ { flexGrow: 0 } }>
-              <Select value={ language } onChange={ handleLanguageChange }>
+              <Select
+                value={ language }
+                onChange={ handleLanguageChange }
+              >
                 <MenuItem value="es">Español</MenuItem>
                 <MenuItem value="en">English</MenuItem>
                 <MenuItem value="pt">Português</MenuItem>

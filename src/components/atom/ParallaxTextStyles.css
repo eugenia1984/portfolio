@@ -1,0 +1,23 @@
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  margin: 10px 20px;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  font-size: 40px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}

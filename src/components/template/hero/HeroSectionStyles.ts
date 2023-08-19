@@ -1,6 +1,6 @@
 export const HERO_STYLES = {
   container: {
-    padding: '2.75rem 0.5rem',
+    padding: '100px 0.5rem 1.75rem ',
     maxWidth: '1400px',
     margin: '0 auto',
   },
