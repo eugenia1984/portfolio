@@ -125,6 +125,7 @@ All commands are run from the root of the project, from a terminal:
 Assets designed by [Freepik](www.freepik.com).
 
 ---
+
 ## Notes
 
 I appreciate your interest in this Project ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me at [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)
