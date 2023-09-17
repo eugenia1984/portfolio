@@ -5,7 +5,7 @@ export const HEADER_STYLES = {
     fontWeight: 700,
     color: 'inherit',
     textDecoration: 'none',
-    fontSize: '20px'
+    fontSize: '18px'
   },
   logoMobile: {
     mr: 1,
@@ -17,7 +17,7 @@ export const HEADER_STYLES = {
     color: 'inherit',
     textDecoration: 'none',
   },
-  menuDesktop: {
+  menuMobileContainer: {
     flexGrow: 1,
     display: {
       xs: 'flex',
@@ -30,7 +30,7 @@ export const HEADER_STYLES = {
       sm: 'none'
     },
   },
-  menuMobileContainer: {
+  menuDesktopContainer: {
     flexGrow: 1,
     display: {
       xs: 'none',
@@ -42,10 +42,5 @@ export const HEADER_STYLES = {
     },
     gap: '12px',
     marginLeft: '12px'
-  },
-  iconMenuMobile: {
-    my: 2,
-    color: 'white',
-    display: 'block'
   }
 }

@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { TextField, Box, Button, Snackbar } from '@mui/material'
+import { Box, Button, InputLabel, TextField, Snackbar } from '@mui/material'
 import MuiAlert from '@mui/material/Alert'
 import { emailRegex, nameRegex } from '../../../utils/constants'
 import { useLanguageContext } from '../../../context/LanguageContext'
 import { FORM_MSG } from './ContactFormConstants'
+import { FORM_STYLES } from './ContactFormStyles'
 
 const ContactForm: React.FC = () => {
   const { language } = useLanguageContext()
@@ -77,30 +78,42 @@ const ContactForm: React.FC = () => {
   return (
     <>
       <form onSubmit={ handleSubmit }>
+        <InputLabel htmlFor="nombre" sx={ FORM_STYLES.label  }>
+          { FORM_MSG[language].nameLabel } :
+        </InputLabel>
         <TextField
-          label="Nombre"
+          type="text"
           id="nombre"
-          variant="outlined"
+          placeholder={ FORM_MSG[language].namePlaceholder }
+          variant="filled"
           fullWidth
           value={ name }
           onChange={ handleNameChange }
           required
           sx={ { marginBottom: '1.25rem' } }
         />
+        <InputLabel htmlFor="email" sx={ FORM_STYLES.label   }>
+          { FORM_MSG[language].eMailLabel } :
+        </InputLabel>
         <TextField
-          label="Email"
+          type="text"
           id="email"
-          variant="outlined"
+          placeholder={FORM_MSG[language].eMailPlaceholder}
+          variant="filled"
           fullWidth
           value={ email }
           onChange={ handleEmailChange }
           required
           sx={ { marginBottom: '1.25rem' } }
         />
+        <InputLabel htmlFor="mensaje" sx={ FORM_STYLES.label  }>
+          { FORM_MSG[language].messageLabel } :
+        </InputLabel>
         <TextField
           id="mensaje"
+          placeholder={ FORM_MSG[language].messagePlaceholder }
+          variant="filled"
           rows={ 6 }
-          placeholder="Mensaje"
           value={ message }
           onChange={ handleMessageChange }
           required
@@ -117,8 +130,8 @@ const ContactForm: React.FC = () => {
             justifyContent: 'center',
             alignItems: 'center'
           } }>
-          <Button type="submit" variant="contained" color="primary">
-            {FORM_MSG[language].sendBtn}
+          <Button type="submit" variant="contained" color="primary" sx={ { width: '280px' } }>
+            { FORM_MSG[language].sendBtn }
           </Button>
         </Box>
       </form>

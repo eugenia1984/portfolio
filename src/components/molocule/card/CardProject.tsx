@@ -33,6 +33,8 @@ const CardProject: React.FC<CardProjectProps> = ({
   projectImgSrc
 }) => {
   const { themeMode } = useTheme()
+  const alternativeSrc= 'https://img.freepik.com/free-photo/side-view-kids-with-magnifying-glass_23-2149668696.jpg'
+
   return (
     <Card sx={ {
       width: '90%',
@@ -46,19 +48,15 @@ const CardProject: React.FC<CardProjectProps> = ({
       }
     } }>
       <CardMedia
-        sx={ { height: 220 } }
-        image={
-          projectImgSrc !== '' ?
-            projectImgSrc
-            : 'https://img.freepik.com/free-photo/side-view-kids-with-magnifying-glass_23-2149668696.jpg'
-        }
-        title="green iguana"
+        sx={ { height: 260 } }
+        image={ projectImgSrc !== '' ? projectImgSrc : alternativeSrc}
+        title={projectName}
       />
       <CardContent>
         <Typography variant="h3" component="div">
           { projectName }
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography variant="body1" color="text.secondary" sx={{minHeight: '125px'}}>
           { projectDescription }
         </Typography>
         <Grid
@@ -102,7 +100,7 @@ const CardProject: React.FC<CardProjectProps> = ({
         />
       </CardActions>
     </Card>
-  );
+  )
 }
 
 export default CardProject 

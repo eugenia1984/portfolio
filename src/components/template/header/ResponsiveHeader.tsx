@@ -22,9 +22,7 @@ import { HEADER_STYLES } from './ResponsiveHeaderStyles'
 import { pages } from './ResponsiveHeaderConstants'
 import './ResponsiveHeader.css'
 
-interface ResponsiveHeaderProps { }
-
-const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
+const ResponsiveHeader: React.FC = () => {
   const { themeMode, toggleTheme } = useTheme()
   const { language, setLanguage } = useLanguageContext()
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
@@ -43,16 +41,15 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
             <Typography
               variant="h1"
               noWrap
-              component="a"
-              href="/"
+              component="h1"
               sx={ HEADER_STYLES.logoDesktop }
             >
               María Eugenia Costa
             </Typography>
-            <Box sx={ HEADER_STYLES.menuDesktop }>
+            <Box sx={ HEADER_STYLES.menuMobileContainer }>
               <IconButton
                 size="large"
-                aria-label="account of current user"
+                aria-label="menu"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={ handleOpenNavMenu }
@@ -93,28 +90,36 @@ const ResponsiveHeader: React.FC<ResponsiveHeaderProps> = ({ }) => {
             <Typography
               variant="h1"
               noWrap
-              component="a"
-              href="/"
+              component="h1"
               sx={ HEADER_STYLES.logoMobile }
             >
               MEC
             </Typography>
-            <Box sx={ HEADER_STYLES.menuMobileContainer }>
+            <Box sx={ HEADER_STYLES.menuDesktopContainer }>
               { pages[language].map((page) => (
                 <Button
                   key={ page.title }
                   onClick={ handleCloseNavMenu }
-                  sx={ HEADER_STYLES.iconMenuMobile }
+                  sx={ {
+                    my: 2,
+                    display: 'block',
+                    '&:hover': {
+                      color: `${ themeMode === 'dark' ? 'black!important' : 'white!important' }`
+                    }
+                  } }
                   aria-label={ page.title }
                 >
                   <Link
                     href={ page.to }
                     aria-label={ page.title }
                     underline="none"
+                    sx={ {
+                      color: '#fff', '&:hover': {
+                        color: `${ themeMode === 'dark' ? 'black!important' : 'white!important' }`
+                      }
+                    } }
                   >
-                    <Box component="span" sx={{color: '#e7dede'}}>
-                      { page.title }
-                    </Box>
+                    { page.title }
                   </Link>
                 </Button>
               )) }

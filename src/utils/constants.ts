@@ -31,5 +31,4 @@ export enum Colors {
   SuccessBlackText = '#003734',
   TextColorLight = '#1C1B1F',
   TextColorBlack = '#E6E1E5',
-
 }

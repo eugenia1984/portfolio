@@ -5,9 +5,7 @@ import { CARDS, TITLE } from './ProjectSectionConstants'
 import CardProject from '../../molocule/card/CardProject'
 import { PROJECT_STYLES } from './ProjectSectionStyles'
 
-interface ProjectSectionProps { }
-
-const ProjectSection: React.FC<ProjectSectionProps> = ({ }) => {
+const ProjectSection: React.FC = () => {
   const { language } = useLanguageContext()
 
   return (
@@ -18,31 +16,18 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ }) => {
         </Grid>
       </Grid>
       <Grid container sx={ PROJECT_STYLES.container2 }>
-        { CARDS && CARDS.map((project, index) => {
-          const {
-            title,
-            languageText,
-            technologies,
-            linkRepository,
-            linkDeploy,
-            imgSrc
-          } = project
+        { CARDS.map((project) => {
+          const { title, languageText, technologies, linkRepository, linkDeploy, imgSrc } = project
           return (
-            <Grid
-              item
-              xs={ 12 }
-              sm={ 6 }
-              md={ 4 }
-              key={ `project-id-${ index }` }
-            >
+            <Grid item xs={ 12 } sm={ 6 } md={ 4 } key={ `project-id-${ title }` }>
               <CardProject
                 projectName={ title }
                 projectDescription={ languageText[language].description }
                 projectTechnologies={ technologies }
                 projectLinkGitHub={ linkRepository }
                 projectLinkDeploy={ linkDeploy }
-                projectImgSrc={imgSrc}
-                key={ `project-${ index }` }
+                projectImgSrc={ imgSrc }
+                key={ `project-${ title }` }
               />
             </Grid>
           )
