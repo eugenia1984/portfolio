@@ -4,11 +4,10 @@ import { Colors, ThemeMode, YEAR } from '../../../utils/constants'
 import { allRightsReserved } from './ResponsiveFooterConstants'
 import { FOOTER } from './ResponsiveFooterStyles'
 import { useTheme } from '../../../context/ThemeContext'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import GitHubIcon from '@mui/icons-material/GitHub'
 
-
-interface ResponsiveFooter { }
-
-const ResponsiveFooter: React.FC<ResponsiveFooter> = ({ }) => {
+const ResponsiveFooter: React.FC = () => {
   const { language } = useLanguageContext()
   const { themeMode } = useTheme()
 
@@ -20,16 +19,27 @@ const ResponsiveFooter: React.FC<ResponsiveFooter> = ({ }) => {
       } }
     >
       <Typography sx={ FOOTER.text }>
-        Copyright © { YEAR } { allRightsReserved[language] }
+        Copyright © { YEAR } { allRightsReserved[language] } María Eugenia Costa
         <Link
           href="https://www.linkedin.com/in/maríaeugeniacosta/"
           target="_blank"
           rel="noopener"
           underline="hover"
           aria-label="LinkedIn: maríaeugeniacosta"
-          sx={{ color: 'inherit', fontWeight: '700'}}
+          sx={ { color: 'inherit', marginLeft: '12px' } }
         >
-          María Eugenia Costa</Link>
+          <LinkedInIcon fontSize="small" />
+        </Link>
+        <Link
+          href="https://github.com/eugenia1984"
+          target="_blank"
+          rel="noopener"
+          underline="hover"
+          aria-label="GitHub: eugenia1984"
+          sx={ { color: 'inherit', marginLeft: '12px' } }
+        >
+          <GitHubIcon fontSize="small" />
+        </Link>
       </Typography>
     </footer>
   )

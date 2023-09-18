@@ -28,7 +28,7 @@ const ResponsiveHeader: React.FC = () => {
       <AppBar position="sticky">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Link to="/" aria-label="home">
+            <Link to="/" aria-label="home" style={{textDecoration: 'none'}}>
               <Typography component="h1" sx={ HEADER_STYLES.logoDesktop }>
                 María Eugenia Costa
               </Typography>
@@ -60,7 +60,7 @@ const ResponsiveHeader: React.FC = () => {
                     onClick={ handleCloseNavMenu }
                   >
                     <Typography textAlign="center">
-                      <Link to={ page.to } aria-label={ page.title }>
+                      <Link to={ page.to } aria-label={ page.title } style={{textDecoration: 'none'}}>
                         <Box component="span" sx={ { textDecoration: 'none' } }>
                           { page.title }
                         </Box>
@@ -70,7 +70,7 @@ const ResponsiveHeader: React.FC = () => {
                 )) }
               </Menu>
             </Box>
-            <Link to="/" aria-label="home">
+            <Link to="/" aria-label="home" style={{textDecoration: 'none'}}>
               <Typography
                 variant="h1"
                 noWrap
@@ -94,7 +94,7 @@ const ResponsiveHeader: React.FC = () => {
                   } }
                   aria-label={ page.title }
                 >
-                  <Link to={ page.to } aria-label={ page.title } >
+                  <Link to={ page.to } aria-label={ page.title } style={{textDecoration: 'none'}} >
                     <Typography
                       sx={ {
                         color: '#fff', '&:hover': {
