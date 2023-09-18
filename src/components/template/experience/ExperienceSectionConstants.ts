@@ -5,9 +5,15 @@ export const EXPERIENCE_TITLE = {
 }
 
 export const JOB_1 = {
-  es: 'Front End Developer - SOFTTEK ARGENTINA (Enero 2023 - Presente)',
-  en: 'Front End Developer - SOFTTEK ARGENTINA (January 2023 - Present)',
-  pt: 'Desenvolvedora Front End - SOFTTEK ARGENTINA (Janeiro 2023 - Presente)'
+  es: 'Front End Developer - SOFTTEK ARGENTINA ',
+  en: 'Front End Developer - SOFTTEK ARGENTINA ',
+  pt: 'Desenvolvedora Front End - SOFTTEK ARGENTINA '
+}
+
+export const JOB_1_YEAR = {
+  es: '(Enero 2023 - Presente)',
+  en: '(January 2023 - Present)',
+  pt: '(Janeiro 2023 - Presente)'
 }
 
 export const JOB_1_TITLE = {
@@ -23,15 +29,27 @@ export const JOB_1_DESCRIPTION = {
 }
 
 export const JOB_1_TECHNOLOGIES = {
-  es:'Tecnologías: HTML5, CSS3, JavaScript, SVN.',
-  en: 'Technologies: HTML5, CSS3, JavaScript, SVN.',
-  pt: 'Tecnologias: HTML5, CSS3, JavaScript, SVN.'
+  es:'Tecnologías:',
+  en: 'Technologies:',
+  pt: 'Tecnologias:'
+}
+
+export const JOB_1_TECHNOLOGIES_ICONS = {
+  es: ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code'],
+  en:  ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code'],
+  pt:  ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code'],
 }
 
 export const JOB_2 = {
-  es: 'Front End Developer - HOGARTH ARGENTINA (Enero 2022 - Enero 2023)',
-  en: 'Front End Developer - HOGARTH ARGENTINA (January 2022 - January 2023)',
-  pt: 'Desenvolvedora Front End - HOGARTH ARGENTINA (Janeiro 2022 - Janeiro 2023)'
+  es: 'Front End Developer - HOGARTH ARGENTINA ',
+  en: 'Front End Developer - HOGARTH ARGENTINA ',
+  pt: 'Desenvolvedora Front End - HOGARTH ARGENTINA '
+}
+
+export const JOB_2_YEAR = {
+  es: '(Enero 2022 - Enero 2023)',
+  en: '(January 2022 - January 2023)',
+  pt: '(Janeiro 2022 - Janeiro 2023)'
 }
 
 export const JOB_2_TITLE = {
@@ -47,16 +65,28 @@ export const JOB_2_DESCRIPTION = {
 }
 
 export const JOB_2_TECHNOLOGIES = {
-  es:'TEcnologías: React, TypeScript, Material UI (MUI), CSS3, HTML5, Swagger, Postman, Git and GitLab',
-  en: 'Technologies: React, TypeScript, Material UI (MUI), CSS3, HTML5, Swagger, Postman, Git and GitLab',
-  pt: 'Tecnologias: React, TypeScript, Material UI (MUI), CSS3, HTML5, Swagger, Postman, Git and GitLab'
+  es:'Tecnologías:',
+  en: 'Technologies:',
+  pt: 'Tecnologias:'
+}
+
+export const JOB_2_TECHNOLOGIES_ICONS = {
+  es: ['HTML5', 'CSS3', 'JavaScript', 'SVN', 'Visual Studio Code'],
+  en: ['HTML5', 'CSS3', 'JavaScript', 'SVN', 'Visual Studio Code'],
+  pt: ['HTML5', 'CSS3', 'JavaScript', 'SVN', 'Visual Studio Code'],
 }
 
 
 export const JOB_3 = {
-  es: 'Back End Developer - PIGMALION SOFTWARE (Enero 2023 - Enero 2022)',
-  en: 'Back End Developer - PIGMALION SOFTWARE (August 2021 - January 2022)',
-  pt: 'Desenvolvedora Back End - PIGMALION SOFTWARE (Janeiro 2023 - Janeiro de 2022)'
+  es: 'Back End Developer - PIGMALION SOFTWARE ',
+  en: 'Back End Developer - PIGMALION SOFTWARE ',
+  pt: 'Desenvolvedora Back End - PIGMALION SOFTWARE '
+}
+
+export const JOB_3_YEAR = {
+  es: '(Enero 2023 - Enero 2022)',
+  en: '(August 2021 - January 2022)',
+  pt: '(Janeiro 2023 - Janeiro de 2022)'
 }
 
 export const JOB_3_TITLE = {
@@ -72,16 +102,27 @@ export const JOB_3_DESCRIPTION = {
 }
 
 export const JOB_3_TECHNOLOGIES = {
-  es:'Tecnologías: Java 11, JasperReport, pgAdmin, Postgresql, Kuarkus, Redis, Jira, Git y GitLab.',
-  en: 'Technologies: Java 11, JasperReport, pgAdmin, Postgresql, Kuarkus, Redis, Jira, Git and GitLab.',
-  pt: 'Tecnologias: Java 11, JasperReport, pgAdmin, Postgresql, Kuarkus, Redis, Jira, Git e GitLab.'
+  es:'Tecnologías:',
+  en: 'Technologies:',
+  pt: 'Tecnologias:'
 }
 
+export const JOB_3_TECHNOLOGIES_ICONS = {
+  es: ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ'],
+  en:  ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ'],
+  pt:  ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ'],
+}
 
 export const JOB_4 = {
-  es: 'Front End Developer - CONSULT-AR (Marzo 2021 - Enero 2022)',
-  en: 'Front End Developer - CONSULT-AR (March 2021 - January 2022)',
-  pt: 'Desenvolvedora Front End - CONSULT-AR (Março de 2021 - Janeiro de 2022)'
+  es: 'Front End Developer - CONSULT-AR ',
+  en: 'Front End Developer - CONSULT-AR ',
+  pt: 'Desenvolvedora Front End - CONSULT-AR '
+}
+
+export const JOB_4_YEAR = {
+  es: '(Marzo 2021 - Enero 2022)',
+  en: '(March 2021 - January 2022)',
+  pt: '(Março de 2021 - Janeiro de 2022)'
 }
 
 export const JOB_4_TITLE = {
@@ -92,12 +133,18 @@ export const JOB_4_TITLE = {
 
 export const JOB_4_DESCRIPTION = {
   es: "Mantenimiento de páginas web para agencias de viajes de diversos países de Latinoamérica, realizando actualización de contenido (modificando datos de contacto, secciones de una página, creando nuevas secciones o páginas, etc) y estando a cargo del módulo de búsqueda y reserva de vuelos, el cual se podía implementar por separado, por lo que debía maquetar misma Cabecera y Pie de página de la agencia que contrataba y crear desde cero el módulo, haciendo las configuraciones necesarias, manejando Base de Datos y alojando en un hosting.",
-  en: "Manutenção de sites para agências de viagens em vários países da América Latina, atualizando conteúdo (modificando dados de contato, seções de uma página, criando novas seções ou páginas, etc) e sendo responsável pelo módulo de busca e reserva de voos, que poderia ser implementado separadamente, então tive que fazer o layout do mesmo cabeçalho e rodapé da agência que contratou e criar do zero o módulo, fazendo as configurações necessárias, gerenciando banco de dados e hospedagem..",
+  en: "Maintenance of web pages for travel agencies in several Latin American countries, updating content (modifying contact details, sections of a page, creating new sections or pages, etc) and being in charge of the search and flight booking module, which could be implemented separately, so I had to layout the same header and footer of the agency that hired and create from scratch the module, making the necessary configurations, managing database and hosting.",
   pt: "Migração do módulo Reintegros para o OSDE (o principal provedor de medicina privada na Argentina) com implementação nacional em todos os seus escritórios, onde os afiliados submetem seus benefícios de saúde e solicitam o reembolso dos mesmos. Trata-se de um aplicativo web interativo, com desempenho eficiente, implementando design responsivo e com compatibilidade em todos os navegadores (incluindo o Internet Explorer). Utilizo as metodologias Agile e Scrum, trabalhando em conjunto com: Desenvolvedores de back-end, que constroem os microsserviços que usamos e testamos em Swagger e Postman, o designer de UX/UI, que, de acordo com a marca da empresa, projeta as interfaces de usuário atraentes e coerentes e os analistas funcionais."
 }
 
 export const JOB_4_TECHNOLOGIES = {
-  es:'Tecnologías: HTML5, CSS3, Bootstrap, templates Smarty, WordPress, cPanel, phpMyAdmin.',
-  en: 'Technologies: HTML5, CSS3, Bootstrap, Smarty templates, WordPress, cPanel, phpMyAdmin.',
-  pt: 'Tecnologias: HTML5, CSS3, Bootstrap, Smarty templates, WordPress, cPanel, phpMyAdmin.'
+  es:'Tecnologías:',
+  en: 'Technologies:',
+  pt: 'Tecnologias:'
+}
+
+export const JOB_4_TECHNOLOGIES_ICONS = {
+  es: ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code'],
+  en: ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code'],
+  pt: ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code'],
 }

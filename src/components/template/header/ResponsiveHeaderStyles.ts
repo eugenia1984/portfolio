@@ -40,7 +40,7 @@ export const HEADER_STYLES = {
       xs: 'none',
       sm: 'flex-end'
     },
-    gap: '12px',
+    gap: '2px',
     marginLeft: '12px'
   }
 }

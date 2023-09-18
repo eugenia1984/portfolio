@@ -9,23 +9,24 @@ import MuiAccordionSummary, {
 import MuiAccordionDetails from '@mui/material/AccordionDetails'
 import { useLanguageContext } from '../../../context/LanguageContext'
 import { EXPERIENCE_STYLES } from './ExperienceSectionStyles'
-import { EXPERIENCE_TITLE, JOB_1, JOB_1_DESCRIPTION, JOB_1_TECHNOLOGIES, JOB_1_TITLE, JOB_2, JOB_2_DESCRIPTION, JOB_2_TECHNOLOGIES, JOB_2_TITLE, JOB_3, JOB_3_DESCRIPTION, JOB_3_TECHNOLOGIES, JOB_3_TITLE, JOB_4, JOB_4_DESCRIPTION, JOB_4_TECHNOLOGIES, JOB_4_TITLE } from './ExperienceSectionConstants'
+import { EXPERIENCE_TITLE, JOB_1, JOB_1_DESCRIPTION, JOB_1_TECHNOLOGIES, JOB_1_TECHNOLOGIES_ICONS, JOB_1_TITLE, JOB_1_YEAR, JOB_2, JOB_2_DESCRIPTION, JOB_2_TECHNOLOGIES, JOB_2_TECHNOLOGIES_ICONS, JOB_2_TITLE, JOB_2_YEAR, JOB_3, JOB_3_DESCRIPTION, JOB_3_TECHNOLOGIES, JOB_3_TECHNOLOGIES_ICONS, JOB_3_TITLE, JOB_3_YEAR, JOB_4, JOB_4_DESCRIPTION, JOB_4_TECHNOLOGIES, JOB_4_TECHNOLOGIES_ICONS, JOB_4_TITLE, JOB_4_YEAR } from './ExperienceSectionConstants'
+import { technologies } from '../../../utils/constants'
 
 const Accordion = styled((props: AccordionProps) => (
-  <MuiAccordion disableGutters elevation={ 0 } square { ...props } />
+  <MuiAccordion disableGutters elevation={ 8 } square { ...props } />
 ))(({ theme }) => ({
-  border: `1px solid ${ theme.palette.divider }`,
+  border: `2px solid ${ theme.palette.divider }`,
   '&:not(:last-child)': {
     borderBottom: 0,
   },
   '&:before': {
     display: 'none',
   },
-}));
+}))
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
   <MuiAccordionSummary
-    expandIcon={ <ArrowForwardIosSharpIcon sx={ { fontSize: '0.9rem' } } /> }
+    expandIcon={ <ArrowForwardIosSharpIcon sx={ { fontSize: '1.25rem' } } /> }
     { ...props }
   />
 ))(({ theme }) => ({
@@ -40,16 +41,16 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
   '& .MuiAccordionSummary-content': {
     marginLeft: theme.spacing(1),
   },
-}));
+}))
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
-}));
+  borderTop: '2px solid rgba(0, 0, 0, .125)',
+}))
 
 const ExperienceSection: React.FC = () => {
   const { language } = useLanguageContext()
-  const [expanded, setExpanded] = useState<string | false>('panel1')
+  const [expanded, setExpanded] = useState<string | false>(false)
 
   const handleChange = (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
     setExpanded(newExpanded ? panel : false)
@@ -63,11 +64,11 @@ const ExperienceSection: React.FC = () => {
             { EXPERIENCE_TITLE[language] }
           </Typography>
         </Grid>
-        <Grid item xs={ 10 }>
+        <Grid item xs={ 12 } sm={ 10 }>
           <Accordion expanded={ expanded === 'panel1' } onChange={ handleChange('panel1') }>
             <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
               <Typography variant="h3" gutterBottom>
-                { JOB_1[language] }
+                { JOB_1[language] } <br /><span style={ { fontSize: '14px', fontWeight: '500' } }>{ JOB_1_YEAR[language] } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -78,14 +79,22 @@ const ExperienceSection: React.FC = () => {
                 { JOB_1_DESCRIPTION[language] }
               </Typography>
               <Typography>
-                { JOB_1_TECHNOLOGIES[language] }
+              <span style={{ textDecoration: 'underline'}}> { JOB_1_TECHNOLOGIES[language] }</span>
+                { JOB_1_TECHNOLOGIES_ICONS[language].map((tech) => {
+                  const techInfo = technologies.find(t => t.alt === tech)
+                  return (
+                    <>
+                      { techInfo && <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } /> } <span>{ techInfo ? techInfo.alt : tech } </span>
+                    </>
+                  )
+                }) }
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion expanded={ expanded === 'panel2' } onChange={ handleChange('panel2') }>
             <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
               <Typography variant="h3" gutterBottom>
-                { JOB_2[language] }
+                { JOB_2[language] } <br /><span style={ { fontSize: '14px', fontWeight: '500' } }>{ JOB_2_YEAR[language] } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -96,14 +105,22 @@ const ExperienceSection: React.FC = () => {
                 { JOB_2_DESCRIPTION[language] }
               </Typography>
               <Typography>
-                { JOB_2_TECHNOLOGIES[language] }
+              <span style={{ textDecoration: 'underline'}}> { JOB_2_TECHNOLOGIES[language] }</span>
+                { JOB_2_TECHNOLOGIES_ICONS[language].map((tech) => {
+                  const techInfo = technologies.find(t => t.alt === tech)
+                  return (
+                    <>
+                      { techInfo && <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } /> } <span>{ techInfo ? techInfo.alt : tech } </span>
+                    </>
+                  )
+                }) }
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion expanded={ expanded === 'panel3' } onChange={ handleChange('panel3') }>
             <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
               <Typography variant="h3" gutterBottom>
-                { JOB_3[language] }
+                { JOB_3[language] } <br /><span style={ { fontSize: '14px', fontWeight: '500' } }>{ JOB_3_YEAR[language] } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -114,14 +131,22 @@ const ExperienceSection: React.FC = () => {
                 { JOB_3_DESCRIPTION[language] }
               </Typography>
               <Typography>
-                { JOB_3_TECHNOLOGIES[language] }
+              <span style={{ textDecoration: 'underline'}}> { JOB_3_TECHNOLOGIES[language] }</span>
+                { JOB_3_TECHNOLOGIES_ICONS[language].map((tech) => {
+                  const techInfo = technologies.find(t => t.alt === tech)
+                  return (
+                    <>
+                      { techInfo && <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } /> } <span>{ techInfo ? techInfo.alt : tech } </span>
+                    </>
+                  )
+                }) }
               </Typography>
             </AccordionDetails>
           </Accordion>
           <Accordion expanded={ expanded === 'panel4' } onChange={ handleChange('panel4') }>
             <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
               <Typography variant="h3" gutterBottom>
-                { JOB_4[language] }
+                { JOB_4[language] } <br /><span style={ { fontSize: '14px', fontWeight: '500' } }>{ JOB_4_YEAR[language] } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -132,7 +157,15 @@ const ExperienceSection: React.FC = () => {
                 { JOB_4_DESCRIPTION[language] }
               </Typography>
               <Typography>
-                { JOB_4_TECHNOLOGIES[language] }
+                <span style={ { textDecoration: 'underline' } }> { JOB_4_TECHNOLOGIES[language] }</span>
+                { JOB_4_TECHNOLOGIES_ICONS[language].map((tech) => {
+                  const techInfo = technologies.find(t => t.alt === tech)
+                  return (
+                    <>
+                      { techInfo && <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } /> } <span>{ techInfo ? techInfo.alt : tech } </span>
+                    </>
+                  )
+                }) }
               </Typography>
             </AccordionDetails>
           </Accordion>

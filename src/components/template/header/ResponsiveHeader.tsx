@@ -28,7 +28,7 @@ const ResponsiveHeader: React.FC = () => {
       <AppBar position="sticky">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Link to="/" aria-label="home" style={{textDecoration: 'none'}}>
+            <Link to="/" aria-label="home" style={ { textDecoration: 'none' } }>
               <Typography component="h1" sx={ HEADER_STYLES.logoDesktop }>
                 María Eugenia Costa
               </Typography>
@@ -60,7 +60,7 @@ const ResponsiveHeader: React.FC = () => {
                     onClick={ handleCloseNavMenu }
                   >
                     <Typography textAlign="center">
-                      <Link to={ page.to } aria-label={ page.title } style={{textDecoration: 'none'}}>
+                      <Link to={ page.to } aria-label={ page.title } style={ { textDecoration: 'none' } }>
                         <Box component="span" sx={ { textDecoration: 'none' } }>
                           { page.title }
                         </Box>
@@ -70,7 +70,7 @@ const ResponsiveHeader: React.FC = () => {
                 )) }
               </Menu>
             </Box>
-            <Link to="/" aria-label="home" style={{textDecoration: 'none'}}>
+            <Link to="/" aria-label="home" style={ { textDecoration: 'none' } }>
               <Typography
                 variant="h1"
                 noWrap
@@ -94,7 +94,7 @@ const ResponsiveHeader: React.FC = () => {
                   } }
                   aria-label={ page.title }
                 >
-                  <Link to={ page.to } aria-label={ page.title } style={{textDecoration: 'none'}} >
+                  <Link to={ page.to } aria-label={ page.title } style={ { textDecoration: 'none' } } >
                     <Typography
                       sx={ {
                         color: '#fff', '&:hover': {
@@ -109,7 +109,7 @@ const ResponsiveHeader: React.FC = () => {
               )) }
             </Box>
             <IconButton
-              sx={ { margin: '0rem 1rem' } }
+              sx={ { margin: '0rem 0.1rem' } }
               onClick={ toggleTheme }
               color="inherit"
             >
@@ -124,10 +124,11 @@ const ResponsiveHeader: React.FC = () => {
                     id="language"
                     value={ language }
                     onChange={ handleLanguageChange }
+                    className="lenguage-select"
                   >
-                    <MenuItem value="es">Español</MenuItem>
-                    <MenuItem value="en">English</MenuItem>
-                    <MenuItem value="pt">Português</MenuItem>
+                    <MenuItem value="es" className="lenguage-select-option">Español</MenuItem>
+                    <MenuItem value="en" className="lenguage-select-option">English</MenuItem>
+                    <MenuItem value="pt" className="lenguage-select-option">Português</MenuItem>
                   </Select>
                 </FormControl>
               </form>

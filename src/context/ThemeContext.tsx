@@ -199,7 +199,7 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = ({ childr
               borderRadius: '16px',
               fontStyle: 'normal',
               fontSize: '16px',
-              padding: '8px 16px',
+              padding: '6px 16px',
             },
             text: {
               '&.Mui-focusVisible': {
@@ -230,16 +230,6 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = ({ childr
             containedPrimary: {
               color: themeMode === ThemeMode.Light ? Colors.PrimaryLightText : Colors.PrimaryDarkText,
               backgroundColor: themeMode === ThemeMode.Light ? Colors.PrimaryLight : Colors.PrimaryDark,
-              // ':hover': {
-              //   backgroundColor: themeMode === ThemeMode.Light ? '#21005D' : '#EADDFF',
-              // },
-              // ':focus': {
-              //   backgroundColor: themeMode === ThemeMode.Light ? '#EADDFF' : '#4F378B',
-              // },
-              // '&.Mui-disabled': {
-              //   background: '#8F9193',
-              //   color: 'white',
-              // },
             },
           },
         },

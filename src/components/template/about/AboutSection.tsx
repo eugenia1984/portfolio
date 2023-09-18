@@ -4,30 +4,12 @@ import TitleH2 from '../../atom/TitleH2'
 import { TITLE, TEXT } from './AboutSectionConstants'
 import { ABOUT_STYLES } from './AboutSectionStyles'
 import ParallaxText from '../../atom/ParallaxText'
-import htmlLogo from './../../../assets/html-5.svg'
-import cssLogo from './../../../assets/css3.svg'
-import bootstrapLogo from './../../../assets/bootstrap.svg'
-import tailwindCssLogo from './../../../assets/tailwindcss.svg'
-import materialLogo from './../../../assets/material-ui.svg'
-import javascriptLogo from './../../../assets/javascript.svg'
-import typescriptLogo from './../../../assets/typescript.svg'
-import reactLogo from './../../../assets/react.svg'
-import figmaLogo from './../../../assets/figma.svg'
+import { pictures } from '../../../utils/constants'
 
 const AboutSection: React.FC = () => {
   const { language } = useLanguageContext()
   const sentences = (TEXT[language]).split('.').filter(sentence => sentence.trim() !== '')
-  const pictures = [
-    { src: htmlLogo, alt: 'HTML5' },
-    { src: cssLogo, alt: 'CSS3' },
-    { src: bootstrapLogo, alt: 'Bootstrap' },
-    { src: tailwindCssLogo, alt: 'TailwindCSS3' },
-    { src: materialLogo, alt: 'Material UI' },
-    { src: javascriptLogo, alt: 'JavaScript' },
-    { src: typescriptLogo, alt: 'TypeScript' },
-    { src: reactLogo, alt: 'React' },
-    { src: figmaLogo, alt: 'Figma' }
-  ]
+
   return (
     <main id="about">
       <Grid container sx={ ABOUT_STYLES.container }>
@@ -36,10 +18,10 @@ const AboutSection: React.FC = () => {
         </Grid>
         <Grid item xs={ 12 } sm={ 5 } sx={ { padding: '0rem 0.5rem 1rem' } }>
           <ParallaxText baseVelocity={ 2 }>
-            HTML5  CSS3  Bootstrap TailwindCSS Styled Components Figma
+            HTML5 - CSS3 - Bootstrap - TailwindCSS - Styled Components - JavaScript - TypeScript - React - MaterialUI - Next - Figma
           </ParallaxText>
           <ParallaxText baseVelocity={ -2 }>
-            JavaScript TypeScript React MaterialUI Next
+            mySQL - Postgresql - Java - Nodejs - Jasper Report - Postman - Swagger
           </ParallaxText>
           <Box component="div" sx={ ABOUT_STYLES.boxIcons }>
             <ImageList variant="masonry" cols={ 5 } gap={ 4 }>
