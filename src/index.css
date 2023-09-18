@@ -9,3 +9,9 @@ div.lenguage-select div#language {
   padding-top: 8px;
   background-color: #FFFFFF80;
 }
+
+#nombre,
+#email,
+#mensaje {
+  padding-top: 12px;
+}

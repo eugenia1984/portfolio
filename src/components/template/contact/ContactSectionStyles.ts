@@ -4,9 +4,21 @@ export const CONTACT_STYLES = {
     maxWidth: '1400px',
     margin: '0 auto',
     justifyContent: 'center',
-    flexDirection: 'column',
     alignContent: 'center',
+    alignItems: 'center',
     gap: '1rem',
     minHeight: '94vh'
+  },
+  containerForm: {
+    display: 'flex',
+    flexDirection: {
+      xs: 'row',
+      sm: 'column'
+    },
+    justifyContent: {
+      xs: 'center',
+      sm: 'flex-start'
+    },
+    gap: '12px'
   }
 }
