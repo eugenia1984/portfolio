@@ -3,6 +3,8 @@ export const EXPERIENCE_STYLES= {
     padding: '0.5rem 1.75rem ',
     maxWidth: '1400px',
     margin: '140px auto 20px',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    minHeight: '92vh',
+    alignContent: 'flex-start'
   },
 }
