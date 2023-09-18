@@ -52,11 +52,11 @@ const CardProject: React.FC<CardProjectProps> = ({
         image={ projectImgSrc !== '' ? projectImgSrc : alternativeSrc}
         title={projectName}
       />
-      <CardContent>
+      <CardContent sx={{minHeight: '320px'}}>
         <Typography variant="h3" component="div">
           { projectName }
         </Typography>
-        <Typography variant="body1" color="text.secondary" sx={{minHeight: '150px'}}>
+        <Typography variant="body1" color="text.secondary" >
           { projectDescription }
         </Typography>
         <Grid

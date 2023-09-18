@@ -7,7 +7,7 @@ export const TITLE = {
 export const CARDS = [
   {
     title: 'Binance-L',
-    technologies: ['React', 'TypeScript', 'MUI', 'react-dom', 'react-router-dom', 'react-hot-toast', 'axios'],
+    technologies: ['React', 'TypeScript', 'MUI', 'react-dom', 'react-router-dom', 'react-hot-toast', 'swiperjs', 'axios'],
     linkRepository: 'https://github.com/eugenia1984/binance-lite',
     linkDeploy: 'https://binance-l.netlify.app/',
     imgSrc: 'screens/binance-l.png',
@@ -28,7 +28,7 @@ export const CARDS = [
   },
   {
     title: 'Appartamentos',
-    technologies: ['React', 'TypecCript', 'MUI'],
+    technologies: ['React', 'TypeScript', 'MUI', 'react-dom', 'react-router-dom', 'zustand', 'swiperjs', 'dayjs', 'Firebase', 'notistack', 'Formik', 'YUP'],
     linkRepository: 'https://github.com/eugenia1984/c12-25-t-node-react',
     linkDeploy: 'https://appartments-c12-25.vercel.app/',
     imgSrc: 'screens/appartamentos .png',

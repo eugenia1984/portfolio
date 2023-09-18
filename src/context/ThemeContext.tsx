@@ -95,8 +95,8 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = ({ childr
         },
         body1: {
           fontFamily: 'Montserrat, sans-serif',
-          fontSize: '15px',
-          lineHeight: '25px',
+          fontSize: '14px',
+          lineHeight: '24px',
           fontWeight: 400,
           color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
