@@ -18,8 +18,8 @@ const ResponsiveHeader: React.FC = () => {
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => setAnchorElNav(event.currentTarget)
   const handleCloseNavMenu = () => setAnchorElNav(null)
-  const handleLanguageChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setLanguage(event.target.value as Language);
+  const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setLanguage(event.target.value as Language)
   }
 
   return (
@@ -27,10 +27,7 @@ const ResponsiveHeader: React.FC = () => {
       <AppBar position="sticky">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Link
-              to="/"
-              aria-label="home"
-            >
+            <Link to="/" aria-label="home">
               <Typography
                 component="h1"
                 sx={ HEADER_STYLES.logoDesktop }
@@ -65,11 +62,8 @@ const ResponsiveHeader: React.FC = () => {
                     onClick={ handleCloseNavMenu }
                   >
                     <Typography textAlign="center">
-                      <Link
-                        to={ page.to }
-                        aria-label={ page.title }
-                      >
-                        <Box component="span" sx={{ textDecoration: 'none'}}>
+                      <Link to={ page.to } aria-label={ page.title }>
+                        <Box component="span" sx={ { textDecoration: 'none' } }>
                           { page.title }
                         </Box>
                       </Link>
@@ -78,10 +72,7 @@ const ResponsiveHeader: React.FC = () => {
                 )) }
               </Menu>
             </Box>
-            <Link
-              to="/"
-              aria-label="home"
-            >
+            <Link to="/" aria-label="home">
               <Typography
                 variant="h1"
                 noWrap
@@ -105,10 +96,7 @@ const ResponsiveHeader: React.FC = () => {
                   } }
                   aria-label={ page.title }
                 >
-                  <Link
-                    to={ page.to  }
-                    aria-label={ page.title }
-                  >
+                  <Link to={ page.to } aria-label={ page.title } >
                     <Typography
                       sx={ {
                         color: '#fff', '&:hover': {

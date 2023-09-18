@@ -1,6 +1,6 @@
 import React, { ReactNode, createContext, useContext, useState } from 'react'
 import { createTheme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
-import { Colors, ThemeMode, primaryLight } from '../utils/constants'
+import { Colors, ThemeMode } from '../utils/constants'
 
 interface ThemeContextType {
   themeMode: ThemeMode
