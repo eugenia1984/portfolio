@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Select, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Container, IconButton, FormControl, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
+import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { Link } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu'
 import { useTheme } from '../../../context/ThemeContext'
@@ -18,7 +19,7 @@ const ResponsiveHeader: React.FC = () => {
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => setAnchorElNav(event.currentTarget)
   const handleCloseNavMenu = () => setAnchorElNav(null)
-  const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleLanguageChange = (event: SelectChangeEvent) => {
     setLanguage(event.target.value as Language)
   }
 
@@ -28,10 +29,7 @@ const ResponsiveHeader: React.FC = () => {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Link to="/" aria-label="home">
-              <Typography
-                component="h1"
-                sx={ HEADER_STYLES.logoDesktop }
-              >
+              <Typography component="h1" sx={ HEADER_STYLES.logoDesktop }>
                 María Eugenia Costa
               </Typography>
             </Link>
@@ -120,14 +118,19 @@ const ResponsiveHeader: React.FC = () => {
               }
             </IconButton>
             <Box sx={ { flexGrow: 0 } }>
-              <Select
-                value={ language }
-                onChange={ handleLanguageChange }
-              >
-                <MenuItem value="es">Español</MenuItem>
-                <MenuItem value="en">English</MenuItem>
-                <MenuItem value="pt">Português</MenuItem>
-              </Select>
+              <form>
+                <FormControl variant="filled">
+                  <Select
+                    id="language"
+                    value={ language }
+                    onChange={ handleLanguageChange }
+                  >
+                    <MenuItem value="es">Español</MenuItem>
+                    <MenuItem value="en">English</MenuItem>
+                    <MenuItem value="pt">Português</MenuItem>
+                  </Select>
+                </FormControl>
+              </form>
             </Box>
           </Toolbar>
         </Container>
