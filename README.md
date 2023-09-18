@@ -2,11 +2,7 @@
 
 ---
 
-### Dark mode
-
----
-
-### Light mode
+### Dark mode / Light mode / Select language
 
 ---
 
@@ -48,7 +44,17 @@
 
 - react-hot-toast
   
-🔜 404 error page
+🔜 Home page, where you can download the curriculum or visit the [GitHub](https://github.com/eugenia1984) and [LinkedIn](https://github.com/eugenia1984) profiles
+
+🔜 About page, with a short presentation and my technologies.
+
+🔜 Proyects page, where you can take a look to some projects with the GitHub repository and a live demo.
+
+🔜 Experience page, where you can read about my work experience.
+
+🔜 Contact page, with a contact form.
+
+🔜 404 error page, that redirect to Home page
 
 ---
 
