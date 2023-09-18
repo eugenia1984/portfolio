@@ -3,7 +3,7 @@ export const HERO_STYLES = {
     padding: '140px 0.5rem 1.75rem ',
     maxWidth: '1400px',
     margin: '0 auto',
-    minHeight: '92vh'
+    minHeight: '94vh'
   },
   introContainter: {
     maxWidth: '300px',
@@ -14,5 +14,18 @@ export const HERO_STYLES = {
     alignContent: 'center',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    height: {
+      xs: '200px',
+      sx: '100%'
+    }
+  },
+  gridItemImg: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignContent: 'center',
+    justifyContent: {
+      xs: 'center',
+      sm: 'flex-start'
+    }
   }
 }

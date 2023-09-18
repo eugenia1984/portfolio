@@ -11,9 +11,12 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import PrimaryButton from '../../atom/PrimaryButton'
 import NewWindowButton from '../../atom/NewWindowButton'
+import { useTheme } from '../../../context/ThemeContext'
+import { ThemeMode } from '../../../utils/constants'
 
 const HeroSection: React.FC = () => {
   const { language } = useLanguageContext()
+  const { themeMode } = useTheme()
 
   const getHref = (language: Language): string => {
     if (language === 'es') return cvES
@@ -33,14 +36,14 @@ const HeroSection: React.FC = () => {
   return (
     <main id="hero">
       <Grid container sx={ HERO_STYLES.container }>
-        <Grid item xs={ 12 } sm={ 6 } sx={{ display: 'flex'}}>
-          <Grid sx={ HERO_STYLES.introContainter }>
+        <Grid item xs={ 12 } sm={ 6 } sx={ { display: 'flex', flexWrap: 'wrap' ,alignContent: 'center' } }>
+          <Grid sx={ HERO_STYLES.introContainter } className="intro-container">
             <Typography variant="h4" >
               { GREETING[language] }
             </Typography>
-            <TitleH2 titleText={ TITLE[language] } />
-            <Typography variant="h3" sx={ { paddingBottom: '1rem' } }>
-              { SUBTITLE[language] }  { EXPERIENCE[language] }
+            <TitleH2 titleText={ TITLE[language] } titleAlign='left'/>
+            <Typography variant="h3" sx={ { paddingBottom: '1rem', textAlign: 'left' } }>
+              { SUBTITLE[language] } <br /> { EXPERIENCE[language] }
             </Typography>
             <Stack direction="row" spacing={ 1 }>
               <PrimaryButton
@@ -61,7 +64,16 @@ const HeroSection: React.FC = () => {
             </Stack>
           </Grid>
         </Grid>
-        <Grid item xs={ 12 } sm={ 6 }>
+        <Grid item xs={ 12 } sm={ 6 } sx={ HERO_STYLES.gridItemImg }>
+          <img
+            src="screens/euge.png"
+            height="300"
+            alt="María Eugenia Costa"
+            style={ {
+              filter: themeMode === ThemeMode.Light ?
+                'drop-shadow(10px 20px 50px rgba(50, 50, 50, 0.7)'
+                : 'drop-shadow(10px 20px 30px rgba(255, 255, 255, 0.7)'
+            } } />
         </Grid>
       </Grid>
     </main>
