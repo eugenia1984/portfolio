@@ -34,15 +34,7 @@
 
 ✔️ Integration with **MUI** supporting **Dark mode**.
 
-✔️ Uses the following integrations:
-
-- @emotion/react
-
-- @emotion/styled
-
-- @mui/icons-material
-
-- react-hot-toast
+✔️ Uses the following integrations: @emotion/react / @emotion/styled / @mui/icons-material /  react-hot-toast
   
 🔜 Home page, where you can download the curriculum or visit the [GitHub](https://github.com/eugenia1984) and [LinkedIn](https://github.com/eugenia1984) profiles
 
