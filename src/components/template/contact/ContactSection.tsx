@@ -12,7 +12,7 @@ const ContactSection: React.FC = () => {
     <section id="contact">
       <Grid container sx={ CONTACT_STYLES.container }>
         <TitleH2 titleText={ TITLE[language] } titleAlign="center" />
-        <Grid item xs={ 12 } sm={ 10 } md={ 8 } sx={ { padding: '1rem 1rem 2rem 1rem', width: '100%'} }>
+        <Grid item xs={ 12 } sm={ 10 } md={ 8 } sx={ { padding: '0.5rem 1rem 1.50rem', width: '100%'} }>
           <ContactForm />
         </Grid>
       </Grid>

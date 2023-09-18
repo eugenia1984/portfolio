@@ -45,6 +45,8 @@
 - @emotion/styled
 
 - @mui/icons-material
+
+- react-hot-toast
   
 🔜 404 error page
 
@@ -52,7 +54,7 @@
 
 ## Project Structure🛠️
 
-Inside of theo project, you'll see the following folders and files:
+Inside of the project, you'll see the following folders and files:
 
 ```
 |

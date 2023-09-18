@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Box, Button, InputLabel, TextField, Snackbar } from '@mui/material'
-import MuiAlert from '@mui/material/Alert'
+import { Box, Button, CircularProgress, InputLabel, TextField } from '@mui/material'
+import toast, { Toaster } from 'react-hot-toast'
 import { emailRegex, nameRegex } from '../../../utils/constants'
 import { useLanguageContext } from '../../../context/LanguageContext'
 import { FORM_MSG } from './ContactFormConstants'
@@ -9,45 +9,55 @@ import { FORM_STYLES } from './ContactFormStyles'
 const ContactForm: React.FC = () => {
   const { language } = useLanguageContext()
   const [name, setName] = useState('')
+  const [errorName, setErrorName] = useState<string | null>(null)
   const [email, setEmail] = useState('')
+  const [errorEmail, setErrorEmail] = useState<string | null>(null)
   const [message, setMessage] = useState('')
-  const [error, setError] = useState('')
-  const [success, setSuccess] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const [loading, setLoading] = useState<boolean>(false)
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value)
+    const inputName = event.target.value
+    const isValidName = nameRegex.test(inputName)
+
+    if (isValidName) {
+      setName(inputName)
+      setErrorName(null)
+    } else {
+      setName(inputName)
+      setErrorName(`X - ${ FORM_MSG[language].nameError }`)
+    }
   }
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value)
+    const inputEmail = event.target.value
+    const isValidEmail = emailRegex.test(inputEmail)
+
+    if (isValidEmail) {
+      setEmail(inputEmail)
+      setErrorEmail(null)
+    } else {
+      setEmail(inputEmail)
+      setErrorEmail(`X - ${ FORM_MSG[language].eMailError }`)
+    }
   }
 
   const handleMessageChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setMessage(event.target.value)
+    const inputMessage = event.target.value
+
+    if (inputMessage.length > 3) {
+      setMessage(inputMessage)
+      setErrorMessage(null)
+    } else {
+      setMessage(inputMessage)
+      setErrorMessage(`X - ${ FORM_MSG[language].messageError }`)
+    }
   }
 
-  const handleCloseSnackbar = () => {
-    setError('')
-    setSuccess(false)
-  }
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
-
-    if (!nameRegex.test(name)) {
-      setError(FORM_MSG[language].nameError)
-      return
-    }
-
-    if (!emailRegex.test(email)) {
-      setError(FORM_MSG[language].eMailError)
-      return
-    }
-
-    if (!message) {
-      setError(FORM_MSG[language].requiredError)
-      return
-    }
+    setLoading(true)
 
     try {
       const response = await fetch(
@@ -63,22 +73,29 @@ const ContactForm: React.FC = () => {
 
       const data = await response.json()
       if (data.success === 'true') {
-        setSuccess(true)
         setName('')
         setEmail('')
         setMessage('')
+        toast.success(`${ FORM_MSG[language].successSend }`)
       } else {
-        setError(FORM_MSG[language].sendError)
+        toast.error(`${ FORM_MSG[language].sendError }`)
       }
     } catch (error) {
-      setError(FORM_MSG[language].sendError)
+      toast.error(`${ FORM_MSG[language].sendError }`)
+    } finally {
+      setLoading(false)
     }
-  };
+  }
 
   return (
     <>
+      <Toaster
+        position="top-center"
+        toastOptions={ { duration: 3000 } }
+        reverseOrder={ false }
+      />
       <form onSubmit={ handleSubmit }>
-        <InputLabel htmlFor="nombre" sx={ FORM_STYLES.label  }>
+        <InputLabel htmlFor="nombre" sx={ FORM_STYLES.label }>
           { FORM_MSG[language].nameLabel } :
         </InputLabel>
         <TextField
@@ -89,24 +106,26 @@ const ContactForm: React.FC = () => {
           fullWidth
           value={ name }
           onChange={ handleNameChange }
-          required
-          sx={ { marginBottom: '1.25rem' } }
+          error={ Boolean(errorName) }
+          helperText={ errorName }
+          sx={ { marginBottom: '1.0rem' } }
         />
-        <InputLabel htmlFor="email" sx={ FORM_STYLES.label   }>
+        <InputLabel htmlFor="email" sx={ FORM_STYLES.label }>
           { FORM_MSG[language].eMailLabel } :
         </InputLabel>
         <TextField
           type="text"
           id="email"
-          placeholder={FORM_MSG[language].eMailPlaceholder}
+          placeholder={ FORM_MSG[language].eMailPlaceholder }
           variant="filled"
           fullWidth
           value={ email }
           onChange={ handleEmailChange }
-          required
-          sx={ { marginBottom: '1.25rem' } }
+          error={ Boolean(errorEmail) }
+          helperText={ errorEmail }
+          sx={ { marginBottom: '1.0rem' } }
         />
-        <InputLabel htmlFor="mensaje" sx={ FORM_STYLES.label  }>
+        <InputLabel htmlFor="mensaje" sx={ FORM_STYLES.label }>
           { FORM_MSG[language].messageLabel } :
         </InputLabel>
         <TextField
@@ -116,11 +135,11 @@ const ContactForm: React.FC = () => {
           rows={ 6 }
           value={ message }
           onChange={ handleMessageChange }
-          required
+          error={ Boolean(errorMessage) }
+          helperText={ errorMessage }
           multiline
           sx={ { marginBottom: '1.25rem', width: '100%' } }
         />
-        { error && <p>{ error }</p> }
         <Box
           sx={ {
             display: 'flex',
@@ -135,21 +154,10 @@ const ContactForm: React.FC = () => {
           </Button>
         </Box>
       </form>
-      <Snackbar
-        open={ error !== '' || success }
-        autoHideDuration={ 6000 }
-        onClose={ handleCloseSnackbar }
-      >
-        { success ? (
-          <MuiAlert elevation={ 6 } variant="filled" severity="success">
-            { FORM_MSG[language].successSend }
-          </MuiAlert>
-        ) : (
-          <MuiAlert elevation={ 6 } variant="filled" severity="error">
-            { error }
-          </MuiAlert>
-        ) }
-      </Snackbar>
+      { loading &&
+        <Box sx={ FORM_STYLES.boxLoader }>
+          <CircularProgress color="success" />
+        </Box> }
     </>
   )
 }

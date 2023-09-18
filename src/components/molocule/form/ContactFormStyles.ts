@@ -2,6 +2,13 @@ export const FORM_STYLES = {
   label: { 
     fontSize: '18px', 
     fontWeight: '600', 
-    margin: '6px 0px' 
+    margin: '4px 0px' 
+  },
+  boxLoader: { 
+    display: 'flex', 
+    alignContent: 'center', 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    margin: '10px auto' 
   }
 }

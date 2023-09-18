@@ -8,7 +8,7 @@ export const FORM_MSG = {
     eMailError: "Enter a valid email, containing letters and/or '_', the '@' and the '.'",
     messageLabel: 'Message',
     messagePlaceholder: 'Enter you message hare...',
-    requiredError: 'The message is required',
+    messageError: 'The message is required',
     sendError: 'There was a problem while submitting the form',
     successSend: 'Message sent, we will get back to you soon!',
     sendBtn: 'Send'
@@ -22,7 +22,7 @@ export const FORM_MSG = {
     eMailError: "Enter a valid email, containing letters and/or '_', the '@' and the '.'",
     messageLabel: 'Mensaje',
     messagePlaceholder: 'Ingresá tu mensaje aca...',
-    requiredError: 'El mensaje es requerido',
+    messageError: 'El mensaje es requerido',
     sendError: 'Hubo un problema al enviar el formulario',
     successSend: 'Mensaje enviado. ¡Te responderemos pronto!',
     sendBtn: 'Enviar'
@@ -36,7 +36,7 @@ export const FORM_MSG = {
     eMailError: "Digite um endereço de correio eletrônico válido, contendo letras e/ou '_', '@' e '.'",
     messageLabel: 'Mensagem',
     messagePlaceholder: 'Sua mensagem aqui...',
-    requiredError: 'A mensagem é obrigatória',
+    messageError: 'A mensagem é obrigatória',
     sendError: 'Houve um problema ao enviar o formulário',
     successSend: 'Mensagem enviada, entraremos em contato com você em breve!',
     sendBtn: 'Enviar'
