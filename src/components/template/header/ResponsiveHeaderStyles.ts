@@ -3,9 +3,9 @@ export const HEADER_STYLES = {
     display: { xs: 'none', sm: 'flex' },
     fontFamily: 'monospace',
     fontWeight: 700,
-    color: 'inherit',
     textDecoration: 'none',
-    fontSize: '18px'
+    fontSize: '18px',
+    color: '#fff'
   },
   logoMobile: {
     mr: 1,
@@ -14,7 +14,7 @@ export const HEADER_STYLES = {
     fontFamily: 'monospace',
     fontWeight: 700,
     letterSpacing: '.1rem',
-    color: 'inherit',
+    color: '#fff',
     textDecoration: 'none',
   },
   menuMobileContainer: {

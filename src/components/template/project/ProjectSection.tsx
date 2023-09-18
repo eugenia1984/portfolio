@@ -9,7 +9,7 @@ const ProjectSection: React.FC = () => {
   const { language } = useLanguageContext()
 
   return (
-    <section id="project">
+    <main id="project">
       <Grid container sx={ PROJECT_STYLES.container }>
         <Grid item xs={ 12 } sm={ 12 }>
           <TitleH2 titleText={ TITLE[language] } />
@@ -33,7 +33,7 @@ const ProjectSection: React.FC = () => {
           )
         }) }
       </Grid>
-    </section>
+    </main>
   )
 }
 

@@ -1,17 +1,6 @@
 import React, { useState } from 'react'
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Link,
-  Menu,
-  MenuItem,
-  Select,
-  Toolbar,
-  Typography
-} from '@mui/material'
+import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Select, Toolbar, Typography } from '@mui/material'
+import { Link } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu'
 import { useTheme } from '../../../context/ThemeContext'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
@@ -38,14 +27,17 @@ const ResponsiveHeader: React.FC = () => {
       <AppBar position="sticky">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Typography
-              variant="h1"
-              noWrap
-              component="h1"
-              sx={ HEADER_STYLES.logoDesktop }
+            <Link
+              to="/"
+              aria-label="home"
             >
-              María Eugenia Costa
-            </Typography>
+              <Typography
+                component="h1"
+                sx={ HEADER_STYLES.logoDesktop }
+              >
+                María Eugenia Costa
+              </Typography>
+            </Link>
             <Box sx={ HEADER_STYLES.menuMobileContainer }>
               <IconButton
                 size="large"
@@ -74,11 +66,10 @@ const ResponsiveHeader: React.FC = () => {
                   >
                     <Typography textAlign="center">
                       <Link
-                        href={ page.to }
+                        to={ page.to }
                         aria-label={ page.title }
-                        underline="none"
                       >
-                        <Box component="span" >
+                        <Box component="span" sx={{ textDecoration: 'none'}}>
                           { page.title }
                         </Box>
                       </Link>
@@ -87,14 +78,19 @@ const ResponsiveHeader: React.FC = () => {
                 )) }
               </Menu>
             </Box>
-            <Typography
-              variant="h1"
-              noWrap
-              component="h1"
-              sx={ HEADER_STYLES.logoMobile }
+            <Link
+              to="/"
+              aria-label="home"
             >
-              MEC
-            </Typography>
+              <Typography
+                variant="h1"
+                noWrap
+                component="h1"
+                sx={ HEADER_STYLES.logoMobile }
+              >
+                MEC
+              </Typography>
+            </Link>
             <Box sx={ HEADER_STYLES.menuDesktopContainer }>
               { pages[language].map((page) => (
                 <Button
@@ -110,16 +106,18 @@ const ResponsiveHeader: React.FC = () => {
                   aria-label={ page.title }
                 >
                   <Link
-                    href={ page.to }
+                    to={ page.to  }
                     aria-label={ page.title }
-                    underline="none"
-                    sx={ {
-                      color: '#fff', '&:hover': {
-                        color: `${ themeMode === 'dark' ? 'black!important' : 'white!important' }`
-                      }
-                    } }
                   >
-                    { page.title }
+                    <Typography
+                      sx={ {
+                        color: '#fff', '&:hover': {
+                          color: `${ themeMode === 'dark' ? 'black!important' : 'white!important' }`
+                        }
+                      } }
+                    >
+                      { page.title }
+                    </Typography>
                   </Link>
                 </Button>
               )) }

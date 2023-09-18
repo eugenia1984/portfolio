@@ -7,7 +7,7 @@ export const TITLE = {
 export const CARDS = [
   {
     title: 'Binance-L',
-    technologies: ['React', 'TypeScript', 'MUI'],
+    technologies: ['React', 'TypeScript', 'MUI', 'react-dom', 'react-router-dom', 'react-hot-toast', 'axios'],
     linkRepository: 'https://github.com/eugenia1984/binance-lite',
     linkDeploy: 'https://binance-l.netlify.app/',
     imgSrc: 'screens/binance-l.png',

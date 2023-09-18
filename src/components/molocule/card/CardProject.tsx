@@ -56,7 +56,7 @@ const CardProject: React.FC<CardProjectProps> = ({
         <Typography variant="h3" component="div">
           { projectName }
         </Typography>
-        <Typography variant="body1" color="text.secondary" sx={{minHeight: '125px'}}>
+        <Typography variant="body1" color="text.secondary" sx={{minHeight: '150px'}}>
           { projectDescription }
         </Typography>
         <Grid
@@ -64,13 +64,16 @@ const CardProject: React.FC<CardProjectProps> = ({
           spacing={ 1 }
           alignItems="center"
           justifyContent='flex-start'
-          sx={ { margin: '12px 0px' } }
+          alignContent='flex-start'
+          sx={ { margin: '12px 0px' , minHeight: '120px'} }
         >
           <Stack
             direction="row"
             spacing={ 1 }
             alignItems="center"
             justifyContent='flex-start'
+            flexWrap="wrap"
+            gap={1}
           >
             { projectTechnologies.map((technology, index) => {
               return (

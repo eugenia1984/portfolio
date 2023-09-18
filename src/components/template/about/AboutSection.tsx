@@ -31,7 +31,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ }) => {
     { src: figmaLogo, alt: 'Figma' }
   ]
   return (
-    <section id="about">
+    <main id="about">
       <Grid container sx={ ABOUT_STYLES.container }>
         <Grid
           item
@@ -93,7 +93,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ }) => {
           )) }
         </Grid>
       </Grid>
-    </section>
+    </main>
   )
 }
 

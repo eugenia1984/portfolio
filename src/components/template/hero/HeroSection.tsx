@@ -12,9 +12,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import PrimaryButton from '../../atom/PrimaryButton'
 import NewWindowButton from '../../atom/NewWindowButton'
 
-interface HeroSectionProps { }
-
-const HeroSection: React.FC<HeroSectionProps> = ({ }) => {
+const HeroSection: React.FC = () => {
   const { language } = useLanguageContext()
 
   const getHref = (language: Language): string => {
