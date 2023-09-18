@@ -28,7 +28,7 @@
 
 ## Demo📦
 
-📌 (bulding...)
+📌 [https://portfolio-mec.netlify.app/](https://portfolio-mec.netlify.app/)
 
 ---
 
