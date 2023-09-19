@@ -34,7 +34,7 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
     theme.palette.mode === 'dark'
       ? 'rgba(255, 255, 255, .05)'
       : 'rgba(0, 0, 0, .03)',
-  flexDirection: 'row-reverse',
+  flexDirection: 'row',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
   },
@@ -50,7 +50,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 const ExperienceSection: React.FC = () => {
   const { language } = useLanguageContext()
-  const [expanded, setExpanded] = useState<string | false>(false)
+  const [expanded, setExpanded] = useState<string | false>('panel1')
 
   const handleChange = (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
     setExpanded(newExpanded ? panel : false)
