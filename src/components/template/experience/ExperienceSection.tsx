@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import { styled } from '@mui/material/styles'
 import { Grid, Typography } from '@mui/material'
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion'
-import MuiAccordionSummary, {
-  AccordionSummaryProps,
-} from '@mui/material/AccordionSummary'
+import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary'
 import MuiAccordionDetails from '@mui/material/AccordionDetails'
 import { useLanguageContext } from '../../../context/LanguageContext'
 import { EXPERIENCE_STYLES } from './ExperienceSectionStyles'
@@ -26,7 +24,7 @@ const Accordion = styled((props: AccordionProps) => (
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
   <MuiAccordionSummary
-    expandIcon={ <ArrowForwardIosSharpIcon sx={ { fontSize: '1.25rem' } } /> }
+    expandIcon={ <ExpandMoreIcon sx={ { fontSize: '1.50rem' } } /> }
     { ...props }
   />
 ))(({ theme }) => ({
@@ -34,12 +32,13 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
     theme.palette.mode === 'dark'
       ? 'rgba(255, 255, 255, .05)'
       : 'rgba(0, 0, 0, .03)',
-  flexDirection: 'row',
+  flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    transform: 'rotate(90deg)',
+    transform: 'rotate(180deg)',
   },
   '& .MuiAccordionSummary-content': {
     marginLeft: theme.spacing(1),
+    flexDirection: 'column'
   },
 }))
 
@@ -60,113 +59,145 @@ const ExperienceSection: React.FC = () => {
     <main id="experience">
       <Grid container sx={ EXPERIENCE_STYLES.container }>
         <Grid item xs={ 12 } sx={ { marginBottom: '32px' } }>
-          <Typography variant="h2" textAlign="center" gutterBottom>
+          <Typography variant="h2" textAlign="center" textTransform="uppercase" my="0.5rem">
             { EXPERIENCE_TITLE[language] }
           </Typography>
         </Grid>
-        <Grid item xs={ 12 } sm={ 10 }>
+        <Grid item xs={ 12 } sm={ 10 } md={ 9 }>
           <Accordion expanded={ expanded === 'panel1' } onChange={ handleChange('panel1') }>
             <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
               <Typography variant="h3" gutterBottom>
-                { JOB_1[language] } <br /><span style={ { fontSize: '14px', fontWeight: '500' } }>{ JOB_1_YEAR[language] } </span>
+                { JOB_1[language] }
+              </Typography>
+              <Typography >
+                <span style={ EXPERIENCE_STYLES.span }>{ JOB_1_YEAR[language] } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="h4" gutterBottom>
                 { JOB_1_TITLE[language] }
               </Typography>
-              <Typography gutterBottom>
+              <Typography sx={ { marginBottom: '1rem' } }>
                 { JOB_1_DESCRIPTION[language] }
               </Typography>
-              <Typography>
-              <span style={{ textDecoration: 'underline'}}> { JOB_1_TECHNOLOGIES[language] }</span>
-                { JOB_1_TECHNOLOGIES_ICONS[language].map((tech) => {
-                  const techInfo = technologies.find(t => t.alt === tech)
-                  return (
-                    <>
-                      { techInfo && <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } /> } <span>{ techInfo ? techInfo.alt : tech } </span>
-                    </>
-                  )
-                }) }
+              <Typography sx={ { textDecoration: 'underline', marginBottom: '18px' } }>
+                { JOB_1_TECHNOLOGIES[language] }
               </Typography>
+              { JOB_1_TECHNOLOGIES_ICONS[language].map((tech, index) => {
+                const techInfo = technologies.find(t => t.alt === tech)
+                return (
+                  <Typography key={ `job1-${ index }` }>
+                    { techInfo &&
+                      <span>
+                        <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } />
+                        { techInfo ? techInfo.alt : tech }
+                      </span>
+                    }
+                  </Typography>
+                )
+              }) }
             </AccordionDetails>
           </Accordion>
           <Accordion expanded={ expanded === 'panel2' } onChange={ handleChange('panel2') }>
             <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
               <Typography variant="h3" gutterBottom>
-                { JOB_2[language] } <br /><span style={ { fontSize: '14px', fontWeight: '500' } }>{ JOB_2_YEAR[language] } </span>
+                { JOB_2[language] }
+              </Typography>
+              <Typography >
+                <span style={ EXPERIENCE_STYLES.span }>{ JOB_2_YEAR[language] } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="h4" gutterBottom>
                 { JOB_2_TITLE[language] }
               </Typography>
-              <Typography gutterBottom>
+              <Typography sx={ { marginBottom: '1rem' } }>
                 { JOB_2_DESCRIPTION[language] }
               </Typography>
-              <Typography>
-              <span style={{ textDecoration: 'underline'}}> { JOB_2_TECHNOLOGIES[language] }</span>
-                { JOB_2_TECHNOLOGIES_ICONS[language].map((tech) => {
-                  const techInfo = technologies.find(t => t.alt === tech)
-                  return (
-                    <>
-                      { techInfo && <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } /> } <span>{ techInfo ? techInfo.alt : tech } </span>
-                    </>
-                  )
-                }) }
+              <Typography sx={ { textDecoration: 'underline', marginBottom: '18px' } }>
+                { JOB_2_TECHNOLOGIES[language] }
               </Typography>
+              { JOB_2_TECHNOLOGIES_ICONS[language].map((tech, index) => {
+                const techInfo = technologies.find(t => t.alt === tech)
+                return (
+                  <Typography key={ `job2-${ index }` }>
+                    { techInfo &&
+                      <span >
+                        <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } />
+                        { techInfo ? techInfo.alt : tech }
+                      </span>
+                    }
+                  </Typography>
+                )
+              }) }
             </AccordionDetails>
           </Accordion>
           <Accordion expanded={ expanded === 'panel3' } onChange={ handleChange('panel3') }>
             <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
               <Typography variant="h3" gutterBottom>
-                { JOB_3[language] } <br /><span style={ { fontSize: '14px', fontWeight: '500' } }>{ JOB_3_YEAR[language] } </span>
+                { JOB_3[language] }
+              </Typography>
+              <Typography >
+                <span style={ EXPERIENCE_STYLES.span }>{ JOB_3_YEAR[language] } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="h4" gutterBottom>
                 { JOB_3_TITLE[language] }
               </Typography>
-              <Typography gutterBottom>
+              <Typography sx={ { marginBottom: '1rem' } }>
                 { JOB_3_DESCRIPTION[language] }
               </Typography>
-              <Typography>
-              <span style={{ textDecoration: 'underline'}}> { JOB_3_TECHNOLOGIES[language] }</span>
-                { JOB_3_TECHNOLOGIES_ICONS[language].map((tech) => {
-                  const techInfo = technologies.find(t => t.alt === tech)
-                  return (
-                    <>
-                      { techInfo && <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } /> } <span>{ techInfo ? techInfo.alt : tech } </span>
-                    </>
-                  )
-                }) }
+              <Typography sx={ { textDecoration: 'underline', marginBottom: '18px' } }>
+                { JOB_3_TECHNOLOGIES[language] }
               </Typography>
+              { JOB_3_TECHNOLOGIES_ICONS[language].map((tech, index) => {
+                const techInfo = technologies.find(t => t.alt === tech)
+                return (
+                  <Typography key={ `job3-${ index }` }>
+                    { techInfo &&
+                      <span >
+                        <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } />
+                        { techInfo ? techInfo.alt : tech }
+                      </span>
+                    }
+                  </Typography>
+                )
+              }) }
             </AccordionDetails>
           </Accordion>
           <Accordion expanded={ expanded === 'panel4' } onChange={ handleChange('panel4') }>
-            <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
+            <AccordionSummary aria-controls="panel4d-content" id="panel4d-header" >
               <Typography variant="h3" gutterBottom>
-                { JOB_4[language] } <br /><span style={ { fontSize: '14px', fontWeight: '500' } }>{ JOB_4_YEAR[language] } </span>
+                { JOB_4[language] }
+              </Typography>
+              <Typography >
+                <span style={ EXPERIENCE_STYLES.span }>{ JOB_4_YEAR[language] } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="h4" gutterBottom>
                 { JOB_4_TITLE[language] }
               </Typography>
-              <Typography gutterBottom>
+              <Typography sx={ { marginBottom: '1rem' } }>
                 { JOB_4_DESCRIPTION[language] }
               </Typography>
-              <Typography>
-                <span style={ { textDecoration: 'underline' } }> { JOB_4_TECHNOLOGIES[language] }</span>
-                { JOB_4_TECHNOLOGIES_ICONS[language].map((tech) => {
-                  const techInfo = technologies.find(t => t.alt === tech)
-                  return (
-                    <>
-                      { techInfo && <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } /> } <span>{ techInfo ? techInfo.alt : tech } </span>
-                    </>
-                  )
-                }) }
+              <Typography sx={ { textDecoration: 'underline', marginBottom: '18px' } }>
+                { JOB_4_TECHNOLOGIES[language] }
               </Typography>
+              { JOB_4_TECHNOLOGIES_ICONS[language].map((tech, index) => {
+                const techInfo = technologies.find(t => t.alt === tech)
+                return (
+                  <Typography key={ `job4-${ index }` }>
+                    { techInfo &&
+                      <span >
+                        <img src={ techInfo.src } alt={ techInfo.alt } width="18" height="18" style={ { margin: '0px 8px' } } />
+                        { techInfo ? techInfo.alt : tech }
+                      </span>
+                    }
+                  </Typography>
+                )
+              }) }
             </AccordionDetails>
           </Accordion>
         </Grid>

@@ -1,6 +1,5 @@
 import { Box, Grid, ImageList, ImageListItem, Typography } from '@mui/material'
 import { useLanguageContext } from '../../../context/LanguageContext'
-import TitleH2 from '../../atom/TitleH2'
 import { TITLE, TEXT } from './AboutSectionConstants'
 import { ABOUT_STYLES } from './AboutSectionStyles'
 import ParallaxText from '../../atom/ParallaxText'
@@ -14,7 +13,9 @@ const AboutSection: React.FC = () => {
     <main id="about">
       <Grid container sx={ ABOUT_STYLES.container }>
         <Grid item xs={ 12 }>
-          <TitleH2 titleText={ TITLE[language] } />
+          <Typography variant="h2" textAlign="center" textTransform="uppercase" my="0.5rem">
+            { TITLE[language] }
+          </Typography>
         </Grid>
         <Grid item xs={ 12 } sm={ 5 } sx={ { padding: '0rem 0.5rem 1rem' } }>
           <ParallaxText baseVelocity={ 2 }>

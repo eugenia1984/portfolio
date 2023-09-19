@@ -1,13 +1,13 @@
 export const CONTACT_STYLES = {
   container: {
-    padding: '100px 0.5rem 1.75rem ',
+    padding: '30px 0.5rem 1.75rem ',
     maxWidth: '1400px',
     margin: '0 auto',
     justifyContent: 'center',
-    alignContent: 'center',
+    alignContent: 'flex-start',
     alignItems: 'center',
     gap: '1rem',
-    minHeight: '94vh'
+    minHeight: '84vh'
   },
   containerForm: {
     display: 'flex',

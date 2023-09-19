@@ -4,7 +4,6 @@ import { useLanguageContext } from '../../../context/LanguageContext'
 import cvEN from '/maria-eugenia-costa-en.pdf'
 import cvES from '/maria-eugenia-costa-es.pdf'
 import cvPT from '/maria-eugenia-costa-pt.pdf'
-import TitleH2 from '../../atom/TitleH2'
 import { HERO_STYLES } from './HeroSectionStyles'
 import { Language } from '../../../utils/types'
 import GitHubIcon from '@mui/icons-material/GitHub'
@@ -36,16 +35,21 @@ const HeroSection: React.FC = () => {
   return (
     <main id="hero">
       <Grid container sx={ HERO_STYLES.container }>
-        <Grid item xs={ 12 } sm={ 6 } sx={ { display: 'flex', flexWrap: 'wrap' ,alignContent: 'center' } }>
+        <Grid item xs={ 12 } sm={ 6 } sx={ HERO_STYLES.containerPresentation }>
           <Grid sx={ HERO_STYLES.introContainter } className="intro-container">
-            <Typography variant="h4" >
+            <Typography >
               { GREETING[language] }
             </Typography>
-            <TitleH2 titleText={ TITLE[language] } titleAlign='left'/>
-            <Typography variant="h3" sx={ { paddingBottom: '1rem', textAlign: 'left' } }>
-              { SUBTITLE[language] } <br /> { EXPERIENCE[language] }
+            <Typography variant="h2">
+              { TITLE[language] }
             </Typography>
-            <Stack direction="row" spacing={ 1 }>
+            <Typography variant="h3">
+              { SUBTITLE[language] }
+            </Typography>
+            <Typography >
+              { EXPERIENCE[language] }
+            </Typography>
+            <Stack direction="row" spacing={ 1 } sx={{mt: '12px'}}>
               <PrimaryButton
                 ariaLabelText={ BTN_TEXT[language].text }
                 handleClick={ handleDownload }

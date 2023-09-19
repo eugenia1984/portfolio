@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import { useLanguageContext } from '../../../context/LanguageContext.tsx'
 import TitleH2 from '../../atom/TitleH2'
 import { TITLE } from './ContactSectionConstants.ts'
@@ -14,7 +14,9 @@ const ContactSection: React.FC = () => {
     <main id="contact">
       <Grid container sx={ CONTACT_STYLES.container }>
         <Grid item xs={ 12 } sx={ { marginBottom: '12px' } }>
-          <TitleH2 titleText={ TITLE[language] } titleAlign="center" />
+          <Typography variant="h2" textAlign="center" textTransform="uppercase" my="0.5rem">
+            { TITLE[language] }
+          </Typography>
         </Grid>
         <Grid item xs={ 11 } sm={ 5 } md={ 4 } sx={ CONTACT_STYLES.containerForm }>
           <ContactLinks />

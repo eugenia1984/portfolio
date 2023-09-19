@@ -20,6 +20,10 @@ import npmLogo from './../assets/npm.svg'
 import vscLogo from './../assets/vsc.svg'
 import intellijLogo from './../assets/intellij.svg'
 import nextjsLogo from './../assets/nextjs.svg'
+import swaggerLogo from './../assets/swagger.svg'
+import kuarkusLogo from './../assets/kuarkus.svg'
+import cpaneLogo from './../assets/cpanel.svg'
+import phpmyadminLogo from './../assets/phpmyadmin.svg'
 
 /* To show the technologies icons at the about section */
 export const pictures = [
@@ -57,7 +61,11 @@ export const technologies = [
   { src: yarnLogo, alt: 'Yarn' },
   { src: npmLogo, alt: 'npm' },
   { src: vscLogo, alt: 'Visual Studio Code' },
-  { src: intellijLogo, alt: 'IntelliJ' }
+  { src: intellijLogo, alt: 'IntelliJ' },
+  { src: swaggerLogo, alt: 'Swagger' },
+  { src: kuarkusLogo, alt: 'Kuarkus' },
+  { src: cpaneLogo, alt: 'cPanel' },
+  { src: phpmyadminLogo, alt: 'phpMyAdmin' }
 ]
 
 export const YEAR = new Date().getFullYear()
@@ -76,19 +84,19 @@ export enum ThemeMode {
 /* Color constant to theme Pallete */
 export enum Colors {
   PrimaryLight = '#6750A4',
-  PrimaryLightText = '#FFFFFF',
+  PrimaryLightText = '#F5F5F5',
   PrimaryDark = '#D0BCFF',
   PrimaryDarkText = '#381E72',
   SecondaryLight = '#625B71',
   SecondaryBlack = '#CCC2DC',
   ErrorLight = '#B3261E',
-  ErrorLightText = '#FFFFFD',
+  ErrorLightText = '#FAFAFA',
   ErrorBlack = '#F2B8B5',
   ErrorBlackText = '#601410',
   WarningLight = '#7D5260',
   WarningBlack = '#EFB8C8',
   SuccessLight = '#00AA65',
-  SuccessLightText = '#FFFFFE',
+  SuccessLightText = '#FAFAFB',
   SuccessBlack = '#4FDAD2',
   SuccessBlackText = '#003734',
   TextColorLight = '#1C1B1F',

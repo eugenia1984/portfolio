@@ -33,7 +33,7 @@ const CardProject: React.FC<CardProjectProps> = ({
   projectImgSrc
 }) => {
   const { themeMode } = useTheme()
-  const alternativeSrc= 'https://img.freepik.com/free-photo/side-view-kids-with-magnifying-glass_23-2149668696.jpg'
+  const alternativeSrc = 'https://img.freepik.com/free-photo/side-view-kids-with-magnifying-glass_23-2149668696.jpg'
 
   return (
     <Card sx={ {
@@ -44,15 +44,16 @@ const CardProject: React.FC<CardProjectProps> = ({
         : '0 4px 8px rgba(250, 250, 250, 0.2), 0 6px 20px rgba(250, 250, 250, 0.15)',
       transition: 'transform 0.3s ease-in-out',
       '&:hover': {
-        transform: 'scale(1.08)', 
+        transform: 'scale(1.08)',
       }
     } }>
       <CardMedia
         sx={ { height: 260 } }
-        image={ projectImgSrc !== '' ? projectImgSrc : alternativeSrc}
-        title={projectName}
+        image={ projectImgSrc !== '' ? projectImgSrc : alternativeSrc }
+        title={ projectName }
       />
-      <CardContent sx={{minHeight: '320px'}}>
+      <CardContent
+        sx={ { minHeight: { sx: '20px', sm: '348px', lg:'280px' } } } >
         <Typography variant="h3" component="div">
           { projectName }
         </Typography>
@@ -65,7 +66,7 @@ const CardProject: React.FC<CardProjectProps> = ({
           alignItems="center"
           justifyContent='flex-start'
           alignContent='flex-start'
-          sx={ { margin: '12px 0px' , minHeight: '120px'} }
+          sx={ { margin: '12px 0px', minHeight: { xs: '20px', sm: '120px', lg:'100px' } } }
         >
           <Stack
             direction="row"
@@ -73,7 +74,7 @@ const CardProject: React.FC<CardProjectProps> = ({
             alignItems="center"
             justifyContent='flex-start'
             flexWrap="wrap"
-            gap={1}
+            gap={ 1 }
           >
             { projectTechnologies.map((technology, index) => {
               return (

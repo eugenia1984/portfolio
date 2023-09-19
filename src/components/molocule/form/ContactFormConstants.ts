@@ -10,6 +10,7 @@ export const FORM_MSG = {
     messagePlaceholder: 'Enter you message hare...',
     messageError: 'The message is required',
     sendError: 'There was a problem while submitting the form',
+    sendEmpty: 'All fields are required',
     successSend: 'Message sent, we will get back to you soon!',
     sendBtn: 'Send'
   },
@@ -24,6 +25,7 @@ export const FORM_MSG = {
     messagePlaceholder: 'Ingresá tu mensaje aca...',
     messageError: 'El mensaje es requerido',
     sendError: 'Hubo un problema al enviar el formulario',
+    sendEmpty: 'Todos los campos son obligatorios',
     successSend: 'Mensaje enviado. ¡Te responderemos pronto!',
     sendBtn: 'Enviar'
   },
@@ -38,6 +40,7 @@ export const FORM_MSG = {
     messagePlaceholder: 'Sua mensagem aqui...',
     messageError: 'A mensagem é obrigatória',
     sendError: 'Houve um problema ao enviar o formulário',
+    sendEmpty: 'Todos os campos são obligatorios',
     successSend: 'Mensagem enviada, entraremos em contato com você em breve!',
     sendBtn: 'Enviar'
   }

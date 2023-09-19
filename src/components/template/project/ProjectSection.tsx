@@ -1,6 +1,5 @@
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import { useLanguageContext } from '../../../context/LanguageContext'
-import TitleH2 from '../../atom/TitleH2'
 import { CARDS, TITLE } from './ProjectSectionConstants'
 import CardProject from '../../molocule/card/CardProject'
 import { PROJECT_STYLES } from './ProjectSectionStyles'
@@ -12,7 +11,9 @@ const ProjectSection: React.FC = () => {
     <main id="project">
       <Grid container sx={ PROJECT_STYLES.container }>
         <Grid item xs={ 12 } sm={ 12 }>
-          <TitleH2 titleText={ TITLE[language] } />
+          <Typography variant="h2" textAlign="center" textTransform="uppercase" my="0.5rem">
+            { TITLE[language] }
+          </Typography>
         </Grid>
       </Grid>
       <Grid container sx={ PROJECT_STYLES.container2 }>

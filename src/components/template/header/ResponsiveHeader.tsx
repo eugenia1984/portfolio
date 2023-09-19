@@ -24,124 +24,122 @@ const ResponsiveHeader: React.FC = () => {
   }
 
   return (
-    <header>
-      <AppBar position="sticky">
-        <Container maxWidth="xl">
-          <Toolbar disableGutters>
-            <Link to="/" aria-label="home" style={ { textDecoration: 'none' } }>
-              <Typography component="h1" sx={ HEADER_STYLES.logoDesktop }>
-                María Eugenia Costa
-              </Typography>
-            </Link>
-            <Box sx={ HEADER_STYLES.menuMobileContainer }>
-              <IconButton
-                size="large"
-                aria-label="menu"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={ handleOpenNavMenu }
-                color="inherit"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={ anchorElNav }
-                anchorOrigin={ { vertical: 'bottom', horizontal: 'left' } }
-                keepMounted
-                transformOrigin={ { vertical: 'top', horizontal: 'left' } }
-                open={ Boolean(anchorElNav) }
-                onClose={ handleCloseNavMenu }
-                sx={ HEADER_STYLES.menuMobile }
-              >
-                { pages[language].map((page) => (
-                  <MenuItem
-                    key={ page.title }
-                    onClick={ handleCloseNavMenu }
-                  >
-                    <Typography textAlign="center">
-                      <Link to={ page.to } aria-label={ page.title } style={ { textDecoration: 'none' } }>
-                        <Box
-                          component="span"
-                          sx={ {
-                            textDecoration: 'none',
-                            color: `${ themeMode === 'dark' ? 'white!important': '#6750A4!important' }`
-                          } }>
-                          { page.title }
-                        </Box>
-                      </Link>
-                    </Typography>
-                  </MenuItem>
-                )) }
-              </Menu>
-            </Box>
-            <Link to="/" aria-label="home" style={ { textDecoration: 'none' } }>
-              <Typography
-                variant="h1"
-                noWrap
-                component="h1"
-                sx={ HEADER_STYLES.logoMobile }
-              >
-                MEC
-              </Typography>
-            </Link>
-            <Box sx={ HEADER_STYLES.menuDesktopContainer }>
-              { pages[language].map((page) => (
-                <Button
-                  key={ page.title }
-                  onClick={ handleCloseNavMenu }
-                  sx={ {
-                    my: 2,
-                    display: 'block',
-                    '&:hover': {
-                      color: `${ themeMode === 'dark' ? 'black!important' : 'white!important' }`
-                    }
-                  } }
-                  aria-label={ page.title }
-                >
-                  <Link to={ page.to } aria-label={ page.title } style={ { textDecoration: 'none' } } >
-                    <Typography
-                      sx={ {
-                        color: '#fff', '&:hover': {
-                          color: `${ themeMode === 'dark' ? 'black!important' : 'white!important' }`
-                        }
-                      } }
-                    >
-                      { page.title }
-                    </Typography>
-                  </Link>
-                </Button>
-              )) }
-            </Box>
+    <AppBar position="sticky">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Link to="/" aria-label="home" style={ { textDecoration: 'none' } }>
+            <Typography component="h1" sx={ HEADER_STYLES.logoDesktop }>
+              María Eugenia Costa
+            </Typography>
+          </Link>
+          <Box sx={ HEADER_STYLES.menuMobileContainer }>
             <IconButton
-              sx={ { margin: '0rem 0.1rem' } }
-              onClick={ toggleTheme }
+              size="large"
+              aria-label="menu"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={ handleOpenNavMenu }
               color="inherit"
             >
-              { themeMode === 'dark' ?
-                <Brightness7Icon /> : <Brightness4Icon />
-              }
+              <MenuIcon />
             </IconButton>
-            <Box sx={ { flexGrow: 0 } }>
-              <form>
-                <FormControl variant="filled">
-                  <Select
-                    id="language"
-                    value={ language }
-                    onChange={ handleLanguageChange }
-                    className="lenguage-select"
+            <Menu
+              id="menu-appbar"
+              anchorEl={ anchorElNav }
+              anchorOrigin={ { vertical: 'bottom', horizontal: 'left' } }
+              keepMounted
+              transformOrigin={ { vertical: 'top', horizontal: 'left' } }
+              open={ Boolean(anchorElNav) }
+              onClose={ handleCloseNavMenu }
+              sx={ HEADER_STYLES.menuMobile }
+            >
+              { pages[language].map((page) => (
+                <MenuItem
+                  key={ page.title }
+                  onClick={ handleCloseNavMenu }
+                >
+                  <Typography textAlign="center">
+                    <Link to={ page.to } aria-label={ page.title } style={ { textDecoration: 'none' } }>
+                      <Box
+                        component="span"
+                        sx={ {
+                          textDecoration: 'none',
+                          color: `${ themeMode === 'dark' ? 'white!important' : '#6750A4!important' }`
+                        } }>
+                        { page.title }
+                      </Box>
+                    </Link>
+                  </Typography>
+                </MenuItem>
+              )) }
+            </Menu>
+          </Box>
+          <Link to="/" aria-label="home" style={ { textDecoration: 'none' } }>
+            <Typography
+              variant="h1"
+              noWrap
+              component="h1"
+              sx={ HEADER_STYLES.logoMobile }
+            >
+              MEC
+            </Typography>
+          </Link>
+          <Box sx={ HEADER_STYLES.menuDesktopContainer }>
+            { pages[language].map((page) => (
+              <Button
+                key={ page.title }
+                onClick={ handleCloseNavMenu }
+                sx={ {
+                  my: 2,
+                  display: 'block',
+                  '&:hover': {
+                    color: `${ themeMode === 'dark' ? 'black!important' : 'white!important' }`
+                  }
+                } }
+                aria-label={ page.title }
+              >
+                <Link to={ page.to } aria-label={ page.title } style={ { textDecoration: 'none' } } >
+                  <Typography
+                    sx={ {
+                      color: '#fff', '&:hover': {
+                        color: `${ themeMode === 'dark' ? 'black!important' : 'white!important' }`
+                      }
+                    } }
                   >
-                    <MenuItem value="es" className="lenguage-select-option">Español</MenuItem>
-                    <MenuItem value="en" className="lenguage-select-option">English</MenuItem>
-                    <MenuItem value="pt" className="lenguage-select-option">Português</MenuItem>
-                  </Select>
-                </FormControl>
-              </form>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
-    </header>
+                    { page.title }
+                  </Typography>
+                </Link>
+              </Button>
+            )) }
+          </Box>
+          <IconButton
+            sx={ { margin: '0rem 0.1rem' } }
+            onClick={ toggleTheme }
+            color="inherit"
+          >
+            { themeMode === 'dark' ?
+              <Brightness7Icon /> : <Brightness4Icon />
+            }
+          </IconButton>
+          <Box sx={ { flexGrow: 0 } }>
+            <form>
+              <FormControl variant="filled">
+                <Select
+                  id="language"
+                  value={ language }
+                  onChange={ handleLanguageChange }
+                  className="lenguage-select"
+                >
+                  <MenuItem value="es" className="lenguage-select-option">Español</MenuItem>
+                  <MenuItem value="en" className="lenguage-select-option">English</MenuItem>
+                  <MenuItem value="pt" className="lenguage-select-option">Português</MenuItem>
+                </Select>
+              </FormControl>
+            </form>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   )
 }
 

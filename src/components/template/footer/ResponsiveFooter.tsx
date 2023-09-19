@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link, Typography } from '@mui/material'
 import { useLanguageContext } from '../../../context/LanguageContext'
 import { Colors, ThemeMode, YEAR } from '../../../utils/constants'

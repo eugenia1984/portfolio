@@ -12,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 export const useTheme = () => {
   const context = useContext(ThemeContext)
   if (!context) {
-    throw new Error('useTheme debe ser usado dentro de un ThemeProvider');
+    throw new Error('useTheme debe ser usado dentro de un ThemeProvider')
   }
   return context
 }
@@ -31,8 +31,8 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     <ThemeContext.Provider value={ { themeMode, toggleTheme } }>
       { children }
     </ThemeContext.Provider>
-  );
-};
+  )
+}
 
 interface CustomThemeProviderProps {
   children: ReactNode
@@ -76,7 +76,7 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = ({ childr
           color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,
         },
         h3: {
-          fontSize: '18px',
+          fontSize: '20px',
           lineHeight: '24px',
           fontWeight: 700,
           color: themeMode === ThemeMode.Light ? Colors.TextColorLight : Colors.TextColorBlack,

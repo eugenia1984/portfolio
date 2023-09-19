@@ -85,7 +85,7 @@ const ContactForm: React.FC = () => {
         toast.error(`${ FORM_MSG[language].sendError }`)
       }
     } else {
-      toast.error(`${ FORM_MSG[language].sendError }`)
+      toast.error(`${ FORM_MSG[language].sendEmpty }`)
     }
     setLoading(false)
   }
