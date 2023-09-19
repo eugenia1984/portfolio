@@ -4,15 +4,22 @@
 
 ### Dark mode /  Select language
 
-![image](https://github.com/eugenia1984/portfolio/assets/72580574/ff4ed410-5a13-4f1e-8b90-a12bc3b8c650)
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/ff4ed410-5a13-4f1e-8b90-a12bc3b8c650" width="300" alt="porfolio maria eugenia costa modo dark" />
+
 
 ### Dark mode / Select language
 
-![image](https://github.com/eugenia1984/portfolio/assets/72580574/5653ace6-c89f-4e4b-89d1-b804c33caf1a)
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/5653ace6-c89f-4e4b-89d1-b804c33caf1a" width="300" alt="porfolio maria eugenia costa modo light" />
+
+
 
 ---
 
 ### Lighthouse report
+
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/f56df6f5-23d8-4595-96fe-829f7f326f2c" width="300" alt="porfolio maria eugenia costa lighthouse report" />
+
+
 
 ---
 
