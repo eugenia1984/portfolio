@@ -61,7 +61,12 @@ const ResponsiveHeader: React.FC = () => {
                   >
                     <Typography textAlign="center">
                       <Link to={ page.to } aria-label={ page.title } style={ { textDecoration: 'none' } }>
-                        <Box component="span" sx={ { textDecoration: 'none' } }>
+                        <Box
+                          component="span"
+                          sx={ {
+                            textDecoration: 'none',
+                            color: `${ themeMode === 'dark' ? 'white!important': '#6750A4!important' }`
+                          } }>
                           { page.title }
                         </Box>
                       </Link>

@@ -59,32 +59,35 @@ const ContactForm: React.FC = () => {
     event.preventDefault()
     setLoading(true)
 
-    try {
-      const response = await fetch(
-        'https://formsubmit.co/ajax/costamariaeugenia1@gmail.com',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name, email, message }),
-        }
-      )
+    if (name && email && message) {
+      try {
+        const response = await fetch(
+          'https://formsubmit.co/ajax/costamariaeugenia1@gmail.com',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+          }
+        )
 
-      const data = await response.json()
-      if (data.success === 'true') {
-        setName('')
-        setEmail('')
-        setMessage('')
-        toast.success(`${ FORM_MSG[language].successSend }`)
-      } else {
+        const data = await response.json()
+        if (data.success === 'true') {
+          setName('')
+          setEmail('')
+          setMessage('')
+          toast.success(`${ FORM_MSG[language].successSend }`)
+        } else {
+          toast.error(`${ FORM_MSG[language].sendError }`)
+        }
+      } catch (error) {
         toast.error(`${ FORM_MSG[language].sendError }`)
       }
-    } catch (error) {
+    } else {
       toast.error(`${ FORM_MSG[language].sendError }`)
-    } finally {
-      setLoading(false)
     }
+    setLoading(false)
   }
 
   return (
