@@ -2,15 +2,14 @@
 
 ---
 
+### Light mode / Select language
+
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/5653ace6-c89f-4e4b-89d1-b804c33caf1a" width="480" alt="porfolio maria eugenia costa modo light" />
+
+
 ### Dark mode /  Select language
 
-<img src="https://github.com/eugenia1984/portfolio/assets/72580574/ff4ed410-5a13-4f1e-8b90-a12bc3b8c650" width="400" alt="porfolio maria eugenia costa modo dark" />
-
-
-### Dark mode / Select language
-
-<img src="https://github.com/eugenia1984/portfolio/assets/72580574/5653ace6-c89f-4e4b-89d1-b804c33caf1a" width="400" alt="porfolio maria eugenia costa modo light" />
-
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/ff4ed410-5a13-4f1e-8b90-a12bc3b8c650" width="480" alt="porfolio maria eugenia costa modo dark" />
 
 
 ---
