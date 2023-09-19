@@ -4,12 +4,12 @@
 
 ### Dark mode /  Select language
 
-<img src="https://github.com/eugenia1984/portfolio/assets/72580574/ff4ed410-5a13-4f1e-8b90-a12bc3b8c650" width="300" alt="porfolio maria eugenia costa modo dark" />
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/ff4ed410-5a13-4f1e-8b90-a12bc3b8c650" width="400" alt="porfolio maria eugenia costa modo dark" />
 
 
 ### Dark mode / Select language
 
-<img src="https://github.com/eugenia1984/portfolio/assets/72580574/5653ace6-c89f-4e4b-89d1-b804c33caf1a" width="300" alt="porfolio maria eugenia costa modo light" />
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/5653ace6-c89f-4e4b-89d1-b804c33caf1a" width="400" alt="porfolio maria eugenia costa modo light" />
 
 
 
@@ -17,7 +17,7 @@
 
 ### Lighthouse report
 
-<img src="https://github.com/eugenia1984/portfolio/assets/72580574/f56df6f5-23d8-4595-96fe-829f7f326f2c" width="300" alt="porfolio maria eugenia costa lighthouse report" />
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/f56df6f5-23d8-4595-96fe-829f7f326f2c" width="400" alt="porfolio maria eugenia costa lighthouse report" />
 
 
 
@@ -73,11 +73,11 @@ Inside of the project, you'll see the following folders and files:
 │   ├── maria-eugenia-costa-en.pdf
 │   ├── maria-eugenia-costa-es.pdf
 │   ├── maria-eugenia-costa-pt.pdf
-|   └── vite.svg
+|  
 |   
 ├── src/
 |   ├── assets/
-|   |   ├── react.scg
+|   |   ├── react.svg
 |   |
 │   ├── components/
 │   │   ├── atom/
