@@ -65,7 +65,14 @@ Inside of the project, you'll see the following folders and files:
 
 ```
 |
+├── node_modules/
+|
 ├── public/
+|   ├── screens/
+|   |   ├── appartamentos.png
+|   |   ├── binance-l.png
+|   |   └─ euge.png
+|   |
 │   ├── maria-eugenia-costa-en.pdf
 │   ├── maria-eugenia-costa-es.pdf
 │   ├── maria-eugenia-costa-pt.pdf
@@ -73,28 +80,32 @@ Inside of the project, you'll see the following folders and files:
 |   
 ├── src/
 |   ├── assets/
-|   |   ├── react.svg
+|   |   ├── bootstrap.svg
+|   |   └─ (all the technologies icons that are shown in the portfolio)
 |   |
 │   ├── components/
 │   │   ├── atom/
-|   |   |   └── TitleH2.tsx
+|   |   |    ├── NewWindowButton.tsx
+|   |   |    ├── NewWindowButtonsStyles.css
+|   |   |    ├── ParallarText.tsx
+|   |   |    ├── PrimaryButton.tsx
+|   |   |    └── SecondaryButton.tsx
+|   |   |
 │   │   ├── template/
-|   |   |    ├──  about/
-|   |   |    ├── contact/
-|   |   |    ├── footer/
-|   |   |    ├── header/
-|   |   |    ├── hero/
-|   |   |    └──project/
-|   |   └─ MyApp.tsx
+|   |        ├──  about/
+|   |        ├── contact/
+|   |        ├── experience /
+|   |        ├── footer/
+|   |        ├── header/
+|   |        ├── hero/
+|   |        └──project/
 |   |
 |   ├── context
-|   |   └── LanguageContext.tsx
+|   |   ├── LanguageContext.tsx
+|   |   └── ThemeContext.tsx
 |   |
-|   ├── theme
-|   |
-|   └── utils
+|   └── utils/
 |
-├── App.css
 ├── App.txs
 ├── index.css
 ├── main.tsx
@@ -126,13 +137,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm install`  | Installs dependencies |
 | `npm run dev`  | Starts local dev server at `localhost:3000` |
 | `npm build`    | Build your production site to `./dist/`     |                     
-
----
-
-## Credits
-
-Assets designed by [Freepik](www.freepik.com).
-
 ---
 
 ## Notes
