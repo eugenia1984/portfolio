@@ -9,16 +9,13 @@
 
 ### Dark mode /  Select language
 
-<img src="https://github.com/eugenia1984/portfolio/assets/72580574/ff4ed410-5a13-4f1e-8b90-a12bc3b8c650" width="480" alt="porfolio maria eugenia costa modo dark" />
-
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/dbe982c8-ecff-47ee-83e8-5ff57b8fb8eb" width="480" alt="porfolio maria eugenia costa modo dark" />
 
 ---
 
 ### Lighthouse report
 
 <img src="https://github.com/eugenia1984/portfolio/assets/72580574/f56df6f5-23d8-4595-96fe-829f7f326f2c" width="400" alt="porfolio maria eugenia costa lighthouse report" />
-
-
 
 ---
 
