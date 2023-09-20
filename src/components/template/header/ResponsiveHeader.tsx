@@ -7,7 +7,6 @@ import { useTheme } from '../../../context/ThemeContext'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 import { useLanguageContext } from '../../../context/LanguageContext'
-import { Language } from '../../../utils/types'
 import { HEADER_STYLES } from './ResponsiveHeaderStyles'
 import { pages } from './ResponsiveHeaderConstants'
 import './ResponsiveHeader.css'
@@ -20,7 +19,7 @@ const ResponsiveHeader: React.FC = () => {
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => setAnchorElNav(event.currentTarget)
   const handleCloseNavMenu = () => setAnchorElNav(null)
   const handleLanguageChange = (event: SelectChangeEvent) => {
-    setLanguage(event.target.value as Language)
+    setLanguage(event.target.value)
   }
 
   return (
@@ -53,7 +52,7 @@ const ResponsiveHeader: React.FC = () => {
               onClose={ handleCloseNavMenu }
               sx={ HEADER_STYLES.menuMobile }
             >
-              { pages[language].map((page) => (
+              { pages.get(language)?.map((page) => (
                 <MenuItem
                   key={ page.title }
                   onClick={ handleCloseNavMenu }
@@ -85,7 +84,7 @@ const ResponsiveHeader: React.FC = () => {
             </Typography>
           </Link>
           <Box sx={ HEADER_STYLES.menuDesktopContainer }>
-            { pages[language].map((page) => (
+            { pages.get(language)?.map((page) => (
               <Button
                 key={ page.title }
                 onClick={ handleCloseNavMenu }

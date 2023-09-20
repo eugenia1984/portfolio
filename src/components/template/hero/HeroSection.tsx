@@ -5,7 +5,6 @@ import cvEN from '/maria-eugenia-costa-en.pdf'
 import cvES from '/maria-eugenia-costa-es.pdf'
 import cvPT from '/maria-eugenia-costa-pt.pdf'
 import { HERO_STYLES } from './HeroSectionStyles'
-import { Language } from '../../../utils/types'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import PrimaryButton from '../../atom/PrimaryButton'
@@ -17,7 +16,7 @@ const HeroSection: React.FC = () => {
   const { language } = useLanguageContext()
   const { themeMode } = useTheme()
 
-  const getHref = (language: Language): string => {
+  const getHref = (language: string): string => {
     if (language === 'es') return cvES
     if (language === 'en') return cvEN
     return cvPT
@@ -37,23 +36,15 @@ const HeroSection: React.FC = () => {
       <Grid container sx={ HERO_STYLES.container }>
         <Grid item xs={ 12 } sm={ 6 } sx={ HERO_STYLES.containerPresentation }>
           <Grid sx={ HERO_STYLES.introContainter } className="intro-container">
-            <Typography >
-              { GREETING[language] }
-            </Typography>
-            <Typography variant="h2">
-              { TITLE[language] }
-            </Typography>
-            <Typography variant="h3">
-              { SUBTITLE[language] }
-            </Typography>
-            <Typography >
-              { EXPERIENCE[language] }
-            </Typography>
-            <Stack direction="row" spacing={ 1 } sx={{mt: '12px'}}>
+            <Typography > { GREETING.get(language) }</Typography>
+            <Typography variant="h2">  { TITLE.get(language) } </Typography>
+            <Typography variant="h3"> { SUBTITLE.get(language) } </Typography>
+            <Typography > { EXPERIENCE.get(language) }</Typography>
+            <Stack direction="row" spacing={ 1 } sx={ { mt: '12px' } }>
               <PrimaryButton
-                ariaLabelText={ BTN_TEXT[language].text }
+                ariaLabelText={ BTN_TEXT.get(language)!! }
                 handleClick={ handleDownload }
-                buttonText={ BTN_TEXT[language].text }
+                buttonText={  BTN_TEXT.get(language)!! }
               />
               <NewWindowButton
                 ariaLabelText="GitHub profile"

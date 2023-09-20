@@ -1,11 +1,9 @@
 import { Grid, Typography } from '@mui/material'
 import { useLanguageContext } from '../../../context/LanguageContext.tsx'
-import TitleH2 from '../../atom/TitleH2'
 import { TITLE } from './ContactSectionConstants.ts'
 import { CONTACT_STYLES } from './ContactSectionStyles.ts'
 import ContactForm from '../../molocule/form/ContactForm.tsx'
 import ContactLinks from '../../molocule/contact-links/ContactLinks.tsx'
-
 
 const ContactSection: React.FC = () => {
   const { language } = useLanguageContext()

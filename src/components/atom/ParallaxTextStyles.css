@@ -2,7 +2,7 @@
   overflow: hidden;
   letter-spacing: -1px;
   line-height: 1.2;
-  margin: 10px 56px;
+  margin: 10px 12px;
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
@@ -19,7 +19,6 @@
   font-size: 24px;
   display: flex;
   white-space: nowrap;
-  display: flex;
   flex-wrap: nowrap;
 }
 
