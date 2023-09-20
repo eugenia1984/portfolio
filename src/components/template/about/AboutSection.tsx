@@ -7,14 +7,14 @@ import { pictures } from '../../../utils/constants'
 
 const AboutSection: React.FC = () => {
   const { language } = useLanguageContext()
-  const sentences = (TEXT[language]).split('.').filter(sentence => sentence.trim() !== '')
+  const sentences = (TEXT.get(language))?.split('.').filter(sentence => sentence.trim() !== '')
 
   return (
     <main id="about">
       <Grid container sx={ ABOUT_STYLES.container }>
         <Grid item xs={ 12 }>
           <Typography variant="h2" textAlign="center" textTransform="uppercase" my="0.5rem">
-            { TITLE[language] }
+            { TITLE.get(language) }
           </Typography>
         </Grid>
         <Grid item xs={ 12 } sm={ 5 } sx={ { padding: '0rem 0.5rem 1rem' } }>

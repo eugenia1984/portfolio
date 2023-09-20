@@ -1,68 +1,68 @@
-export const EXPERIENCE_TITLE = {
-  es: 'Experiencia',
-  en: 'Experience',
-  pt: 'Experiência'
-}
+export const EXPERIENCE_TITLE = new Map<string, string>([
+  ['es', 'Experiencia'],
+  ['en', 'Experience'],
+  ['pt', 'Experiência']
+])
 
-export const JOB_1 = {
-  es: 'SOFTTEK ARGENTINA - Front End Developer ',
-  en: 'SOFTTEK ARGENTINA - Front End Developer',
-  pt: 'SOFTTEK ARGENTINA - Desenvolvedora Front End'
-}
+export const JOB_1 = new Map<string, string>([
+  ['es', 'SOFTTEK ARGENTINA - Front End Developer '],
+  ['en', 'SOFTTEK ARGENTINA - Front End Developer'],
+  ['pt', 'SOFTTEK ARGENTINA - Desenvolvedora Front End']
+])
 
-export const JOB_1_YEAR = {
-  es: '(Enero 2023 - Presente)',
-  en: '(January 2023 - Present)',
-  pt: '(Janeiro 2023 - Presente)'
-}
+export const JOB_1_YEAR = new Map<string, string>([
+  ['es', '(Enero 2023 - Presente)'],
+  ['en', '(January 2023 - Present)'],
+  ['pt', '(Janeiro 2023 - Presente)']
+])
 
-export const JOB_1_TITLE = {
-  es: 'Proyecto: Renovación Tecnológica - Reintegros (OSDE)',
-  en: 'Project: Technological Renewal - Reintegros (OSDE)',
-  pt: 'Projeto: Renovação Tecnológica - Reintegros (OSDE)'
-}
+export const JOB_1_TITLE = new Map<string, string>([
+  ['es', 'Proyecto: Renovación Tecnológica - Reintegros (OSDE)'],
+  ['en', 'Project: Technological Renewal - Reintegros (OSDE)'],
+  ['pt', 'Projeto: Renovação Tecnológica - Reintegros (OSDE)']
+])
 
-export const JOB_1_DESCRIPTION = {
-  es: "Migración del módulo Reintegros para OSDE (la principal proveedora de medicina privada de Argentina) con implementación de alcance nacional en todas sus oficinas, donde los afiliados presentan sus prestaciones de salud realizadas y solicitan reintegro de las mismas. Es una aplicación web interactiva, de rendimiento eficiente, implementando responsive design y con compatibilidad en todos los navegadores (incluido Internet Explorer). Utilizo metodologías Ágiles y Scrum, trabajando junto a: Desarrolladores BackEnd, quienes construyen los microservicios que utilizamos y probamos en Swagger y Postman, el Diseñador UX/UI, quien acorde al branding de la empresa diseña las interfaces de usuario atractivas y coherentes y los Analistas Funcionales. ",
-  en: "Migration of the Reintegros module for OSDE (the main provider of private medicine in Argentina) with nationwide implementation in all its offices, where affiliates submit their health benefits and request reimbursement of the same. It is an interactive web application, with efficient performance, implementing responsive design and compatibility with all browsers (including Internet Explorer). I use Agile and Scrum methodologies, working together with: BackEnd Developers, who build the microservices we use and test in Swagger and Postman, the UX/UI Designer, who according to the company's branding designs the attractive and coherent user interfaces and the Functional Analysts.",
-  pt: "Migração do módulo Reintegros para o OSDE (o principal provedor de medicina privada na Argentina) com implementação nacional em todos os seus escritórios, onde os afiliados submetem seus benefícios de saúde e solicitam o reembolso dos mesmos. Trata-se de um aplicativo web interativo, com desempenho eficiente, implementando design responsivo e com compatibilidade em todos os navegadores (incluindo o Internet Explorer). Utilizo as metodologias Agile e Scrum, trabalhando em conjunto com: Desenvolvedores de back-end, que constroem os microsserviços que usamos e testamos em Swagger e Postman, o designer de UX/UI, que, de acordo com a marca da empresa, projeta as interfaces de usuário atraentes e coerentes e os analistas funcionais."
-}
+export const JOB_1_DESCRIPTION = new Map<string, string>([
+  ['es', "Migración del módulo Reintegros para OSDE (la principal proveedora de medicina privada de Argentina) con implementación de alcance nacional en todas sus oficinas, donde los afiliados presentan sus prestaciones de salud realizadas y solicitan reintegro de las mismas. Es una aplicación web interactiva, de rendimiento eficiente, implementando responsive design y con compatibilidad en todos los navegadores (incluido Internet Explorer). Utilizo metodologías Ágiles y Scrum, trabajando junto a: Desarrolladores BackEnd, quienes construyen los microservicios que utilizamos y probamos en Swagger y Postman, el Diseñador UX/UI, quien acorde al branding de la empresa diseña las interfaces de usuario atractivas y coherentes y los Analistas Funcionales. "],
+  ['en', "Migration of the Reintegros module for OSDE (the main provider of private medicine in Argentina) with nationwide implementation in all its offices, where affiliates submit their health benefits and request reimbursement of the same. It is an interactive web application, with efficient performance, implementing responsive design and compatibility with all browsers (including Internet Explorer). I use Agile and Scrum methodologies, working together with: BackEnd Developers, who build the microservices we use and test in Swagger and Postman, the UX/UI Designer, who according to the company's branding designs the attractive and coherent user interfaces and the Functional Analysts."],
+  ['pt', "Migração do módulo Reintegros para o OSDE (o principal provedor de medicina privada na Argentina) com implementação nacional em todos os seus escritórios, onde os afiliados submetem seus benefícios de saúde e solicitam o reembolso dos mesmos. Trata-se de um aplicativo web interativo, com desempenho eficiente, implementando design responsivo e com compatibilidade em todos os navegadores (incluindo o Internet Explorer). Utilizo as metodologias Agile e Scrum, trabalhando em conjunto com: Desenvolvedores de back-end, que constroem os microsserviços que usamos e testamos em Swagger e Postman, o designer de UX/UI, que, de acordo com a marca da empresa, projeta as interfaces de usuário atraentes e coerentes e os analistas funcionais."]
+])
 
-export const JOB_1_TECHNOLOGIES = {
-  es: 'Tecnologías:',
-  en: 'Technologies:',
-  pt: 'Tecnologias:'
-}
+export const JOB_1_TECHNOLOGIES = new Map<string, string>([
+  ['es', 'Tecnologías:'],
+  ['en', 'Technologies:'],
+  ['pt', 'Tecnologias: ']
+])
 
-export const JOB_1_TECHNOLOGIES_ICONS = {
-  es: ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code'],
-  en: ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code'],
-  pt: ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code'],
-}
+export const JOB_1_TECHNOLOGIES_ICONS = new Map<string, string[]>([
+  ['es', ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code']],
+  ['en', ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code']],
+  ['pt', ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code']],
+])
 
-export const JOB_2 = {
-  es: 'HOGARTH ARGENTINA - Front End Developer',
-  en: 'HOGARTH ARGENTINA - Front End Developer',
-  pt: 'HOGARTH ARGENTINA - Desenvolvedora Front End'
-}
+export const JOB_2 = new Map<string, string>([
+  ['es', 'HOGARTH ARGENTINA - Front End Developer'],
+  ['en', 'HOGARTH ARGENTINA - Front End Developer'],
+  ['pt', 'HOGARTH ARGENTINA - Desenvolvedora Front End']
+])
 
-export const JOB_2_YEAR = {
-  es: '(Enero 2022 - Enero 2023)',
-  en: '(January 2022 - January 2023)',
-  pt: '(Janeiro 2022 - Janeiro 2023)'
-}
+export const JOB_2_YEAR = new Map<string, string>([
+  ['es', '(Enero 2022 - Enero 2023)'],
+  ['en', '(January 2022 - January 2023)'],
+  ['pt', '(Janeiro 2022 - Janeiro 2023)']
+])
 
-export const JOB_2_TITLE = {
-  es: 'Proyecto: Geo localización de páginas webs para la principal empresa de tecnología',
-  en: 'Project: Geo localization of web pages for major technology company',
-  pt: 'Projeto: Localização geográfica de sites para uma empresa líder em tecnologia'
-}
+export const JOB_2_TITLE = new Map<string, string>([
+  [ 'es', 'Proyecto: Geo localización de páginas webs para la principal empresa de tecnología]'],
+  ['en', 'Project: Geo localization of web pages for major technology company'],
+  ['pt', 'Projeto: Localização geográfica de sites para uma empresa líder em tecnologia']
+])
 
-export const JOB_2_DESCRIPTION = {
-  es: "Trabajo con las páginas webs para toda América, dividiéndose en: Brasil, Colombia, Chile, Latinoamérica en Español e Inglés y Canadá en Francés e Inglés comprendiendo dichos idiomas. Maquetación de páginas y e-mails con un alto estándar de calidad, responsive design, mobile first y priorizando la accesibilidad. Corrección de bugs visuales.",
-  en: "Working with websites for all America, divided in: Brazil, Colombia, Chile, Latin America in Spanish and English, and Canada in French and English, understanding those languages. Layout of pages and emails with a high standard of quality, responsive design, mobile first and prioritizing accessibility. Correction of visual bugs.",
-  pt: "Trabalhar com os sites para todas as Américas, divididos em: Brasil, Colômbia, Chile, América Latina em espanhol e inglês, e Canadá em francês e inglês, incluindo esses idiomas. Layout de páginas e e-mails com alto padrão de qualidade, design responsivo, mobile first e priorizando a acessibilidade. Correção de bugs visuais."
-}
+export const JOB_2_DESCRIPTION = new Map<string, string>([
+  ['es', "Trabajo con las páginas webs para toda América, dividiéndose en: Brasil, Colombia, Chile, Latinoamérica en Español e Inglés y Canadá en Francés e Inglés comprendiendo dichos idiomas. Maquetación de páginas y e-mails con un alto estándar de calidad, responsive design, mobile first y priorizando la accesibilidad. Corrección de bugs visuales."],
+  ['en', "Working with websites for all America, divided in: Brazil, Colombia, Chile, Latin America in Spanish and English, and Canada in French and English, understanding those languages. Layout of pages and emails with a high standard of quality, responsive design, mobile first and prioritizing accessibility. Correction of visual bugs."],
+  ['pt', "Trabalhar com os sites para todas as Américas, divididos em: Brasil, Colômbia, Chile, América Latina em espanhol e inglês, e Canadá em francês e inglês, incluindo esses idiomas. Layout de páginas e e-mails com alto padrão de qualidade, design responsivo, mobile first e priorizando a acessibilidade. Correção de bugs visuais."]
+])
 
 export const JOB_2_TECHNOLOGIES = {
   es: 'Tecnologías:',

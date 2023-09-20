@@ -20,7 +20,7 @@ const ResponsiveFooter: React.FC = () => {
       } }
     >
       <Typography sx={ FOOTER.text }>
-        Copyright © { YEAR } { allRightsReserved[language] } María Eugenia Costa
+        Copyright © { YEAR } { allRightsReserved.get(language) } María Eugenia Costa
         <Link
           href="https://www.linkedin.com/in/maríaeugeniacosta/"
           target="_blank"

@@ -17,7 +17,7 @@ import { ThemeMode } from '../../../utils/constants'
 
 interface CardProjectProps {
   projectName: string
-  projectDescription: string
+  projectDescription?: string
   projectTechnologies: string[]
   projectLinkGitHub: string
   projectLinkDeploy: string
@@ -57,8 +57,8 @@ const CardProject: React.FC<CardProjectProps> = ({
         <Typography variant="h3" component="div">
           { projectName }
         </Typography>
-        <Typography variant="body1" color="text.secondary" >
-          { projectDescription }
+        <Typography >
+          { projectDescription? projectDescription : '' }
         </Typography>
         <Grid
           container

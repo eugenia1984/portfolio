@@ -60,30 +60,30 @@ const ExperienceSection: React.FC = () => {
       <Grid container sx={ EXPERIENCE_STYLES.container }>
         <Grid item xs={ 12 } sx={ { marginBottom: '32px' } }>
           <Typography variant="h2" textAlign="center" textTransform="uppercase" my="0.5rem">
-            { EXPERIENCE_TITLE[language] }
+            { EXPERIENCE_TITLE.get(language) }
           </Typography>
         </Grid>
         <Grid item xs={ 12 } sm={ 10 } md={ 9 }>
           <Accordion expanded={ expanded === 'panel1' } onChange={ handleChange('panel1') }>
             <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
               <Typography variant="h3" gutterBottom>
-                { JOB_1[language] }
+                { JOB_1.get(language) }
               </Typography>
               <Typography >
-                <span style={ EXPERIENCE_STYLES.span }>{ JOB_1_YEAR[language] } </span>
+                <span style={ EXPERIENCE_STYLES.span }>{ JOB_1_YEAR.get(language) } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="h4" gutterBottom>
-                { JOB_1_TITLE[language] }
+                { JOB_1_TITLE.get(language) }
               </Typography>
               <Typography sx={ { marginBottom: '1rem' } }>
-                { JOB_1_DESCRIPTION[language] }
+                { JOB_1_DESCRIPTION.get(language) }
               </Typography>
               <Typography sx={ { textDecoration: 'underline', marginBottom: '18px' } }>
-                { JOB_1_TECHNOLOGIES[language] }
+                { JOB_1_TECHNOLOGIES.get(language) }
               </Typography>
-              { JOB_1_TECHNOLOGIES_ICONS[language].map((tech, index) => {
+              { JOB_1_TECHNOLOGIES_ICONS.get(language)?.map((tech, index) => {
                 const techInfo = technologies.find(t => t.alt === tech)
                 return (
                   <Typography key={ `job1-${ index }` }>
@@ -101,18 +101,18 @@ const ExperienceSection: React.FC = () => {
           <Accordion expanded={ expanded === 'panel2' } onChange={ handleChange('panel2') }>
             <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
               <Typography variant="h3" gutterBottom>
-                { JOB_2[language] }
+                { JOB_2.get(language) }
               </Typography>
               <Typography >
-                <span style={ EXPERIENCE_STYLES.span }>{ JOB_2_YEAR[language] } </span>
+                <span style={ EXPERIENCE_STYLES.span }>{ JOB_2_YEAR.grt(language) } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="h4" gutterBottom>
-                { JOB_2_TITLE[language] }
+                { JOB_2_TITLE.get(language) }
               </Typography>
               <Typography sx={ { marginBottom: '1rem' } }>
-                { JOB_2_DESCRIPTION[language] }
+                { JOB_2_DESCRIPTION.get(language) }
               </Typography>
               <Typography sx={ { textDecoration: 'underline', marginBottom: '18px' } }>
                 { JOB_2_TECHNOLOGIES[language] }
