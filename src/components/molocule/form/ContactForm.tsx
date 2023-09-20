@@ -3,7 +3,7 @@ import { Box, Button, CircularProgress, InputLabel, TextField } from '@mui/mater
 import toast, { Toaster } from 'react-hot-toast'
 import { emailRegex, nameRegex } from '../../../utils/constants'
 import { useLanguageContext } from '../../../context/LanguageContext'
-import { FORM_MSG } from './ContactFormConstants'
+import { EMAIL_ERROR, EMAIL_LABEL, EMAIL_PLACEHOLDER, MESSAGE_ERROR, MESSAGE_LABEL, MESSAGE_PLACEHOLDER, NAME_ERROR, NAME_LABEL, NAME_PLACEHOLDER, SEND_BTN_TEXT, SEND_EMPTY, SEND_ERROR, SUCCESS_SEND } from './ContactFormConstants'
 import { FORM_STYLES } from './ContactFormStyles'
 
 const ContactForm: React.FC = () => {
@@ -16,6 +16,8 @@ const ContactForm: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [loading, setLoading] = useState<boolean>(false)
 
+  const URL_SEND_MAIL = 'https://formsubmit.co/ajax/costamariaeugenia1@gmail.com'
+
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputName = event.target.value
     const isValidName = nameRegex.test(inputName)
@@ -25,7 +27,7 @@ const ContactForm: React.FC = () => {
       setErrorName(null)
     } else {
       setName(inputName)
-      setErrorName(`X - ${ FORM_MSG[language].nameError }`)
+      setErrorName(`X - ${ NAME_ERROR.get(language) }`)
     }
   }
 
@@ -38,7 +40,7 @@ const ContactForm: React.FC = () => {
       setErrorEmail(null)
     } else {
       setEmail(inputEmail)
-      setErrorEmail(`X - ${ FORM_MSG[language].eMailError }`)
+      setErrorEmail(`X - ${ EMAIL_ERROR.get(language) }`)
     }
   }
 
@@ -50,7 +52,7 @@ const ContactForm: React.FC = () => {
       setErrorMessage(null)
     } else {
       setMessage(inputMessage)
-      setErrorMessage(`X - ${ FORM_MSG[language].messageError }`)
+      setErrorMessage(`X - ${ MESSAGE_ERROR.get(language) }`)
     }
   }
 
@@ -61,15 +63,11 @@ const ContactForm: React.FC = () => {
 
     if (name && email && message) {
       try {
-        const response = await fetch(
-          'https://formsubmit.co/ajax/costamariaeugenia1@gmail.com',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, message }),
-          }
+        const response = await fetch(URL_SEND_MAIL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', },
+          body: JSON.stringify({ name, email, message }),
+        }
         )
 
         const data = await response.json()
@@ -77,15 +75,15 @@ const ContactForm: React.FC = () => {
           setName('')
           setEmail('')
           setMessage('')
-          toast.success(`${ FORM_MSG[language].successSend }`)
+          toast.success(`${ SUCCESS_SEND.get(language) }`)
         } else {
-          toast.error(`${ FORM_MSG[language].sendError }`)
+          toast.error(`${ SEND_ERROR.get(language) }`)
         }
       } catch (error) {
-        toast.error(`${ FORM_MSG[language].sendError }`)
+        toast.error(`${ SEND_ERROR.get(language) }`)
       }
     } else {
-      toast.error(`${ FORM_MSG[language].sendEmpty }`)
+      toast.error(`${ SEND_EMPTY.get(language) }`)
     }
     setLoading(false)
   }
@@ -99,12 +97,12 @@ const ContactForm: React.FC = () => {
       />
       <form onSubmit={ handleSubmit }>
         <InputLabel htmlFor="nombre" sx={ FORM_STYLES.label }>
-          { FORM_MSG[language].nameLabel } :
+          { NAME_LABEL.get(language) } :
         </InputLabel>
         <TextField
           type="text"
           id="nombre"
-          placeholder={ FORM_MSG[language].namePlaceholder }
+          placeholder={ NAME_PLACEHOLDER.get(language) }
           variant="filled"
           fullWidth
           value={ name }
@@ -114,12 +112,12 @@ const ContactForm: React.FC = () => {
           sx={ { marginBottom: '1.0rem' } }
         />
         <InputLabel htmlFor="email" sx={ FORM_STYLES.label }>
-          { FORM_MSG[language].eMailLabel } :
+          { EMAIL_LABEL.get(language) } :
         </InputLabel>
         <TextField
           type="text"
           id="email"
-          placeholder={ FORM_MSG[language].eMailPlaceholder }
+          placeholder={ EMAIL_PLACEHOLDER.get(language) }
           variant="filled"
           fullWidth
           value={ email }
@@ -129,11 +127,11 @@ const ContactForm: React.FC = () => {
           sx={ { marginBottom: '1.0rem' } }
         />
         <InputLabel htmlFor="mensaje" sx={ FORM_STYLES.label }>
-          { FORM_MSG[language].messageLabel } :
+          { MESSAGE_LABEL.get(language) } :
         </InputLabel>
         <TextField
           id="mensaje"
-          placeholder={ FORM_MSG[language].messagePlaceholder }
+          placeholder={ MESSAGE_PLACEHOLDER.get(language) }
           variant="filled"
           rows={ 6 }
           value={ message }
@@ -144,16 +142,9 @@ const ContactForm: React.FC = () => {
           sx={ { marginBottom: '1.25rem', width: '100%' } }
         />
         <Box
-          sx={ {
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            alignContent: 'center',
-            justifyContent: 'center',
-            alignItems: 'center'
-          } }>
+          sx={ FORM_STYLES.btn }>
           <Button type="submit" variant="contained" color="primary" sx={ { width: '280px' } }>
-            { FORM_MSG[language].sendBtn }
+            { SEND_BTN_TEXT.get(language) }
           </Button>
         </Box>
       </form>

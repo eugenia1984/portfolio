@@ -104,7 +104,7 @@ const ExperienceSection: React.FC = () => {
                 { JOB_2.get(language) }
               </Typography>
               <Typography >
-                <span style={ EXPERIENCE_STYLES.span }>{ JOB_2_YEAR.grt(language) } </span>
+                <span style={ EXPERIENCE_STYLES.span }>{ JOB_2_YEAR.get(language) } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -115,9 +115,9 @@ const ExperienceSection: React.FC = () => {
                 { JOB_2_DESCRIPTION.get(language) }
               </Typography>
               <Typography sx={ { textDecoration: 'underline', marginBottom: '18px' } }>
-                { JOB_2_TECHNOLOGIES[language] }
+                { JOB_2_TECHNOLOGIES.get(language) }
               </Typography>
-              { JOB_2_TECHNOLOGIES_ICONS[language].map((tech, index) => {
+              { JOB_2_TECHNOLOGIES_ICONS.get(language)?.map((tech, index) => {
                 const techInfo = technologies.find(t => t.alt === tech)
                 return (
                   <Typography key={ `job2-${ index }` }>
@@ -135,23 +135,23 @@ const ExperienceSection: React.FC = () => {
           <Accordion expanded={ expanded === 'panel3' } onChange={ handleChange('panel3') }>
             <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
               <Typography variant="h3" gutterBottom>
-                { JOB_3[language] }
+                { JOB_3.get(language) }
               </Typography>
               <Typography >
-                <span style={ EXPERIENCE_STYLES.span }>{ JOB_3_YEAR[language] } </span>
+                <span style={ EXPERIENCE_STYLES.span }>{ JOB_3_YEAR.get(language) } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="h4" gutterBottom>
-                { JOB_3_TITLE[language] }
+                { JOB_3_TITLE.get(language) }
               </Typography>
               <Typography sx={ { marginBottom: '1rem' } }>
-                { JOB_3_DESCRIPTION[language] }
+                { JOB_3_DESCRIPTION.get(language) }
               </Typography>
               <Typography sx={ { textDecoration: 'underline', marginBottom: '18px' } }>
-                { JOB_3_TECHNOLOGIES[language] }
+                { JOB_3_TECHNOLOGIES.get(language) }
               </Typography>
-              { JOB_3_TECHNOLOGIES_ICONS[language].map((tech, index) => {
+              { JOB_3_TECHNOLOGIES_ICONS.get(language)?.map((tech, index) => {
                 const techInfo = technologies.find(t => t.alt === tech)
                 return (
                   <Typography key={ `job3-${ index }` }>
@@ -169,23 +169,23 @@ const ExperienceSection: React.FC = () => {
           <Accordion expanded={ expanded === 'panel4' } onChange={ handleChange('panel4') }>
             <AccordionSummary aria-controls="panel4d-content" id="panel4d-header" >
               <Typography variant="h3" gutterBottom>
-                { JOB_4[language] }
+                { JOB_4.get(language) }
               </Typography>
               <Typography >
-                <span style={ EXPERIENCE_STYLES.span }>{ JOB_4_YEAR[language] } </span>
+                <span style={ EXPERIENCE_STYLES.span }>{ JOB_4_YEAR.get(language) } </span>
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography variant="h4" gutterBottom>
-                { JOB_4_TITLE[language] }
+                { JOB_4_TITLE.get(language) }
               </Typography>
               <Typography sx={ { marginBottom: '1rem' } }>
-                { JOB_4_DESCRIPTION[language] }
+                { JOB_4_DESCRIPTION.get(language) }
               </Typography>
               <Typography sx={ { textDecoration: 'underline', marginBottom: '18px' } }>
-                { JOB_4_TECHNOLOGIES[language] }
+                { JOB_4_TECHNOLOGIES.get(language) }
               </Typography>
-              { JOB_4_TECHNOLOGIES_ICONS[language].map((tech, index) => {
+              { JOB_4_TECHNOLOGIES_ICONS.get(language)?.map((tech, index) => {
                 const techInfo = technologies.find(t => t.alt === tech)
                 return (
                   <Typography key={ `job4-${ index }` }>

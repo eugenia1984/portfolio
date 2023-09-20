@@ -15,7 +15,7 @@ const ContactSection: React.FC = () => {
       <Grid container sx={ CONTACT_STYLES.container }>
         <Grid item xs={ 12 } sx={ { marginBottom: '12px' } }>
           <Typography variant="h2" textAlign="center" textTransform="uppercase" my="0.5rem">
-            { TITLE[language] }
+            { TITLE.get(language) }
           </Typography>
         </Grid>
         <Grid item xs={ 11 } sm={ 5 } md={ 4 } sx={ CONTACT_STYLES.containerForm }>

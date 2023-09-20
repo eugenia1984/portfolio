@@ -9,6 +9,14 @@ export const FORM_STYLES = {
     alignContent: 'center', 
     justifyContent: 'center', 
     alignItems: 'center',
-    margin: '10px auto' 
+    margin: '20px auto' 
+  },
+  btn:  {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignContent: 'center',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 }

@@ -53,7 +53,7 @@ export const JOB_2_YEAR = new Map<string, string>([
 ])
 
 export const JOB_2_TITLE = new Map<string, string>([
-  [ 'es', 'Proyecto: Geo localización de páginas webs para la principal empresa de tecnología]'],
+  ['es', 'Proyecto: Geo localización de páginas webs para la principal empresa de tecnología]'],
   ['en', 'Project: Geo localization of web pages for major technology company'],
   ['pt', 'Projeto: Localização geográfica de sites para uma empresa líder em tecnologia']
 ])
@@ -64,87 +64,86 @@ export const JOB_2_DESCRIPTION = new Map<string, string>([
   ['pt', "Trabalhar com os sites para todas as Américas, divididos em: Brasil, Colômbia, Chile, América Latina em espanhol e inglês, e Canadá em francês e inglês, incluindo esses idiomas. Layout de páginas e e-mails com alto padrão de qualidade, design responsivo, mobile first e priorizando a acessibilidade. Correção de bugs visuais."]
 ])
 
-export const JOB_2_TECHNOLOGIES = {
-  es: 'Tecnologías:',
-  en: 'Technologies:',
-  pt: 'Tecnologias:'
-}
+export const JOB_2_TECHNOLOGIES = new Map<string, string>([
+  ['es', 'Tecnologías:'],
+  ['en', 'Technologies:'],
+  ['pt', 'Tecnologias:']
+])
 
-export const JOB_2_TECHNOLOGIES_ICONS = {
-  es: ['HTML5', 'CSS3', 'JavaScript', 'SVN', 'Visual Studio Code'],
-  en: ['HTML5', 'CSS3', 'JavaScript', 'SVN', 'Visual Studio Code'],
-  pt: ['HTML5', 'CSS3', 'JavaScript', 'SVN', 'Visual Studio Code'],
-}
+export const JOB_2_TECHNOLOGIES_ICONS = new Map<string, string[]>([
+  ['es', ['HTML5', 'CSS3', 'JavaScript', 'SVN', 'Visual Studio Code']],
+  ['en', ['HTML5', 'CSS3', 'JavaScript', 'SVN', 'Visual Studio Code']],
+  ['pt', ['HTML5', 'CSS3', 'JavaScript', 'SVN', 'Visual Studio Code']],
+])
 
+export const JOB_3 = new Map<string, string>([
+  ['es', 'PIGMALION SOFTWARE  - Back End Developer'],
+  ['en', 'PIGMALION SOFTWARE - Back End Developer'],
+  ['pt', 'PIGMALION SOFTWARE - Desenvolvedora Back End']
+])
 
-export const JOB_3 = {
-  es: 'PIGMALION SOFTWARE  - Back End Developer',
-  en: 'PIGMALION SOFTWARE - Back End Developer',
-  pt: 'PIGMALION SOFTWARE - Desenvolvedora Back End'
-}
+export const JOB_3_YEAR = new Map<string, string>([
+  ['es', '(Enero 2023 - Enero 2022)'],
+  ['en', '(August 2021 - January 2022)'],
+  ['pt', '(Janeiro 2023 - Janeiro de 2022)']
+])
 
-export const JOB_3_YEAR = {
-  es: '(Enero 2023 - Enero 2022)',
-  en: '(August 2021 - January 2022)',
-  pt: '(Janeiro 2023 - Janeiro de 2022)'
-}
+export const JOB_3_TITLE = new Map<string, string>([
+  ['es', 'Proyecto: Renovación tecnológica - SAP y Reportes (BYMA)'],
+  ['en', 'Project: Technological renovation - SAP and Reporting (BYMA)'],
+  ['pt', 'Projeto: Renovação tecnológica - SAP e Reporting (BYMA)']
+])
 
-export const JOB_3_TITLE = {
-  es: 'Proyecto: Renovación tecnológica - SAP y Reportes (BYMA)',
-  en: 'Project: Technological renovation - SAP and Reporting (BYMA)',
-  pt: 'Projeto: Renovação tecnológica - SAP e Reporting (BYMA)'
-}
+export const JOB_3_DESCRIPTION = new Map<string, string>([
+  ['es', "Realizando la migración de base de datos y microservicios existentes para BYMA (Bolsas y Mercados Argentinos) nos dividimos en equipos y participé en dos de ellos: SAP, para generar reportes de archivos de tamaño fijo y Reportes donde se generan archivos en formato PDF en distintos formatos acorde a la consulta realizada a extensa base de datos (más de 60 tablas)."],
+  ['en', "Performing the migration of existing database and microservices for BYMA (Bolsas y Mercados Argentinos) we divided into teams and I participated in two of them: SAP, to generate reports of fixed size files and Reports where PDF files are generated in different formats according to the query made to extensive database (more than 60 tables)."],
+  ['pt', "Realizando a migração do banco de dados e microsserviços existentes para a BYMA (Bolsas y Mercados Argentinos) nos dividimos em equipes e participei de duas delas: SAP, para gerar relatórios de arquivos de tamanho fixo e Reports onde são gerados arquivos em formato PDF em diferentes formatos de acordo com a consulta feita ao extenso banco de dados (mais de 60 tabelas)."]
+])
 
-export const JOB_3_DESCRIPTION = {
-  es: "Realizando la migración de base de datos y microservicios existentes para BYMA (Bolsas y Mercados Argentinos) nos dividimos en equipos y participé en dos de ellos: SAP, para generar reportes de archivos de tamaño fijo y Reportes donde se generan archivos en formato PDF en distintos formatos acorde a la consulta realizada a extensa base de datos (más de 60 tablas).",
-  en: "Performing the migration of existing database and microservices for BYMA (Bolsas y Mercados Argentinos) we divided into teams and I participated in two of them: SAP, to generate reports of fixed size files and Reports where PDF files are generated in different formats according to the query made to extensive database (more than 60 tables).",
-  pt: "Realizando a migração do banco de dados e microsserviços existentes para a BYMA (Bolsas y Mercados Argentinos) nos dividimos em equipes e participei de duas delas: SAP, para gerar relatórios de arquivos de tamanho fixo e Reports onde são gerados arquivos em formato PDF em diferentes formatos de acordo com a consulta feita ao extenso banco de dados (mais de 60 tabelas)."
-}
+export const JOB_3_TECHNOLOGIES = new Map<string, string>([
+  ['es', 'Tecnologías:'],
+  ['en', 'Technologies:'],
+  ['pt', 'Tecnologias:']
+])
 
-export const JOB_3_TECHNOLOGIES = {
-  es: 'Tecnologías:',
-  en: 'Technologies:',
-  pt: 'Tecnologias:'
-}
+export const JOB_3_TECHNOLOGIES_ICONS = new Map < string, string[]> ([
+  ['es', ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ']],
+  ['en', ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ']],
+  ['pt', ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ']]
+])
 
-export const JOB_3_TECHNOLOGIES_ICONS = {
-  es: ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ'],
-  en: ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ'],
-  pt: ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ'],
-}
+export const JOB_4 = new Map<string, string>([
+  ['es', 'CONSULT-AR - Front End Developer'],
+  ['en', 'CONSULT-AR - Front End Developer'],
+  ['pt', 'CONSULT-AR - Desenvolvedora Front End']
+])
 
-export const JOB_4 = {
-  es: 'CONSULT-AR - Front End Developer',
-  en: 'CONSULT-AR - Front End Developer',
-  pt: 'CONSULT-AR - Desenvolvedora Front End'
-}
+export const JOB_4_YEAR = new Map<string, string>([
+  [ 'es', '(Marzo 2021 - Enero 2022)'],
+  ['en', '(March 2021 - January 2022)'],
+  ['pt', '(Março de 2021 - Janeiro de 2022)']
+])
 
-export const JOB_4_YEAR = {
-  es: '(Marzo 2021 - Enero 2022)',
-  en: '(March 2021 - January 2022)',
-  pt: '(Março de 2021 - Janeiro de 2022)'
-}
+export const JOB_4_TITLE = new Map<string, string>([
+  ['es', 'Páginas webs para agencias de viaje'],
+  ['en', 'Travel Agencies web pages'],
+  ['pt', 'Sites para agências de viagens']
+])
 
-export const JOB_4_TITLE = {
-  es: 'Páginas webs para agencias de viaje',
-  en: 'Travel Agencies web pages',
-  pt: 'Sites para agências de viagens'
-}
+export const JOB_4_DESCRIPTION = new Map<string, string>([
+  [' es', "Mantenimiento de páginas web para agencias de viajes de diversos países de Latinoamérica, realizando actualización de contenido (modificando datos de contacto, secciones de una página, creando nuevas secciones o páginas, etc) y estando a cargo del módulo de búsqueda y reserva de vuelos, el cual se podía implementar por separado, por lo que debía maquetar misma Cabecera y Pie de página de la agencia que contrataba y crear desde cero el módulo, haciendo las configuraciones necesarias, manejando Base de Datos y alojando en un hosting."],
+  ['en', "Maintenance of web pages for travel agencies in several Latin American countries, updating content (modifying contact details, sections of a page, creating new sections or pages, etc) and being in charge of the search and flight booking module, which could be implemented separately, so I had to layout the same header and footer of the agency that hired and create from scratch the module, making the necessary configurations, managing database and hosting."],
+  ['pt', "Migração do módulo Reintegros para o OSDE (o principal provedor de medicina privada na Argentina) com implementação nacional em todos os seus escritórios, onde os afiliados submetem seus benefícios de saúde e solicitam o reembolso dos mesmos. Trata-se de um aplicativo web interativo, com desempenho eficiente, implementando design responsivo e com compatibilidade em todos os navegadores (incluindo o Internet Explorer). Utilizo as metodologias Agile e Scrum, trabalhando em conjunto com: Desenvolvedores de back-end, que constroem os microsserviços que usamos e testamos em Swagger e Postman, o designer de UX/UI, que, de acordo com a marca da empresa, projeta as interfaces de usuário atraentes e coerentes e os analistas funcionais."]
+])
 
-export const JOB_4_DESCRIPTION = {
-  es: "Mantenimiento de páginas web para agencias de viajes de diversos países de Latinoamérica, realizando actualización de contenido (modificando datos de contacto, secciones de una página, creando nuevas secciones o páginas, etc) y estando a cargo del módulo de búsqueda y reserva de vuelos, el cual se podía implementar por separado, por lo que debía maquetar misma Cabecera y Pie de página de la agencia que contrataba y crear desde cero el módulo, haciendo las configuraciones necesarias, manejando Base de Datos y alojando en un hosting.",
-  en: "Maintenance of web pages for travel agencies in several Latin American countries, updating content (modifying contact details, sections of a page, creating new sections or pages, etc) and being in charge of the search and flight booking module, which could be implemented separately, so I had to layout the same header and footer of the agency that hired and create from scratch the module, making the necessary configurations, managing database and hosting.",
-  pt: "Migração do módulo Reintegros para o OSDE (o principal provedor de medicina privada na Argentina) com implementação nacional em todos os seus escritórios, onde os afiliados submetem seus benefícios de saúde e solicitam o reembolso dos mesmos. Trata-se de um aplicativo web interativo, com desempenho eficiente, implementando design responsivo e com compatibilidade em todos os navegadores (incluindo o Internet Explorer). Utilizo as metodologias Agile e Scrum, trabalhando em conjunto com: Desenvolvedores de back-end, que constroem os microsserviços que usamos e testamos em Swagger e Postman, o designer de UX/UI, que, de acordo com a marca da empresa, projeta as interfaces de usuário atraentes e coerentes e os analistas funcionais."
-}
+export const JOB_4_TECHNOLOGIES = new Map<string, string>([
+  ['es', 'Tecnologías:'],
+  ['en', 'Technologies:'],
+  ['pt', 'Tecnologias:']
+])
 
-export const JOB_4_TECHNOLOGIES = {
-  es: 'Tecnologías:',
-  en: 'Technologies:',
-  pt: 'Tecnologias:'
-}
-
-export const JOB_4_TECHNOLOGIES_ICONS = {
-  es: ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code'],
-  en: ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code'],
-  pt: ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code'],
-}
+export const JOB_4_TECHNOLOGIES_ICONS = new Map<string, string[]>([
+  [ 'es', ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code']],
+  ['en', ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code']],
+  ['pt', ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code']]
+])
