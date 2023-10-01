@@ -53,7 +53,7 @@ const CardProject: React.FC<CardProjectProps> = ({
         title={ projectName }
       />
       <CardContent
-        sx={ { minHeight: { sx: '20px', sm: '348px', lg:'280px' } } } >
+        sx={ { minHeight: { sx: '20px', sm: '330px', lg:'280px' } } } >
         <Typography variant="h3" component="div">
           { projectName }
         </Typography>

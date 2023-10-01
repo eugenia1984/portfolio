@@ -3,7 +3,7 @@ export const ABOUT_STYLES = {
     padding: '30px 0.5rem 1.75rem ',
     maxWidth: '1400px',
     margin: '0 auto',
-    minHeight: '82vh'
+    minHeight: '100vh'
   },
   boxIcons:  {
     display: 'flex',

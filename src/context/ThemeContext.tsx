@@ -389,6 +389,7 @@ export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = ({ childr
               fontSize: '12px',
               fontWeight: 700,
               color: theme.palette.primary.main,
+              padding: '4px 8px'
             }),
           },
         },

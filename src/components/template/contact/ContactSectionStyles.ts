@@ -7,7 +7,7 @@ export const CONTACT_STYLES = {
     alignContent: 'flex-start',
     alignItems: 'center',
     gap: '1rem',
-    minHeight: '84vh'
+    minHeight: '100vh'
   },
   containerForm: {
     display: 'flex',

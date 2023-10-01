@@ -9,7 +9,6 @@ import HeroSection from './components/template/hero/HeroSection'
 import ProjectSection from './components/template/project/ProjectSection'
 import ExperienceSection from './components/template/experience/ExperienceSection'
 
-
 function App() {
 
   return (

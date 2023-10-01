@@ -4,7 +4,7 @@ export const EXPERIENCE_STYLES = {
     maxWidth: '1400px',
     margin: '20px auto 20px',
     justifyContent: 'center',
-    minHeight: '77vh',
+    minHeight: '100vh',
     alignContent: 'flex-start'
   },
   span: {
