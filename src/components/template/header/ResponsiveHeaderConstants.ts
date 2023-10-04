@@ -1,21 +1,21 @@
 export const pages = new Map<string, {title: string, to: string}[]>([
   ['es', [
-    { title: 'Sobre mi', to: '/about' },
-    { title: 'Proyectos', to: '/projects' },
-    { title: 'Experiencia', to: '/experience' },
-    { title: 'Contacto', to: '/contact' }
+    { title: 'SOBRE MI', to: '/about' },
+    { title: 'PROYECTOS', to: '/projects' },
+    { title: 'EXPERIENCIA', to: '/experience' },
+    { title: 'CONTACTO', to: '/contact' }
   ]],
   ['en', [
-    { title: 'About', to: '/about' },
-    { title: 'Projects', to: '/projects' },
-    { title: 'Experience', to: '/experience' },
-    { title: 'Contact', to: '/contact' }
+    { title: 'ABOUT', to: '/about' },
+    { title: 'PROJECTS', to: '/projects' },
+    { title: 'EXPERIENCE', to: '/experience' },
+    { title: 'CONTACT', to: '/contact' }
   ]],
   ['pt', [
-    { title: 'Sobre mim', to: '/about' },
-    { title: 'Projetos', to: '/projects' },
-    { title: 'Experiência', to: '/experience' },
-    { title: 'Contato', to: '/contact' }
+    { title: 'SOBRE MIM', to: '/about' },
+    { title: 'PROJETOS', to: '/projects' },
+    { title: 'EXPERIÊNCIA', to: '/experience' },
+    { title: 'CONTATO', to: '/contact' }
   ]]
 ])
 

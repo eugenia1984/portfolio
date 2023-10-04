@@ -24,6 +24,8 @@ import swaggerLogo from './../assets/swagger.svg'
 import kuarkusLogo from './../assets/kuarkus.svg'
 import cpaneLogo from './../assets/cpanel.svg'
 import phpmyadminLogo from './../assets/phpmyadmin.svg'
+import axiosLogo from './../assets/axios.svg'
+import reportLogo from '../assets/report.svg'
 
 /* To show the technologies icons at the about section */
 export const pictures = [
@@ -47,13 +49,17 @@ export const technologies = [
   { src: tailwindCssLogo, alt: 'TailwindCSS3' },
   { src: materialLogo, alt: 'Material UI' },
   { src: javascriptLogo, alt: 'JavaScript' },
+  { src: javascriptLogo, alt: 'dayjs' },
   { src: typescriptLogo, alt: 'TypeScript' },
   { src: reactLogo, alt: 'React' },
+  { src: reactLogo, alt: 'react-router-dom' },
+  { src: reactLogo, alt: 'react-hook-forms' },
   { src: figmaLogo, alt: 'Figma' },
   { src: svnLogo, alt: 'SVN' },
   { src: javaLogo, alt: 'Java 11' },
   { src: wordpressLogo, alt: 'WordPress' },
   { src: postgresqlLogo, alt: 'Postgresql' },
+  { src: postgresqlLogo, alt: 'pgAdmin' },
   { src: redisLogo, alt: 'Redis' },
   { src: jiraLogo, alt: 'Jira' },
   { src: gitLogo, alt: 'Git' },
@@ -65,7 +71,10 @@ export const technologies = [
   { src: swaggerLogo, alt: 'Swagger' },
   { src: kuarkusLogo, alt: 'Kuarkus' },
   { src: cpaneLogo, alt: 'cPanel' },
-  { src: phpmyadminLogo, alt: 'phpMyAdmin' }
+  { src: phpmyadminLogo, alt: 'phpMyAdmin' },
+  { src: nextjsLogo, alt: 'Nextjs' },
+  { src: axiosLogo, alt: 'axios' },
+  { src: reportLogo, alt: 'JasperReport'}
 ]
 
 export const YEAR = new Date().getFullYear()

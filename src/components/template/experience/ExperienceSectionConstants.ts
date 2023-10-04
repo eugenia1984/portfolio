@@ -17,15 +17,15 @@ export const JOB_1_YEAR = new Map<string, string>([
 ])
 
 export const JOB_1_TITLE = new Map<string, string>([
-  ['es', 'Proyecto: Renovación Tecnológica - Reintegros (OSDE)'],
-  ['en', 'Project: Technological Renewal - Reintegros (OSDE)'],
-  ['pt', 'Projeto: Renovação Tecnológica - Reintegros (OSDE)']
+  ['es', 'Proyecto: Renovación Tecnológica - Reintegros / Órdenes / Autorizaciones (OSDE)'],
+  ['en', 'Project: Technological Renewal - Refounds / Orders / Authorization (OSDE)'],
+  ['pt', 'Projeto: Renovação Tecnológica - Reembolsos / Pedidos / Autorizações  (OSDE)']
 ])
 
 export const JOB_1_DESCRIPTION = new Map<string, string>([
-  ['es', "Migración del módulo Reintegros para OSDE (la principal proveedora de medicina privada de Argentina) con implementación de alcance nacional en todas sus oficinas, donde los afiliados presentan sus prestaciones de salud realizadas y solicitan reintegro de las mismas. Es una aplicación web interactiva, de rendimiento eficiente, implementando responsive design y con compatibilidad en todos los navegadores (incluido Internet Explorer). Utilizo metodologías Ágiles y Scrum, trabajando junto a: Desarrolladores BackEnd, quienes construyen los microservicios que utilizamos y probamos en Swagger y Postman, el Diseñador UX/UI, quien acorde al branding de la empresa diseña las interfaces de usuario atractivas y coherentes y los Analistas Funcionales. "],
-  ['en', "Migration of the Reintegros module for OSDE (the main provider of private medicine in Argentina) with nationwide implementation in all its offices, where affiliates submit their health benefits and request reimbursement of the same. It is an interactive web application, with efficient performance, implementing responsive design and compatibility with all browsers (including Internet Explorer). I use Agile and Scrum methodologies, working together with: BackEnd Developers, who build the microservices we use and test in Swagger and Postman, the UX/UI Designer, who according to the company's branding designs the attractive and coherent user interfaces and the Functional Analysts."],
-  ['pt', "Migração do módulo Reintegros para o OSDE (o principal provedor de medicina privada na Argentina) com implementação nacional em todos os seus escritórios, onde os afiliados submetem seus benefícios de saúde e solicitam o reembolso dos mesmos. Trata-se de um aplicativo web interativo, com desempenho eficiente, implementando design responsivo e com compatibilidade em todos os navegadores (incluindo o Internet Explorer). Utilizo as metodologias Agile e Scrum, trabalhando em conjunto com: Desenvolvedores de back-end, que constroem os microsserviços que usamos e testamos em Swagger e Postman, o designer de UX/UI, que, de acordo com a marca da empresa, projeta as interfaces de usuário atraentes e coerentes e os analistas funcionais."]
+  ['es', "Migración de los módulos Reintegros, Órdenes y Autorizaciones para OSDE (la principal proveedora de medicina privada de Argentina) con implementación de alcance nacional en todas sus oficinas, donde los afiliados presentan sus prestaciones de salud realizadas y solicitan reintegro o autorización de las mismas. Es una aplicación web interactiva, de rendimiento eficiente, implementando responsive design y con compatibilidad en todos los navegadores (incluido Internet Explorer). Utilizo metodologías Ágiles y Scrum, trabajando junto a: Desarrolladores BackEnd, quienes construyen los microservicios que utilizamos y probamos en Swagger y Postman, el Diseñador UX/UI, quien acorde al branding de la empresa diseña las interfaces de usuario atractivas y coherentes y los Analistas Funcionales."],
+  ['en', "Migration of the Refunds, Orders and Authorization modules for OSDE (the main provider of private medicine in Argentina) with nationwide implementation in all its offices, where affiliates submit their health benefits and request reimbursement or authorization thereof. It is an interactive web application, with efficient performance, implementing responsive design and compatibility with all browsers (including Internet Explorer). I use Agile and Scrum methodologies, working together with: BackEnd Developers, who build the microservices we use and test in Swagger and Postman, the UX/UI Designer, who according to the company's branding designs the attractive and coherent user interfaces and the Functional Analysts."],
+  ['pt', "Projeto: Renovação Tecnológica - Reembolsos / Pedidos / Autorizações  (OSDE). Migração dos módulos de Reembolsos, Pedidos e Autorizações para da OSDE (o principal provedor de medicina privada na Argentina) com implementação nacional em todos os seus escritórios, onde os afiliados apresentam seus serviços de saúde prestados e solicitam o reembolso ou autorização dos mesmos. Trata-se de um aplicativo web interativo, com desempenho eficiente, implementando design responsivo e com compatibilidade em todos os navegadores (incluindo o Internet Explorer). Utilizo as metodologias Agile e Scrum, trabalhando em conjunto com: Desenvolvedores de back-end, que constroem os microsserviços que usamos e testamos em Swagger e Postman, o designer de UX/UI, que, de acordo com a marca da empresa, projeta as interfaces de usuário atraentes e coerentes e os analistas funcionais."]
 ])
 
 export const JOB_1_TECHNOLOGIES = new Map<string, string>([
@@ -35,9 +35,9 @@ export const JOB_1_TECHNOLOGIES = new Map<string, string>([
 ])
 
 export const JOB_1_TECHNOLOGIES_ICONS = new Map<string, string[]>([
-  ['es', ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code']],
-  ['en', ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code']],
-  ['pt', ['React', 'TypeScript', 'Material UI', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code']],
+  ['es', ['Nextjs', 'React', 'TypeScript', 'Material UI', 'react-router-dom', 'react-hook-forms', 'axios', 'dayjs', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code']],
+  ['en', ['Nextjs', 'React', 'TypeScript', 'Material UI', 'react-router-dom', 'react-hook-forms', 'axios', 'dayjs', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code']],
+  ['pt', ['Nextjs', 'React', 'TypeScript', 'Material UI', 'react-router-dom', 'react-hook-forms', 'axios', 'dayjs', 'CSS3', 'HTML5', 'Swagger', 'Postman', 'Git', 'GitLab', 'Yarn', 'npm', 'Visual Studio Code']],
 ])
 
 export const JOB_2 = new Map<string, string>([
@@ -106,7 +106,7 @@ export const JOB_3_TECHNOLOGIES = new Map<string, string>([
   ['pt', 'Tecnologias:']
 ])
 
-export const JOB_3_TECHNOLOGIES_ICONS = new Map < string, string[]> ([
+export const JOB_3_TECHNOLOGIES_ICONS = new Map<string, string[]>([
   ['es', ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ']],
   ['en', ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ']],
   ['pt', ['Java 11', 'JasperReport', 'pgAdmin', 'Postgresql', 'Kuarkus', 'Redis', 'Jira', 'Git', 'GitLab', 'IntelliJ']]
@@ -119,7 +119,7 @@ export const JOB_4 = new Map<string, string>([
 ])
 
 export const JOB_4_YEAR = new Map<string, string>([
-  [ 'es', '(Marzo 2021 - Enero 2022)'],
+  ['es', '(Marzo 2021 - Enero 2022)'],
   ['en', '(March 2021 - January 2022)'],
   ['pt', '(Março de 2021 - Janeiro de 2022)']
 ])
@@ -143,7 +143,7 @@ export const JOB_4_TECHNOLOGIES = new Map<string, string>([
 ])
 
 export const JOB_4_TECHNOLOGIES_ICONS = new Map<string, string[]>([
-  [ 'es', ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code']],
+  ['es', ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code']],
   ['en', ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code']],
   ['pt', ['HTML5', 'CSS3', 'Bootstrap', 'WordPress', 'cPanel', 'phpMyAdmin', 'Visual Studio Code']]
 ])

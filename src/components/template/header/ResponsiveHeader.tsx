@@ -28,7 +28,7 @@ const ResponsiveHeader: React.FC = () => {
         <Toolbar disableGutters>
           <Link to="/" aria-label="home" style={ { textDecoration: 'none' } }>
             <Typography component="h1" sx={ HEADER_STYLES.logoDesktop }>
-              María Eugenia Costa
+              MEC
             </Typography>
           </Link>
           <Box sx={ HEADER_STYLES.menuMobileContainer }>
@@ -100,6 +100,8 @@ const ResponsiveHeader: React.FC = () => {
                 <Link to={ page.to } aria-label={ page.title } style={ { textDecoration: 'none' } } >
                   <Typography
                     sx={ {
+                      fontSize: '12px', 
+                      lineHeight: '20px',
                       color: '#fff', '&:hover': {
                         color: `${ themeMode === 'dark' ? 'black!important' : 'white!important' }`
                       }
