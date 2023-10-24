@@ -20,10 +20,10 @@ const ContactLinks = () => {
         </Box>
       </Link>
       <Link
-        href="https://www.linkedin.com/in/maríaeugeniacosta/"
+        href="https://www.linkedin.com/in/maria-eugenia-costa/"
         target="_blank"
         rel="noopener"
-        aria-label="LinkedIn: maríaeugeniacosta"
+        aria-label="LinkedIn: maria-eugenia-costa"
         sx={ CONTACT_LINK.link}
       >
         <LinkedInIcon fontSize="large" />
