@@ -25,8 +25,6 @@
 - [Features](#features📢)
 - [Project structure](#project-structure🛠️)
 - [Commands](#commands)
-- [Contributing](#contributing)
-- [Credits](#credits)
 - [Notes](#notes)
 
 ---
@@ -142,6 +140,6 @@ All commands are run from the root of the project, from a terminal:
 
 ## Notes
 
-I appreciate your interest in this Project ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me at [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)
+I appreciate your interest in this Project ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me at [LinkedIn - maria-eugenia-costa](https://www.linkedin.com/in/maria-eugenia-costa/)
 
 ---
