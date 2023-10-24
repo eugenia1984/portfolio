@@ -22,11 +22,11 @@ const ResponsiveFooter: React.FC = () => {
       <Typography sx={ FOOTER.text }>
         Copyright © { YEAR } { allRightsReserved.get(language) } María Eugenia Costa
         <Link
-          href="https://www.linkedin.com/in/maríaeugeniacosta/"
+          href="https://www.linkedin.com/in/maria-eugenia-costa/"
           target="_blank"
           rel="noopener"
           underline="hover"
-          aria-label="LinkedIn: maríaeugeniacosta"
+          aria-label="Linked In: maria-eugenia-costa"
           sx={ { color: 'inherit', marginLeft: '12px' } }
         >
           <LinkedInIcon fontSize="small" />

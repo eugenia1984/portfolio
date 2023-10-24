@@ -47,13 +47,13 @@ const HeroSection: React.FC = () => {
                 buttonText={  BTN_TEXT.get(language)!! }
               />
               <NewWindowButton
-                ariaLabelText="GitHub profile"
+                ariaLabelText="GitHub profile: eugenia1984"
                 urlWindow="https://github.com/eugenia1984"
                 icon={ <GitHubIcon /> }
               />
               <NewWindowButton
-                ariaLabelText="GitHub profile"
-                urlWindow="https://www.linkedin.com/in/mar%C3%ADaeugeniacosta/"
+                ariaLabelText="LinkedIn profile: maria-eugenia-costa"
+                urlWindow="https://www.linkedin.com/in/maria-eugenia-costa/"
                 icon={ <LinkedInIcon /> }
               />
             </Stack>
