@@ -9,7 +9,7 @@
 
 ### Dark mode /  Select language
 
-<img src="https://github.com/eugenia1984/portfolio/assets/72580574/dbe982c8-ecff-47ee-83e8-5ff57b8fb8eb" width="480" alt="porfolio maria eugenia costa modo dark" />
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/aa2230f5-c0be-455e-b7ee-7a94b00179b2" width="480" alt="porfolio maria eugenia costa modo dark" />
 
 ---
 
