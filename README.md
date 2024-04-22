@@ -47,7 +47,7 @@
 
 🔜 About page, with a short presentation and my technologies.
 
-🔜 Proyects page, where you can take a look to some projects with the GitHub repository and a live demo.
+🔜 Projects page, where you can take a look to some projects with the GitHub repository and a live demo.
 
 🔜 Experience page, where you can read about my work experience.
 

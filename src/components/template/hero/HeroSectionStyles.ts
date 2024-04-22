@@ -22,7 +22,7 @@ export const HERO_STYLES = {
     justifyContent: 'center',
     alignItems: 'center' 
   } ,
-  introContainter: {
+  introContainer: {
     maxWidth: '300px',
     margin: '0 auto',
     display: 'flex',

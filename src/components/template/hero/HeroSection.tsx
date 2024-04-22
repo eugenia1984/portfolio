@@ -1,9 +1,9 @@
 import { Grid, Stack, Typography } from '@mui/material'
 import { TITLE, SUBTITLE, EXPERIENCE, BTN_TEXT, GREETING } from './HeroSectionConstants'
 import { useLanguageContext } from '../../../context/LanguageContext'
-import cvEN from '/maria-eugenia-costa-en.pdf'
-import cvES from '/maria-eugenia-costa-es.pdf'
-import cvPT from '/maria-eugenia-costa-pt.pdf'
+import cvEN from '/costa-maria-eugenia-en.pdf'
+import cvES from '/costa-maria-eugenia-es.pdf'
+import cvPT from '/costa-maria-eugenia-pt.pdf'
 import { HERO_STYLES } from './HeroSectionStyles'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
     <main id="hero">
       <Grid container sx={ HERO_STYLES.container }>
         <Grid item xs={ 12 } sm={ 6 } sx={ HERO_STYLES.containerPresentation }>
-          <Grid sx={ HERO_STYLES.introContainter } className="intro-container">
+          <Grid sx={ HERO_STYLES.introContainer } className="intro-container">
             <Typography > { GREETING.get(language) }</Typography>
             <Typography variant="h2">  { TITLE.get(language) } </Typography>
             <Typography variant="h3"> { SUBTITLE.get(language) } </Typography>

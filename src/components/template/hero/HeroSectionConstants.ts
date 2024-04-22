@@ -17,9 +17,9 @@ export const SUBTITLE = new Map<string, string>([
 ])
 
 export const EXPERIENCE = new Map<string, string>([
-  ['es', '(+2 años)'],
-  ['en', '(+2 years)'],
-  ['pt', '(+2 anos)']
+  ['es', '(+3 años)'],
+  ['en', '(+3 years)'],
+  ['pt', '(+3 anos)']
 ])
 
 export const BTN_TEXT = new Map<string, string>([
