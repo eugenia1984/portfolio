@@ -13,12 +13,6 @@
 
 ---
 
-### Lighthouse report
-
-<img src="https://github.com/eugenia1984/portfolio/assets/72580574/f56df6f5-23d8-4595-96fe-829f7f326f2c" width="400" alt="porfolio maria eugenia costa lighthouse report" />
-
----
-
 ## Table of Contents
 
 - [Demo](#demo📦)
