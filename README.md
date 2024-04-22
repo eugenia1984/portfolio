@@ -4,7 +4,7 @@
 
 ### Light mode / Select language
 
-<img src="https://github.com/eugenia1984/portfolio/assets/72580574/5653ace6-c89f-4e4b-89d1-b804c33caf1a" width="480" alt="porfolio maria eugenia costa modo light" />
+<img src="https://github.com/eugenia1984/portfolio/assets/72580574/cacc7dc6-9fd1-4259-8e35-9d5e1f66d088" width="480" alt="porfolio maria eugenia costa modo light" />
 
 
 ### Dark mode /  Select language
