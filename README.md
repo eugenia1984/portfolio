@@ -47,8 +47,6 @@
 
 🔜 Contact page, with a contact form.
 
-🔜 404 error page, that redirect to Home page
-
 ---
 
 ## Project Structure🛠️

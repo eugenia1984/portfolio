@@ -5,7 +5,7 @@
   scroll-behavior: smooth;
 }
 
-div.lenguage-select div#language {
+div.language-select div#language {
   padding-top: 8px;
   background-color: #FFFFFF80;
 }
@@ -14,4 +14,10 @@ div.lenguage-select div#language {
 #email,
 #mensaje {
   padding-top: 12px;
+}
+
+#project,
+#experience,
+#contact {
+  min-height: 92vh;
 }

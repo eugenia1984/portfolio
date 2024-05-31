@@ -12,25 +12,24 @@ import ExperienceSection from './components/template/experience/ExperienceSectio
 function App() {
 
   return (
-    <>
-      <ThemeProvider>
-        <CustomThemeProvider>
-          <CssBaseline />
-          <HashRouter>
-            <ResponsiveHeader />
-            <Routes>
-              <Route path="/" element={<HeroSection />} />
-              <Route path="/about" element={<AboutSection />} />
-              <Route path="/projects" element={<ProjectSection />} />
-              <Route path="/experience" element={<ExperienceSection />} />
-              <Route path="/contact" element={<ContactSection />} />
-              <Route path="*" element={<HeroSection />} />
-            </Routes>
-            <ResponsiveFooter />
-          </HashRouter>
-        </CustomThemeProvider>
-      </ThemeProvider>
-    </>
+    <ThemeProvider>
+      <CustomThemeProvider>
+        <CssBaseline />
+        <HashRouter>
+          <ResponsiveHeader />
+          <Routes>
+            <Route path="/" element={<HeroSection />} />
+            <Route path="/about" element={<AboutSection />} />
+            <Route path="/projects" element={<ProjectSection />} />
+            <Route path="/experience" element={<ExperienceSection />} />
+            <Route path="/contact" element={<ContactSection />} />
+            <Route path="*" element={<HeroSection />} />
+          </Routes>
+          <ResponsiveFooter />
+        </HashRouter>
+      </CustomThemeProvider>
+    </ThemeProvider>
+
   )
 }
 

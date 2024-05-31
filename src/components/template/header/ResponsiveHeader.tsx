@@ -129,11 +129,11 @@ const ResponsiveHeader: React.FC = () => {
                   id="language"
                   value={ language }
                   onChange={ handleLanguageChange }
-                  className="lenguage-select"
+                  className="language-select"
                 >
-                  <MenuItem value="es" className="lenguage-select-option">Español</MenuItem>
-                  <MenuItem value="en" className="lenguage-select-option">English</MenuItem>
-                  <MenuItem value="pt" className="lenguage-select-option">Português</MenuItem>
+                  <MenuItem value="es" className="language-select-option">Español</MenuItem>
+                  <MenuItem value="en" className="language-select-option">English</MenuItem>
+                  <MenuItem value="pt" className="language-select-option">Português</MenuItem>
                 </Select>
               </FormControl>
             </form>
