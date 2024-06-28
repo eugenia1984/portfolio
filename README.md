@@ -1,4 +1,4 @@
-💫 Hi, wellcome to my personal portfolio, build with [**React**](https://react.dev/), [**Material UI**](https://mui.com/) and [**TypeScript**](https://www.typescriptlang.org/).
+💫 Hi, welcome to my personal portfolio, build with [**React**](https://react.dev/), [**Material UI**](https://mui.com/) and [**TypeScript**](https://www.typescriptlang.org/).
 
 ---
 
@@ -125,7 +125,7 @@ All commands are run from the root of the project, from a terminal:
 | Command | Action |
 | ------- | ------ |
 | `npm install`  | Installs dependencies |
-| `npm run dev`  | Starts local dev server at `localhost:3000` |
+| `npm run dev`  | Starts local dev server at [`http://localhost:5173/`](http://localhost:5173/) |
 | `npm build`    | Build your production site to `./dist/`     |    
 
 ---

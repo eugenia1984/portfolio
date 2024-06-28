@@ -1,6 +1,8 @@
 import { HashRouter, Route, Routes } from 'react-router-dom'
+
 import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
 import { CustomThemeProvider, ThemeProvider } from './context/ThemeContext'
+
 import AboutSection from './components/template/about/AboutSection'
 import ContactSection from './components/template/contact/ContactSection'
 import ResponsiveFooter from './components/template/footer/ResponsiveFooter'

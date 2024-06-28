@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
+
 import { styled } from '@mui/material/styles'
 import { Grid, Typography } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion'
 import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary'
 import MuiAccordionDetails from '@mui/material/AccordionDetails'
+
 import { useLanguageContext } from '../../../context/LanguageContext'
+
 import { EXPERIENCE_STYLES } from './ExperienceSectionStyles'
 import {
   EXPERIENCE_TITLE,
@@ -86,7 +89,12 @@ const ExperienceSection: React.FC = () => {
   const [expanded, setExpanded] = useState<string | false>('panel1')
 
   const handleChange = (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
-    setExpanded(newExpanded ? panel : false)
+    if (!newExpanded) {
+      return
+    }
+    
+    setExpanded(panel)
+
   }
 
   return (
@@ -120,14 +128,14 @@ const ExperienceSection: React.FC = () => {
               {JOB_1_TECHNOLOGIES_ICONS.get(language)?.map((tech, index) => {
                 const techInfo = technologies.find(t => t.alt === tech)
                 return (
-                  <Typography key={`job1-${index}`}>
+                  <span key={`job1-${index}`}>
                     {techInfo &&
                       <span>
                         <img src={techInfo.src} alt={techInfo.alt} width="18" height="18" style={{ margin: '0px 8px' }} />
                         {techInfo ? techInfo.alt : tech}
                       </span>
                     }
-                  </Typography>
+                  </span>
                 )
               })}
             </AccordionDetails>
@@ -154,14 +162,14 @@ const ExperienceSection: React.FC = () => {
               {JOB_2_TECHNOLOGIES_ICONS.get(language)?.map((tech, index) => {
                 const techInfo = technologies.find(t => t.alt === tech)
                 return (
-                  <Typography key={`job2-${index}`}>
+                  <span key={`job2-${index}`}>
                     {techInfo &&
                       <span >
                         <img src={techInfo.src} alt={techInfo.alt} width="18" height="18" style={{ margin: '0px 8px' }} />
                         {techInfo ? techInfo.alt : tech}
                       </span>
                     }
-                  </Typography>
+                  </span>
                 )
               })}
             </AccordionDetails>
@@ -188,14 +196,14 @@ const ExperienceSection: React.FC = () => {
               {JOB_3_TECHNOLOGIES_ICONS.get(language)?.map((tech, index) => {
                 const techInfo = technologies.find(t => t.alt === tech)
                 return (
-                  <Typography key={`job3-${index}`}>
+                  <span key={`job3-${index}`}>
                     {techInfo &&
                       <span >
                         <img src={techInfo.src} alt={techInfo.alt} width="18" height="18" style={{ margin: '0px 8px' }} />
                         {techInfo ? techInfo.alt : tech}
                       </span>
                     }
-                  </Typography>
+                  </span>
                 )
               })}
             </AccordionDetails>
@@ -222,14 +230,14 @@ const ExperienceSection: React.FC = () => {
               {JOB_4_TECHNOLOGIES_ICONS.get(language)?.map((tech, index) => {
                 const techInfo = technologies.find(t => t.alt === tech)
                 return (
-                  <Typography key={`job4-${index}`}>
+                  <span key={`job4-${index}`}>
                     {techInfo &&
                       <span >
                         <img src={techInfo.src} alt={techInfo.alt} width="18" height="18" style={{ margin: '0px 8px' }} />
                         {techInfo ? techInfo.alt : tech}
                       </span>
                     }
-                  </Typography>
+                  </span>
                 )
               })}
             </AccordionDetails>
@@ -256,14 +264,14 @@ const ExperienceSection: React.FC = () => {
               {JOB_5_TECHNOLOGIES_ICONS.get(language)?.map((tech, index) => {
                 const techInfo = technologies.find(t => t.alt === tech)
                 return (
-                  <Typography key={`job5-${index}`}>
+                  <span key={`job5-${index}`}>
                     {techInfo &&
                       <span >
                         <img src={techInfo.src} alt={techInfo.alt} width="18" height="18" style={{ margin: '0px 8px' }} />
                         {techInfo ? techInfo.alt : tech}
                       </span>
                     }
-                  </Typography>
+                  </span>
                 )
               })}
             </AccordionDetails>
@@ -290,14 +298,14 @@ const ExperienceSection: React.FC = () => {
               {JOB_6_TECHNOLOGIES_ICONS.get(language)?.map((tech, index) => {
                 const techInfo = technologies.find(t => t.alt === tech)
                 return (
-                  <Typography key={`job5-${index}`}>
+                  <span key={`job5-${index}`}>
                     {techInfo &&
                       <span >
                         <img src={techInfo.src} alt={techInfo.alt} width="18" height="18" style={{ margin: '0px 8px' }} />
                         {techInfo ? techInfo.alt : tech}
                       </span>
                     }
-                  </Typography>
+                  </span>
                 )
               })}
             </AccordionDetails>

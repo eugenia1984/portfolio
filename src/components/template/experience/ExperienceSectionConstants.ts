@@ -11,9 +11,9 @@ export const JOB_1 = new Map<string, string>([
 ]);
 
 export const JOB_1_YEAR = new Map<string, string>([
-  ["es", "Noviembre 2023 - Presente"],
-  ["en", "November 2023 - Present"],
-  ["pt", "Novembro 2023 - Presente"],
+  ["es", "Diciembre 2023 - Presente"],
+  ["en", "December 2023 - Present"],
+  ["pt", "Dezembro 2023 - Presente"],
 ]);
 
 export const JOB_1_TITLE = new Map<string, string>([
@@ -113,9 +113,9 @@ export const JOB_2 = new Map<string, string>([
 ]);
 
 export const JOB_2_YEAR = new Map<string, string>([
-  ["es", "Noviembre 2023 - Presente"],
-  ["en", "November 2023 - Present"],
-  ["pt", "Novembro 2023 - Presente"],
+  ["es", "Diciembre 2023 - Presente"],
+  ["en", "December 2023 - Present"],
+  ["pt", "Dezembro 2023 - Presente"],
 ]);
 
 export const JOB_2_TITLE = new Map<string, string>([
@@ -262,7 +262,7 @@ export const JOB_3_DESCRIPTION = new Map<string, string>([
   ],
   [
     "pt",
-    "Projeto: Renovação Tecnológica - Reembolsos / Pedidos / Autorizações  (OSDE). Migração dos módulos de Reembolsos, Pedidos e Autorizações para da OSDE (o principal provedor de medicina privada na Argentina) com implementação nacional em todos os seus escritórios, onde os afiliados apresentam seus serviços de saúde prestados e solicitam o reembolso ou autorização dos mesmos. Trata-se de um aplicativo web interativo, com desempenho eficiente, implementando design responsivo e com compatibilidade em todos os navegadores (incluindo o Internet Explorer). Utilizo as metodologias Agile e Scrum, trabalhando em conjunto com: Desenvolvedores de back-end, que constroem os microsserviços que usamos e testamos em Swagger e Postman, o designer de UX/UI, que, de acordo com a marca da empresa, projeta as interfaces de usuário atraentes e coerentes e os analistas funcionais.",
+    "Migração dos módulos de Reembolsos, Pedidos e Autorizações para da OSDE (o principal provedor de medicina privada na Argentina) com implementação nacional em todos os seus escritórios, onde os afiliados apresentam seus serviços de saúde prestados e solicitam o reembolso ou autorização dos mesmos. Trata-se de um aplicativo web interativo, com desempenho eficiente, implementando design responsivo e com compatibilidade em todos os navegadores (incluindo o Internet Explorer). Utilizo as metodologias Agile e Scrum, trabalhando em conjunto com: Desenvolvedores de back-end, que constroem os microsserviços que usamos e testamos em Swagger e Postman, o designer de UX/UI, que, de acordo com a marca da empresa, projeta as interfaces de usuário atraentes e coerentes e os analistas funcionais.",
   ],
 ]);
 
@@ -387,9 +387,9 @@ export const JOB_4_TECHNOLOGIES = new Map<string, string>([
 ]);
 
 export const JOB_4_TECHNOLOGIES_ICONS = new Map<string, string[]>([
-  ["es", ["HTML5", "CSS3", "JavaScript", "SVN", "Visual Studio Code"]],
-  ["en", ["HTML5", "CSS3", "JavaScript", "SVN", "Visual Studio Code"]],
-  ["pt", ["HTML5", "CSS3", "JavaScript", "SVN", "Visual Studio Code"]],
+  ["es", ["HTML5", "CSS3", "JavaScript", "React", "SVN", "Visual Studio Code"]],
+  ["en", ["HTML5", "CSS3", "JavaScript", "React", "SVN", "Visual Studio Code"]],
+  ["pt", ["HTML5", "CSS3", "JavaScript", "React", "SVN", "Visual Studio Code"]],
 ]);
 
 export const JOB_5 = new Map<string, string>([
@@ -400,7 +400,7 @@ export const JOB_5 = new Map<string, string>([
 
 export const JOB_5_YEAR = new Map<string, string>([
   ["es", "(Enero 2023 - Enero 2022)"],
-  ["en", "(August 2021 - January 2022)"],
+  ["en", "(January 2023 - January 2022)"],
   ["pt", "(Janeiro 2023 - Janeiro de 2022)"],
 ]);
 
